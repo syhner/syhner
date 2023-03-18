@@ -2,11 +2,12 @@
 <img src="Banner.svg" alt="Technologies and tools banner"/>
 </div>
 
-<table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0"><tr><td align="center">
+<table><tr><td align="center">
 
 ### Learning
 
 </td><td align="center">
+
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
 <a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
 <a href="https://jekyllrb.com/"><img src="icons/Jekyll.svg" title="Jekyll"></a>
@@ -30,6 +31,7 @@
 ### Using
 
 </td><td align="center">
+
 <a href="https://www.linux.org/"><img src="icons/Linux.svg" title="Linux"></a>
 <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="icons/Bash.svg" title="Bash"></a>
 <a href="https://git-scm.com/"><img src="icons/Git.svg" title="Git"></a>
@@ -66,6 +68,7 @@
 ### Used
 
 </td><td align="center">
+
 <a href="https://www.latex-project.org/"><img src="icons/LaTeX.svg" title="LaTeX"></a>
 <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="icons/C.svg" title="C"></a>
 <a href="https://www.r-project.org/"><img src="icons/R.svg" title="R"></a>
