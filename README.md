@@ -2,96 +2,72 @@
 <img src="Banner.svg" alt="Technologies and tools banner"/>
 </div>
 
-<table><tr><td valign="top" width="33%" align="center">
+<table><tr><td align="center">
 
-### Frontend
+### Learning
 
-<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="icons/HTML.svg" title="HTML"></a>
-<a href="https://sass-lang.com/"><img src="icons/Sass.svg" title="Sass"></a>
-<a href="https://www.typescriptlang.org/"><img src="icons/TypeScript.svg" title="TypeScript"></a>
-<a href="https://reactjs.org/"><img src="icons/React.svg" title="React"></a>
-<a href="https://reactnative.dev/"><img src="icons/React-Native.svg" title="React Native"></a>
-<a href="https://redux.js.org/"><img src="icons/Redux.svg" title="Redux"></a>
-<a href="https://nextjs.org/"><img src="icons/Next-js.svg" title="Next.js"></a>
-<a href="https://www.apollographql.com/"><img src="icons/Apollo-GraphQL.svg" title="Apollo GraphQL"></a>
-<a href="https://developer.chrome.com/docs/devtools/"><img src="icons/Chrome.svg" title="Chrome developer tools"></a>
-<a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
-
-</td><td valign="top" width="34%" align="center">
-
-### Other
-
-<a href="https://www.linux.org/"><img src="icons/Linux.svg" title="Linux"></a>
-<a href="https://code.visualstudio.com/"><img src="icons/Visual-Studio-Code.svg" title="Visual Studio Code"></a>
-<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="icons/Bash.svg" title="Bash"></a>
-<a href="https://git-scm.com/"><img src="icons/Git.svg" title="Git"></a>
-<a href="https://www.docker.com/"><img src="icons/Docker.svg" title="Docker"></a>
-<a href="https://www.cypress.io/"><img src="icons/Cypress.svg" title="Cypress"></a>
-<a href="https://github.com/"><img src="icons/GitHub.svg" title="GitHub"></a>
-<a href="https://github.com/features/actions"><img src="icons/Github-Actions.svg" title="GitHub Actions"></a>
-<a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
-<a href="https://en.wikipedia.org/wiki/Markdown"><img src="icons/Markdown.svg" title="Markdown"></a>
-<a href="https://www.latex-project.org/"><img src="icons/LaTeX.svg" title="LaTeX"></a>
-
-</td><td valign="top" width="33%" align="center">
-
-### Backend
-
-<a href="https://www.typescriptlang.org/"><img src="icons/TypeScript.svg" title="TypeScript"></a>
-<a href="https://nodejs.org"><img src="icons/NodeJS.svg" title="NodeJS"></a>
-<a href="https://www.python.org/"><img src="icons/Python.svg" title="Python"></a>
-<a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="icons/C.svg" title="C"></a>
-<a href="https://www.r-project.org/"><img src="icons/R.svg" title="R"></a>
-<a href="https://www.mathworks.com/products/matlab.html"><img src="icons/MATLAB.svg  " title="MATLAB"></a>
-<a href="https://www.maplesoft.com/products/Maple/"><img src="icons/Maple.svg" title="Maple"></a>
-<a href="https://strapi.io/"><img src="icons/Strapi.svg" title="Strapi"></a>
-<a href="https://graphql.org/"><img src="icons/GraphQL.svg" title="GraphQL"></a>
-<a href="https://jwt.io/"><img src="icons/JWT.svg" title="JSON Web Tokens"></a>
-<a href="https://www.postman.com/"><img src="icons/Postman.svg" title="Postman"></a>
-<a href="https://www.postgresql.org/"><img src="icons/PostgreSQL.svg" title="PostgreSQL"></a>
-<a href="https://www.mongodb.com/"><img src="icons/MongoDB.svg" title="MongoDB"></a>
-<a href="https://redis.io/"><img src="icons/Redis.svg" title="Redis"></a>
-
-</td></tr><tr><td valign="top" width="33%" align="center">
-
-<!-- Frontend -->
-
-### Learning next
-
+<a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
+<a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
+<a href="https://jekyllrb.com/"><img src="icons/Jekyll.svg" title="Jekyll"></a>
+<a href="https://dgraph.io/"><img src="icons/Dgraph.svg" title="Dgraph"></a>
+<a href="https://www.elastic.co/"><img src="icons/Elasticsearch.svg" title="Elasticsearch"></a>
+<a href="https://developer.mozilla.org/en-US/docs/WebAssembly"><img src="icons/WebAssembly.svg" title="WebAssembly"></a>
+<a href="https://postcss.org/"><img src="icons/PostCSS.svg" title="PostCSS"></a>
 <a href="https://www.framer.com/motion/"><img src="icons/Framer-Motion.svg" title="Framer Motion"></a>
 <a href="https://threejs.org/"><img src="icons/Three-JS.svg" title="Three.js"></a>
 <a href="https://storybook.js.org/"><img src="icons/Storybook.svg" title="Storybook"></a>
 <a href="https://kit.svelte.dev/"><img src="icons/SvelteKit.svg" title="SvelteKit"></a>
-<a href="https://react-query.tanstack.com/"><img src="icons/React-Query.svg" title="React Query"></a>
-<a href="https://vitejs.dev/"><img src="icons/Vite.svg" title="Vite"></a>
-<a href="https://postcss.org/"><img src="icons/PostCSS.svg" title="PostCSS"></a>
-<a href="https://jekyllrb.com/"><img src="icons/Jekyll.svg" title="Jekyll"></a>
-<a href="https://web.dev/progressive-web-apps/"><img src="icons/PWA.svg" title="Progressive Web Apps"></a>
-<a href="https://developer.mozilla.org/en-US/docs/WebAssembly"><img src="icons/WebAssembly.svg" title="WebAxissembly"></a>
-<a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
-<a href="https://www.electronjs.org/"><img src="icons/Electron.svg" title="Electron"></a>
-
-</td><td valign="top" width="34%" align="center">
-
-<!-- Other -->
-
-### Learning next
-
 <a href="https://www.nginx.com/"><img src="icons/NGINX.svg" title="NGINX"></a>
-<a href="https://kubernetes.io/"><img src="icons/Kubernetes.svg" title="Kubernetes"></a>
-
-</td><td valign="top" width="33%" align="center">
-
-<!-- Backend -->
-
-### Learning next
-
-<a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
+<a href="https://web.dev/progressive-web-apps/"><img src="icons/PWA.svg" title="Progressive Web Apps"></a>
+<a href="https://www.electronjs.org/"><img src="icons/Electron.svg" title="Electron"></a>
 <a href="https://auth0.com/"><img src="icons/Auth0.svg" title="Auth0"></a>
-<a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
-<a href="https://dgraph.io/"><img src="icons/Dgraph.svg" title="Dgraph"></a>
-<a href="https://www.elastic.co/"><img src="icons/Elasticsearch.svg" title="Elasticsearch"></a>
+<a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
 <a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
+
+</td></tr><tr><td align="center">
+
+### Using
+
+<a href="https://www.linux.org/"><img src="icons/Linux.svg" title="Linux"></a>
+<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="icons/Bash.svg" title="Bash"></a>
+<a href="https://git-scm.com/"><img src="icons/Git.svg" title="Git"></a>
+<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
+<a href="https://code.visualstudio.com/"><img src="icons/Visual-Studio-Code.svg" title="Visual Studio Code"></a>
+<a href="https://en.wikipedia.org/wiki/Markdown"><img src="icons/Markdown.svg" title="Markdown"></a>
+<a href="https://www.typescriptlang.org/"><img src="icons/TypeScript.svg" title="TypeScript"></a>
+<a href="https://nodejs.org"><img src="icons/NodeJS.svg" title="NodeJS"></a>
+<a href="https://vitejs.dev/"><img src="icons/Vite.svg" title="Vite"></a>
+<a href="https://redis.io/"><img src="icons/Redis.svg" title="Redis"></a>
+<a href="https://www.postgresql.org/"><img src="icons/PostgreSQL.svg" title="PostgreSQL"></a>
+<a href="https://www.mongodb.com/"><img src="icons/MongoDB.svg" title="MongoDB"></a>
+<a href="https://strapi.io/"><img src="icons/Strapi.svg" title="Strapi"></a>
+<a href="https://graphql.org/"><img src="icons/GraphQL.svg" title="GraphQL"></a>
+<a href="https://www.postman.com/"><img src="icons/Postman.svg" title="Postman"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="icons/HTML.svg" title="HTML"></a>
+<a href="https://sass-lang.com/"><img src="icons/Sass.svg" title="Sass"></a>
+<a href="https://reactjs.org/"><img src="icons/React.svg" title="React"></a>
+<a href="https://reactnative.dev/"><img src="icons/React-Native.svg" title="React Native"></a>
+<a href="https://redux.js.org/"><img src="icons/Redux.svg" title="Redux"></a>
+<a href="https://www.apollographql.com/"><img src="icons/Apollo-GraphQL.svg" title="Apollo GraphQL"></a>
+<a href="https://react-query.tanstack.com/"><img src="icons/React-Query.svg" title="React Query"></a>
+<a href="https://nextjs.org/"><img src="icons/Next-js.svg" title="Next.js"></a>
+<a href="https://www.docker.com/"><img src="icons/Docker.svg" title="Docker"></a>
+<a href="https://www.cypress.io/"><img src="icons/Cypress.svg" title="Cypress"></a>
+<a href="https://developer.chrome.com/docs/devtools/"><img src="icons/Chrome.svg" title="Chrome developer tools"></a>
+<a href="https://github.com/"><img src="icons/GitHub.svg" title="GitHub"></a>
+<a href="https://github.com/features/actions"><img src="icons/Github-Actions.svg" title="GitHub Actions"></a>
+<a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
+<a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
+
+</td></tr><tr><td align="center">
+
+### Used
+
+<a href="https://www.latex-project.org/"><img src="icons/LaTeX.svg" title="LaTeX"></a>
+<a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="icons/C.svg" title="C"></a>
+<a href="https://www.r-project.org/"><img src="icons/R.svg" title="R"></a>
+<a href="https://www.mathworks.com/products/matlab.html"><img src="icons/MATLAB.svg" title="MATLAB"></a>
+<a href="https://www.maplesoft.com/products/Maple/"><img src="icons/Maple.svg" title="Maple"></a>
+<a href="https://www.python.org/"><img src="icons/Python.svg" title="Python"></a>
 
 </td></tr></table>
