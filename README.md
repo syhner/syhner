@@ -11,6 +11,7 @@
 </td><td align="center">
 
 <a href="https://astro.build/"><img src="icons/Astro.svg" title="Astro"></a>
+<a href="https://github.com/tmux/tmux"><img src="icons/Tmux.svg" title="Tmux"></a>
 <a href="https://github.com/features/copilot"><img src="icons/github-copilot.png" title="GitHub Copilot"></a>
 <a href="https://www.jetbrains.com/datagrip/"><img src="icons/DataGrip.svg" title="DataGrip"></a>
 <a href="https://headlessui.com/"><img src="icons/Headless-UI.svg" title="Headless-UI"></a>
