@@ -2,7 +2,7 @@
 <img src="Banner.svg" alt="Technologies and tools banner"/>
 </div>
 
-<table><tr><td align="center" valign="center">
+<table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0"><tr><td align="center">
 
 ### Learning
 
@@ -25,7 +25,7 @@
 <a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
 <a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
 
-</td></tr><tr><td align="center" valign="center">
+</td></tr><tr><td align="center">
 
 ### Using
 
@@ -61,7 +61,7 @@
 <a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
 <a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
 
-</td></tr><tr><td align="center" valign="center">
+</td></tr><tr><td align="center">
 
 ### Used
 
