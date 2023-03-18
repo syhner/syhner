@@ -2,11 +2,13 @@
 <img src="Banner.svg" alt="Technologies and tools banner"/>
 </div>
 
-<table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" valign="top">
+<table><tr><td align="center">
 
 ### Learning
 
-</td><td align="center">
+&nbsp;
+
+</td><td align="center>
 
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
 <a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
@@ -26,9 +28,11 @@
 <a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
 <a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
 
-</td></tr><tr><td align="center" valign="top">
+</td></tr><tr><td align="center">
 
 ### Using
+
+&nbsp;
 
 </td><td align="center">
 
@@ -63,9 +67,11 @@
 <a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
 <a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
 
-</td></tr><tr><td align="center" valign="top">
+</td></tr><tr><td align="center">
 
 ### Used
+
+&nbsp;
 
 </td><td align="center">
 
