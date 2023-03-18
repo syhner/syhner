@@ -2,7 +2,7 @@
 <img src="Banner.svg" alt="Technologies and tools banner"/>
 </div>
 
-<table><tr><td align="center" valign="top">
+<table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" valign="top">
 
 ### Learning
 
