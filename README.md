@@ -8,7 +8,7 @@
 
 &nbsp;
 
-</td><td align="center>
+</td><td align="center">
 
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
 <a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
