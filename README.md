@@ -14,7 +14,6 @@
 <a href="https://astro.build/"><img src="icons/Astro.svg" title="Astro"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
 <a href="https://github.com/tmux/tmux"><img src="icons/Tmux.svg" title="Tmux"></a>
-<a href="https://github.com/features/copilot"><img src="icons/github-copilot.png" title="GitHub Copilot"></a>
 <a href="https://www.jetbrains.com/datagrip/"><img src="icons/DataGrip.svg" title="DataGrip"></a>
 <a href="https://headlessui.com/"><img src="icons/Headless-UI.svg" title="Headless-UI"></a>
 <a href="https://jotai.org/"><img src="icons/Jotai.png" title="Jotai"></a>
@@ -54,7 +53,6 @@
 
 </td><td align="center">
 
-<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
 <a href="https://www.linux.org/"><img src="icons/Linux.svg" title="Linux"></a>
 <a href="https://en.wikipedia.org/wiki/MacOS"><img src="icons/MacOS.svg" title="MacOS"></a>
 <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="icons/Bash.svg" title="Bash"></a>
@@ -62,6 +60,7 @@
 <a href="https://github.com/changesets/changesets"><img src="icons/changesets.svg" title="changesets"></a>
 <a href="https://turbo.build/repo"><img src="icons/Turborepo.svg" title="Turborepo"></a>
 <a href="https://code.visualstudio.com/"><img src="icons/Visual-Studio-Code.svg" title="Visual Studio Code"></a>
+<a href="https://github.com/features/copilot"><img src="icons/github-copilot.png" title="GitHub Copilot"></a>
 <a href="https://en.wikipedia.org/wiki/Markdown"><img src="icons/Markdown.svg" title="Markdown"></a>
 <a href="https://www.typescriptlang.org/"><img src="icons/TypeScript.svg" title="TypeScript"></a>
 <a href="https://nodejs.org"><img src="icons/NodeJS.svg" title="NodeJS"></a>
@@ -79,6 +78,7 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="icons/HTML.svg" title="HTML"></a>
 <a href="https://tailwindcss.com/"><img src="icons/Tailwind.svg" title="Tailwind"></a>
 <a href="https://sass-lang.com/"><img src="icons/Sass.svg" title="Sass"></a>
+<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
 <a href="https://reactjs.org/"><img src="icons/React.svg" title="React"></a>
 <a href="https://reactnative.dev/"><img src="icons/React-Native.svg" title="React Native"></a>
 <a href="https://expo.dev/"><img src="icons/Expo.svg" title="Expo"></a>
