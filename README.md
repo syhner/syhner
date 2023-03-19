@@ -10,6 +10,7 @@
 
 </td><td align="center">
 
+<a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
 <a href="https://astro.build/"><img src="icons/Astro.svg" title="Astro"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
 <a href="https://github.com/tmux/tmux"><img src="icons/Tmux.svg" title="Tmux"></a>
@@ -84,7 +85,6 @@
 <a href="https://redux.js.org/"><img src="icons/Redux.svg" title="Redux"></a>
 <a href="https://www.apollographql.com/"><img src="icons/Apollo-GraphQL.svg" title="Apollo GraphQL"></a>
 <a href="https://react-query.tanstack.com/"><img src="icons/React-Query.svg" title="React Query"></a>
-<a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
 <a href="https://nextjs.org/"><img src="icons/Next-js.svg" title="Next.js"></a>
 <a href="https://www.docker.com/"><img src="icons/Docker.svg" title="Docker"></a>
 <a href="https://www.cypress.io/"><img src="icons/Cypress.svg" title="Cypress"></a>
