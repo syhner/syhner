@@ -10,37 +10,36 @@
 
 </td><td align="center">
 
-<a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
-<a href="https://astro.build/"><img src="icons/Astro.svg" title="Astro"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
 <a href="https://github.com/tmux/tmux"><img src="icons/Tmux.svg" title="Tmux"></a>
-<a href="https://www.jetbrains.com/datagrip/"><img src="icons/DataGrip.svg" title="DataGrip"></a>
-<a href="https://headlessui.com/"><img src="icons/Headless-UI.svg" title="Headless-UI"></a>
-<a href="https://jotai.org/"><img src="icons/Jotai.png" title="Jotai"></a>
-<a href="https://motioncanvas.io/"><img src="icons/Motion-Canvas.svg" title="Motion-Canvas"></a>
-<a href="https://nestjs.com/"><img src="icons/NestJS.svg" title="NestJS"></a>
-<a href="https://planetscale.com/"><img src="icons/PlanetScale.svg" title="PlanetScale"></a>
-<a href="https://playwright.dev/"><img src="icons/Playwright.svg" title="Playwright"></a>
-<a href="https://www.prisma.io"><img src="icons/Prisma.svg" title="Prisma"></a>
-<a href="https://pusher.com/"><img src="icons/Pusher.svg" title="Pusher"></a>
-<a href="https://rxjs.dev"><img src="icons/RxJS.svg" title="RxJS"></a>
-<a href="https://snyk.io/"><img src="icons/Snyk.svg" title="Snyk"></a>
-<a href="https://upstash.com/"><img src="icons/Upstash.svg" title="Upstash"></a>
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
-<a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
+<a href="https://motioncanvas.io/"><img src="icons/Motion-Canvas.svg" title="Motion-Canvas"></a>
+<a href="https://www.jetbrains.com/datagrip/"><img src="icons/DataGrip.svg" title="DataGrip"></a>
 <a href="https://jekyllrb.com/"><img src="icons/Jekyll.svg" title="Jekyll"></a>
+<a href="https://rxjs.dev"><img src="icons/RxJS.svg" title="RxJS"></a>
+<a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
+<a href="https://pusher.com/"><img src="icons/Pusher.svg" title="Pusher"></a>
+<a href="https://www.prisma.io"><img src="icons/Prisma.svg" title="Prisma"></a>
 <a href="https://dgraph.io/"><img src="icons/Dgraph.svg" title="Dgraph"></a>
 <a href="https://www.elastic.co/"><img src="icons/Elasticsearch.svg" title="Elasticsearch"></a>
+<a href="https://planetscale.com/"><img src="icons/PlanetScale.svg" title="PlanetScale"></a>
+<a href="https://upstash.com/"><img src="icons/Upstash.svg" title="Upstash"></a>
 <a href="https://auth0.com/"><img src="icons/Auth0.svg" title="Auth0"></a>
 <a href="https://developer.mozilla.org/en-US/docs/WebAssembly"><img src="icons/WebAssembly.svg" title="WebAssembly"></a>
-<a href="https://postcss.org/"><img src="icons/PostCSS.svg" title="PostCSS"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
 <a href="https://www.framer.com/motion/"><img src="icons/Framer-Motion.svg" title="Framer Motion"></a>
 <a href="https://threejs.org/"><img src="icons/Three-JS.svg" title="Three.js"></a>
-<a href="https://storybook.js.org/"><img src="icons/Storybook.svg" title="Storybook"></a>
+<a href="https://postcss.org/"><img src="icons/PostCSS.svg" title="PostCSS"></a>
+<a href="https://headlessui.com/"><img src="icons/Headless-UI.svg" title="Headless-UI"></a>
+<a href="https://jotai.org/"><img src="icons/Jotai.png" title="Jotai"></a>
 <a href="https://kit.svelte.dev/"><img src="icons/SvelteKit.svg" title="SvelteKit"></a>
+<a href="https://astro.build/"><img src="icons/Astro.svg" title="Astro"></a>
+<a href="https://storybook.js.org/"><img src="icons/Storybook.svg" title="Storybook"></a>
+<a href="https://playwright.dev/"><img src="icons/Playwright.svg" title="Playwright"></a>
 <a href="https://www.nginx.com/"><img src="icons/NGINX.svg" title="NGINX"></a>
 <a href="https://web.dev/progressive-web-apps/"><img src="icons/PWA.svg" title="Progressive Web Apps"></a>
 <a href="https://www.electronjs.org/"><img src="icons/Electron.svg" title="Electron"></a>
+<a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
+<a href="https://snyk.io/"><img src="icons/Snyk.svg" title="Snyk"></a>
 <a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
 <a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
 <a href="https://github.com/ansible/ansible"><img src="icons/Ansible.svg" title="Ansible"></a>
@@ -71,14 +70,15 @@
 <a href="https://redis.io/"><img src="icons/Redis.svg" title="Redis"></a>
 <a href="https://www.postgresql.org/"><img src="icons/PostgreSQL.svg" title="PostgreSQL"></a>
 <a href="https://www.mongodb.com/"><img src="icons/MongoDB.svg" title="MongoDB"></a>
-<a href="https://strapi.io/"><img src="icons/Strapi.svg" title="Strapi"></a>
+<a href="https://nestjs.com/"><img src="icons/NestJS.svg" title="NestJS"></a>
 <a href="https://trpc.io/"><img src="icons/tRPC.svg" title="tRPC"></a>
 <a href="https://graphql.org/"><img src="icons/GraphQL.svg" title="GraphQL"></a>
+<a href="https://strapi.io/"><img src="icons/Strapi.svg" title="Strapi"></a>
 <a href="https://www.postman.com/"><img src="icons/Postman.svg" title="Postman"></a>
+<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="icons/HTML.svg" title="HTML"></a>
 <a href="https://tailwindcss.com/"><img src="icons/Tailwind.svg" title="Tailwind"></a>
 <a href="https://sass-lang.com/"><img src="icons/Sass.svg" title="Sass"></a>
-<a href="https://www.figma.com"><img src="icons/Figma.svg" title="Figma"></a>
 <a href="https://reactjs.org/"><img src="icons/React.svg" title="React"></a>
 <a href="https://reactnative.dev/"><img src="icons/React-Native.svg" title="React Native"></a>
 <a href="https://expo.dev/"><img src="icons/Expo.svg" title="Expo"></a>
@@ -108,7 +108,7 @@
 <a href="https://www.mathworks.com/products/matlab.html"><img src="icons/MATLAB.svg" title="MATLAB"></a>
 <a href="https://www.maplesoft.com/products/Maple/"><img src="icons/Maple.svg" title="Maple"></a>
 <a href="https://www.python.org/"><img src="icons/Python.svg" title="Python"></a>
-<a href="https://xstate.js.org/"><img src="icons/Xstate.svg" title="Xstate"></a>
 <a href="https://grpc.io"><img src="icons/gRPC.svg" title="gRPC"></a>
+<a href="https://xstate.js.org/"><img src="icons/Xstate.svg" title="Xstate"></a>
 
 </td></tr></table>
