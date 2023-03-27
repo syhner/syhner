@@ -15,7 +15,6 @@
 <a href="https://motioncanvas.io/"><img src="icons/Motion-Canvas.svg" title="Motion-Canvas"></a>
 <a href="https://www.jetbrains.com/datagrip/"><img src="icons/DataGrip.svg" title="DataGrip"></a>
 <a href="https://jekyllrb.com/"><img src="icons/Jekyll.svg" title="Jekyll"></a>
-<a href="https://rxjs.dev"><img src="icons/RxJS.svg" title="RxJS"></a>
 <a href="https://www.tensorflow.org/"><img src="icons/TensorFlow.svg" title="TensorFlow"></a>
 <a href="https://pusher.com/"><img src="icons/Pusher.svg" title="Pusher"></a>
 <a href="https://www.prisma.io"><img src="icons/Prisma.svg" title="Prisma"></a>
@@ -81,7 +80,6 @@
 <a href="https://sass-lang.com/"><img src="icons/Sass.svg" title="Sass"></a>
 <a href="https://reactjs.org/"><img src="icons/React.svg" title="React"></a>
 <a href="https://reactnative.dev/"><img src="icons/React-Native.svg" title="React Native"></a>
-<a href="https://expo.dev/"><img src="icons/Expo.svg" title="Expo"></a>
 <a href="https://redux.js.org/"><img src="icons/Redux.svg" title="Redux"></a>
 <a href="https://www.apollographql.com/"><img src="icons/Apollo-GraphQL.svg" title="Apollo GraphQL"></a>
 <a href="https://react-query.tanstack.com/"><img src="icons/React-Query.svg" title="React Query"></a>
@@ -91,6 +89,7 @@
 <a href="https://developer.chrome.com/docs/devtools/"><img src="icons/Chrome.svg" title="Chrome developer tools"></a>
 <a href="https://github.com/"><img src="icons/GitHub.svg" title="GitHub"></a>
 <a href="https://github.com/features/actions"><img src="icons/Github-Actions.svg" title="GitHub Actions"></a>
+<a href="https://expo.dev/"><img src="icons/Expo.svg" title="Expo"></a>
 <a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
 <a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
 
