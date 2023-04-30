@@ -40,7 +40,6 @@
 <a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
 <a href="https://snyk.io/"><img src="icons/Snyk.svg" title="Snyk"></a>
 <a href="https://unity.com/"><img src="icons/Unity.svg" title="Unity"></a>
-<a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
 <a href="https://github.com/ansible/ansible"><img src="icons/Ansible.svg" title="Ansible"></a>
 
 </td></tr><tr><td align="center">
@@ -68,7 +67,6 @@
 <a href="https://vitest.dev/"><img src="icons/Vitest.svg" title="Vitest"></a>
 <a href="https://redis.io/"><img src="icons/Redis.svg" title="Redis"></a>
 <a href="https://www.postgresql.org/"><img src="icons/PostgreSQL.svg" title="PostgreSQL"></a>
-<a href="https://www.mongodb.com/"><img src="icons/MongoDB.svg" title="MongoDB"></a>
 <a href="https://nestjs.com/"><img src="icons/NestJS.svg" title="NestJS"></a>
 <a href="https://trpc.io/"><img src="icons/tRPC.svg" title="tRPC"></a>
 <a href="https://graphql.org/"><img src="icons/GraphQL.svg" title="GraphQL"></a>
@@ -90,6 +88,7 @@
 <a href="https://github.com/"><img src="icons/GitHub.svg" title="GitHub"></a>
 <a href="https://github.com/features/actions"><img src="icons/Github-Actions.svg" title="GitHub Actions"></a>
 <a href="https://expo.dev/"><img src="icons/Expo.svg" title="Expo"></a>
+<a href="https://www.terraform.io/"><img src="icons/Terraform.svg" title="Terraform"></a>
 <a href="https://vercel.com/"><img src="icons/Vercel.svg" title="Vercel"></a>
 <a href="https://aws.amazon.com/"><img src="icons/AWS.svg" title="AWS"></a>
 
@@ -109,5 +108,6 @@
 <a href="https://www.python.org/"><img src="icons/Python.svg" title="Python"></a>
 <a href="https://grpc.io"><img src="icons/gRPC.svg" title="gRPC"></a>
 <a href="https://xstate.js.org/"><img src="icons/Xstate.svg" title="Xstate"></a>
+<a href="https://www.mongodb.com/"><img src="icons/MongoDB.svg" title="MongoDB"></a>
 
 </td></tr></table>
