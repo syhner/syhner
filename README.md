@@ -71,7 +71,6 @@
 <a href="https://nextjs.org/"><img src="icons/Next-js.svg" title="Next.js"></a>
 <a href="https://www.docker.com/"><img src="icons/Docker.svg" title="Docker"></a>
 <a href="https://playwright.dev/"><img src="icons/Playwright.svg" title="Playwright"></a>
-<a href="https://developer.chrome.com/docs/devtools/"><img src="icons/Chrome.svg" title="Chrome developer tools"></a>
 <a href="https://github.com/"><img src="icons/GitHub.svg" title="GitHub"></a>
 <a href="https://github.com/features/actions"><img src="icons/Github-Actions.svg" title="GitHub Actions"></a>
 <a href="https://web.dev/progressive-web-apps/"><img src="icons/PWA.svg" title="Progressive Web Apps"></a>
