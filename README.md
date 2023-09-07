@@ -12,6 +12,7 @@
 
 <a href="https://linear.app/"><img src="icons/linear.svg" title="Linear"></a>
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
+<a href="https://bun.sh"><img src="icons/bun.svg" title="Bun"></a>
 <a href="https://motioncanvas.io/"><img src="icons/Motion-Canvas.svg" title="Motion-Canvas"></a>
 <a href="https://developer.mozilla.org/en-US/docs/WebAssembly"><img src="icons/WebAssembly.svg" title="WebAssembly"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
