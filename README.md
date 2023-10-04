@@ -12,7 +12,6 @@
 
 <a href="https://linear.app/"><img src="icons/linear.svg" title="Linear"></a>
 <a href="https://www.rust-lang.org/"><img src="icons/Rust.svg" title="Rust"></a>
-<a href="https://bun.sh"><img src="icons/bun.svg" title="Bun"></a>
 <a href="https://motioncanvas.io/"><img src="icons/Motion-Canvas.svg" title="Motion-Canvas"></a>
 <a href="https://developer.mozilla.org/en-US/docs/WebAssembly"><img src="icons/WebAssembly.svg" title="WebAssembly"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"><img src="icons/WebGL.svg" title="WebGL"></a>
@@ -42,12 +41,9 @@
 <a href="https://github.com/features/copilot"><img src="icons/github-copilot.png" title="GitHub Copilot"></a>
 <a href="https://tableplus.com/"><img src="icons/TablePlus.png" title="TablePlus" width='40px'></a>
 <a href="https://en.wikipedia.org/wiki/Markdown"><img src="icons/Markdown.svg" title="Markdown"></a>
-<a href="https://nodejs.org"><img src="icons/NodeJS.svg" title="NodeJS"></a>
-<a href="https://pnpm.io"><img src="icons/pnpm.svg" title="pnpm"></a>
 <a href="https://www.typescriptlang.org/"><img src="icons/TypeScript.svg" title="TypeScript"></a>
-<a href="https://vitejs.dev/"><img src="icons/Vite.svg" title="Vite"></a>
+<a href="https://bun.sh"><img src="icons/bun.svg" title="Bun"></a>
 <a href="https://zod.dev/"><img src="icons/Zod.svg" title="zod"></a>
-<a href="https://vitest.dev/"><img src="icons/Vitest.svg" title="Vitest"></a>
 <a href="https://redis.io/"><img src="icons/Redis.svg" title="Redis"></a>
 <a href="https://www.postgresql.org"><img src="icons/PostgreSQL.svg" title="PostgreSQL"></a>
 <a href="https://orm.drizzle.team"><img src="icons/drizzle.svg" title="Drizzle"></a>
@@ -95,6 +91,10 @@
 <a href="https://www.mathworks.com/products/matlab.html"><img src="icons/MATLAB.svg" title="MATLAB"></a>
 <a href="https://www.maplesoft.com/products/Maple/"><img src="icons/Maple.svg" title="Maple"></a>
 <a href="https://www.python.org/"><img src="icons/Python.svg" title="Python"></a>
+<a href="https://nodejs.org"><img src="icons/NodeJS.svg" title="NodeJS"></a>
+<a href="https://pnpm.io"><img src="icons/pnpm.svg" title="pnpm"></a>
+<a href="https://vitejs.dev/"><img src="icons/Vite.svg" title="Vite"></a>
+<a href="https://vitest.dev/"><img src="icons/Vitest.svg" title="Vitest"></a>
 <a href="https://nestjs.com/"><img src="icons/NestJS.svg" title="NestJS"></a>
 <a href="https://grpc.io"><img src="icons/gRPC.svg" title="gRPC"></a>
 <a href="https://strapi.io/"><img src="icons/Strapi.svg" title="Strapi"></a>
@@ -104,6 +104,6 @@
 <a href="https://auth0.com/"><img src="icons/Auth0.svg" title="Auth0"></a>
 <a href="https://storybook.js.org/"><img src="icons/Storybook.svg" title="Storybook"></a>
 <a href="https://www.cypress.io/"><img src="icons/Cypress.svg" title="Cypress"></a>
-<a href="https://firebase.google.com//"><img src="icons/Firebase.svg" title="Firebase"></a>
+<a href="https://firebase.google.com/"><img src="icons/Firebase.svg" title="Firebase"></a>
 
 </td></tr></table>
