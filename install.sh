@@ -87,5 +87,9 @@ else
   exit 1
 fi
 
-. ./packages-install/powerlevel10k.sh
-. ./packages-install/bat.sh
+echo "Installing packages"
+find "./packages-install" -name '*.sh' -type f | while read -r script; do
+  echo "Running script: $script"
+  . "$script"
+done
+echo "Finished installing packages"

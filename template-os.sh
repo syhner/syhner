@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  true # TODO
+  return # TODO
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  true # TODO
+  return # TODO
 elif [[ "$OSTYPE" == "msys" ]]; then
-  true # TODO
+  return # TODO
 fi
