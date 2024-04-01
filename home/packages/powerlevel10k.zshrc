@@ -3,7 +3,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "msys" ]]; then
-  return # TODO
+  source "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
