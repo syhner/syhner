@@ -1,20 +1,9 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  source "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
+  source_or_install "$HOME/powerlevel10k/powerlevel10k.zsh-theme" "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+  source_or_install "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" "brew install powerlevel10k"
 elif [[ "$OSTYPE" == "msys" ]]; then
   true # TODO
-fi
-
-if ! command -v p10k >/dev/null; then
-  echo "Installing powerlevel10k"
-  if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
-  elif [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install powerlevel10k
-  elif [[ "$OSTYPE" == "msys" ]]; then
-    true # TODO
-  fi
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
