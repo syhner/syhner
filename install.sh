@@ -5,20 +5,7 @@ DOTFILES=$(dirname -- "$(readlink -f -- "$0")")
 export DOTFILES
 export DOTFILES_HOME="$DOTFILES/home"
 
-function mkcp() {
-  if [[ "$#" -ne 2 ]]; then
-    echo "Usage: mkcp <source> <destination>"
-    exit 1
-  fi
-
-  local source="$1"
-  local destination="$2"
-  local dir_to_create
-  dir_to_create="$(dirname -- "$destination")"
-
-  [[ ! -e $dir_to_create ]] && mkdir -p "$dir_to_create"
-  cp "$source" "$destination"
-}
+source "$DOTFILES/home/util/functions.sh"
 
 function copy_home_file() {
   if [[ "$#" -ne 1 ]]; then
@@ -29,7 +16,6 @@ function copy_home_file() {
   local file_path="$1"
   local file_path_relative
   file_path_relative="${file_path#"home/"}"
-  local dir_to_create
 
   if [[ ! -f "$file_path" ]]; then
     echo "File $file_path does not exist in dotfiles"
@@ -100,55 +86,6 @@ else
   echo "Unsupported OSTYPE: $OSTYPE"
   exit 1
 fi
-
-function install_package() {
-  if [[ "$#" -eq 1 ]]; then
-    local package_name="$1"
-    local install_command=false
-  elif [[ "$#" -eq 2 ]]; then
-    local package_name="$1"
-    local install_command="$2"
-  else
-    echo "Usage: install_package <package_name> [install_command]"
-    exit 1
-  fi
-
-  if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-    if dpkg-query -W -f='${Status}' "$package_name" 2>/dev/null | grep -q "installed"; then
-      echo "$package_name is already installed with apt"
-    elif [[ -n "$install_command" ]]; then
-      echo "Installing $package_name with custom install command"
-      eval "$install_command"
-    else
-      sudo apt install "$package_name"
-    fi
-
-  elif [[ "$OSTYPE" == "darwin"* ]]; then
-    if brew list "$package_name" &>/dev/null; then
-      echo "$package_name is already installed with Homebrew."
-    elif [[ -n "$install_command" ]]; then
-      echo "Installing $package_name with custom install command"
-      eval "$install_command"
-    else
-      echo "Installing $package_name with brew install"
-      brew install "$package_name"
-    fi
-
-  elif [[ "$OSTYPE" == "msys" ]]; then
-    if winget list --id "$package_name" &>/dev/null; then
-      echo "$package_name is already installed with winget."
-    elif [[ -n "$install_command" ]]; then
-      echo "Installing $package_name with custom install command"
-      eval "$install_command"
-    else
-      winget install "--id=$package_name" -e
-    fi
-
-  else
-    echo "Unsupported OSTYPE: $OSTYPE"
-    exit 1
-  fi
-}
 
 . ./packages-install/powerlevel10k.sh
 . ./packages-install/bat.sh

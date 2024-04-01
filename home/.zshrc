@@ -5,6 +5,7 @@ fi
 autoload -Uz compinit
 compinit
 
+source "$HOME/util/functions.sh"
 source "$HOME/packages/powerlevel10k.zshrc"
 source "$HOME/packages/git.zshrc"
 source "$HOME/packages/bat.zshrc"
