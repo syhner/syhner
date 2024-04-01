@@ -27,7 +27,7 @@ function install_package() {
       echo "$package_name is already installed with apt"
     elif [[ "$install_command" == "" ]]; then
       echo "Installing $package_name with package manager"
-      sudo apt install "$package_name"
+      sudo apt install --yes "$package_name"
     else
       echo "Installing $package_name with custom install command"
       eval "$install_command"
