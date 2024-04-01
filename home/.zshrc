@@ -26,7 +26,11 @@ function source_or_install() {
   fi
 }
 
+autoload -Uz compinit
+compinit
+
 source "$HOME/zsh/powerlevel10k.zsh"
+source "$HOME/zsh/git.zsh"
 
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
