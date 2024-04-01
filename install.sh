@@ -41,7 +41,6 @@ function copy_home_file() {
       # File exists in home directory and is different to file in dotfiles so create a backup
       unix_timestamp="$(date +%s)"
       mkcp "$HOME/$file_path_relative" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
-
       # Replace file in home directory
       cp -f "$file_path" "$HOME/$file_path_relative"
     fi
@@ -150,9 +149,4 @@ function install_package() {
   fi
 }
 
-echo "Installing packages"
-find "./packages-install" -name '*.sh' -type f | while read -r script; do
-  echo "Running script: $script"
-  . "$script"
-done
-echo "Finished installing packages"
+. ./packages-install/powerlevel10k.sh
