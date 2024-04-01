@@ -52,9 +52,7 @@ function copy_home_file() {
 }
 
 ignore_files=(.DS_Store)
-
 echo "Copying files from $DOTFILES_HOME to $HOME"
-
 find "home" -type f | while read -r home_file; do
   skip=false
   for ignore_file in "${ignore_files[@]}"; do
@@ -67,5 +65,33 @@ find "home" -type f | while read -r home_file; do
     copy_home_file "$home_file"
   fi
 done
-
 echo "Finished copying files from $DOTFILES_HOME to $HOME"
+
+# Package manager
+
+if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
+  echo "Operating system is $OSTYPE" # Linux or WSL
+  if ! command -v apt >/dev/null; then
+    echo "apt is not installed"
+    exit 1
+  fi
+  echo "Using apt to install packages"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  echo 'Operating system is darwin' # macOS
+  if ! command -v brew >/dev/null; then
+    echo "Homebrew is not installed, installing now"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+  echo "Using Homebrew to install packages"
+elif [[ "$OSTYPE" == "msys" ]]; then
+  # Windows
+  echo "Operating system: Windows"
+  if ! command -v winget >/dev/null; then
+    echo "winget is not installed"
+    exit 1
+  fi
+  echo "Using winget to install packages"
+else
+  echo "Unsupported OSTYPE: $OSTYPE"
+  exit 1
+fi
