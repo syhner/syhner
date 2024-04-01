@@ -60,38 +60,99 @@ find "home" -type f | while read -r home_file; do
       skip=true
     fi
   done
-
   if ! $skip; then
     copy_home_file "$home_file"
   fi
 done
 echo "Finished copying files from $DOTFILES_HOME to $HOME"
 
-# Package manager
-
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   echo "Operating system is $OSTYPE" # Linux or WSL
-  if ! command -v apt >/dev/null; then
-    echo "apt is not installed"
+  echo "Checking for package manager: apt"
+  if command -v apt >/dev/null; then
+    echo "Package manager is installed"
+  else
+    echo "Package manager is not installed, please install manually"
     exit 1
   fi
-  echo "Using apt to install packages"
+  echo "Updating package manager"
+  sudo apt update
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   echo 'Operating system is darwin' # macOS
-  if ! command -v brew >/dev/null; then
-    echo "Homebrew is not installed, installing now"
+  echo "Checking for package manager: brew"
+  if command -v brew >/dev/null; then
+    echo "Package manager is installed"
+  else
+    echo "Package manager is not installed, installing now"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-  echo "Using Homebrew to install packages"
+  echo "Updating package manager"
+  brew update
 elif [[ "$OSTYPE" == "msys" ]]; then
-  # Windows
-  echo "Operating system: Windows"
-  if ! command -v winget >/dev/null; then
-    echo "winget is not installed"
+  echo "Operating system: Windows" # Windows
+  echo "Checking for package manager: winget"
+  if command -v winget >/dev/null; then
+    echo "Package manager is installed"
+  else
+    echo "Package manager is not installed, please install manually"
     exit 1
   fi
-  echo "Using winget to install packages"
 else
   echo "Unsupported OSTYPE: $OSTYPE"
   exit 1
 fi
+
+function install_package() {
+  if [[ "$#" -eq 1 ]]; then
+    local package_name="$1"
+  elif [[ "$#" -eq 2 ]]; then
+    local package_name="$1"
+    local install_command="$2"
+  else
+    echo "Usage: install_package <package_name> [install_command]"
+    exit 1
+  fi
+
+  if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
+    if dpkg-query -W -f='${Status}' "$package_name" 2>/dev/null | grep -q "installed"; then
+      echo "$package_name is already installed with apt"
+    elif [[ -n "$install_command" ]]; then
+      echo "Installing $package_name with custom install command"
+      eval "$install_command"
+    else
+      sudo apt install "$package_name"
+    fi
+
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    if brew list "$package_name" &>/dev/null; then
+      echo "$package_name is already installed with Homebrew."
+    elif [[ -n "$install_command" ]]; then
+      echo "Installing $package_name with custom install command"
+      eval "$install_command"
+    else
+      echo "Installing $package_name with brew install"
+      brew install "$package_name"
+    fi
+
+  elif [[ "$OSTYPE" == "msys" ]]; then
+    if winget list --id "$package_name" &>/dev/null; then
+      echo "$package_name is already installed with winget."
+    elif [[ -n "$install_command" ]]; then
+      echo "Installing $package_name with custom install command"
+      eval "$install_command"
+    else
+      winget install "$package_name"
+    fi
+
+  else
+    echo "Unsupported OSTYPE: $OSTYPE"
+    exit 1
+  fi
+}
+
+echo "Installing packages"
+find "./packages-install" -name '*.sh' -type f | while read -r script; do
+  echo "Running script: $script"
+  . "$script"
+done
+echo "Finished installing packages"
