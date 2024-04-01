@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-echo "Installing powerlevel10k"
+package_name="powerlevel10k"
+
+echo "Checking for $package_name installation"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   if [[ ! -f "$HOME/powerlevel10k/powerlevel10k.zsh-theme" ]]; then

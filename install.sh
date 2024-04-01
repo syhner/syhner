@@ -104,6 +104,7 @@ fi
 function install_package() {
   if [[ "$#" -eq 1 ]]; then
     local package_name="$1"
+    local install_command=false
   elif [[ "$#" -eq 2 ]]; then
     local package_name="$1"
     local install_command="$2"
@@ -140,7 +141,7 @@ function install_package() {
       echo "Installing $package_name with custom install command"
       eval "$install_command"
     else
-      winget install "$package_name"
+      winget install "--id=$package_name" -e
     fi
 
   else
@@ -150,3 +151,4 @@ function install_package() {
 }
 
 . ./packages-install/powerlevel10k.sh
+. ./packages-install/bat.sh

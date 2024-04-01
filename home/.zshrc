@@ -7,6 +7,7 @@ compinit
 
 source "$HOME/packages/powerlevel10k.zshrc"
 source "$HOME/packages/git.zshrc"
+source "$HOME/packages/bat.zshrc"
 
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
