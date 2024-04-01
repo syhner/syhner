@@ -29,8 +29,8 @@ function source_or_install() {
 autoload -Uz compinit
 compinit
 
-source "$HOME/zsh/powerlevel10k.zsh"
-source "$HOME/zsh/git.zsh"
+source "$HOME/packages/powerlevel10k.zshrc"
+source "$HOME/packages/git.zshrc"
 
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
