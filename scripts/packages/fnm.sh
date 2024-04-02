@@ -16,5 +16,3 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
 fi
-
-fnm install --lts
