@@ -9,6 +9,7 @@ source "$HOME/util/functions.sh"
 
 source "$HOME/modules/bat.zshrc"
 source "$HOME/modules/bun.zshrc"
+source "$HOME/modules/fnm.zshrc"
 source "$HOME/modules/git.zshrc"
 source "$HOME/modules/powerlevel10k.zshrc"
 
