@@ -7,10 +7,10 @@ compinit
 
 source "$HOME/util/functions.sh"
 
-source "$HOME/packages/bat.zshrc"
-source "$HOME/packages/bun.zshrc"
-source "$HOME/packages/git.zshrc"
-source "$HOME/packages/powerlevel10k.zshrc"
+source "$HOME/modules/bat.zshrc"
+source "$HOME/modules/bun.zshrc"
+source "$HOME/modules/git.zshrc"
+source "$HOME/modules/powerlevel10k.zshrc"
 
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof

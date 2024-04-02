@@ -1,1 +1,1 @@
-source "$HOME/packages/homebrew.zshenv"
+source "$HOME/modules/homebrew.zshenv"
