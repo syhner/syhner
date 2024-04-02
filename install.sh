@@ -57,6 +57,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   if command -v apt >/dev/null; then
     echo "Package manager is installed, updating package manager"
     sudo apt update
+    echo "Finished updating package manager"
   else
     echo "Package manager is not installed, please install manually"
     exit 1
@@ -67,9 +68,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   if command -v brew >/dev/null; then
     echo "Package manager is installed, updating package manager"
     brew update
+    echo "Finished updating package manager"
   else
     echo "Package manager is not installed, installing now"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Finished installing package manager"
   fi
 
 elif [[ "$OSTYPE" == "msys" ]]; then
@@ -78,6 +81,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   if command -v winget >/dev/null; then
     echo "Package manager is installed, updating package manager"
     winget upgrade --accept-source-agreements --accept-package-agreements
+    echo "Finished updating package manager"
   else
     echo "Package manager is not installed, please install manually"
     exit 1
