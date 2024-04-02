@@ -79,9 +79,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   echo "Operating system: Windows" # Windows
   echo "Checking for package manager: winget"
   if command -v winget >/dev/null; then
-    echo "Package manager is installed, updating package manager"
-    winget upgrade --accept-source-agreements --accept-package-agreements
-    echo "Finished updating package manager"
+    echo "Package manager is installed"
   else
     echo "Package manager is not installed, please install manually"
     exit 1

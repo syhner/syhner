@@ -49,7 +49,7 @@ function install_package() {
       echo "$package_name is already installed with winget."
     elif [[ "$install_command" == "" ]]; then
       echo "Installing $package_name with package manager"
-      winget install "--id=$package_name" -e
+      winget install "--id=$package_name" --exact --accept-source-agreements --accept-package-agreements
     else
       echo "Installing $package_name with custom install command"
       eval "$install_command"
