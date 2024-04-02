@@ -7,6 +7,12 @@ Cross-platform dotfiles. Works on Linux, macOS, Windows, and WSL.
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - bash (comes with Linux / macOS / WSL, or with git for Windows)
 
+### Windows
+
+Installed packages may not be found / not add to your PATH automatically (i.e. due to not having admin privileges / not in developer mode). In this case, you will need to do the following (requires admin privileges):
+
+- Settings > System Properties > Environment Variables > (User or System) Variables > Path > New > `%USERPROFILE%\AppData\Local\Microsoft\WinGet\Links`
+
 ## Install
 
 ```sh
