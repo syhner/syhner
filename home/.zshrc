@@ -11,6 +11,8 @@ zstyle ':completion:*' list-suffixes zstyle ':completion:*' expand prefix suffix
 autoload bashcompinit && bashcompinit
 
 source "$HOME/.shrc"
+source "$HOME/modules/git.zsh"
+source "$HOME/modules/powerlevel10k.zsh"
 
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
