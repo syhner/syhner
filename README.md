@@ -24,4 +24,5 @@ cd dotfiles
 This will:
 
 1. Copy files from [`home/`](home/) to your home directory. Replaced files are kept at `backups/` in your local dotfiles repo, which is gitignored.
-2. Run package install scripts in [`packages-install/`](packages-install/) using the right package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
+2. Check for package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
+3. Run package install scripts in [`scripts/packages/`](scripts/packages/) using the right package manager
