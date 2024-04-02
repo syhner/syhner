@@ -55,29 +55,29 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   echo "Operating system is $OSTYPE" # Linux or WSL
   echo "Checking for package manager: apt"
   if command -v apt >/dev/null; then
-    echo "Package manager is installed"
+    echo "Package manager is installed, updating package manager"
+    sudo apt update
   else
     echo "Package manager is not installed, please install manually"
     exit 1
   fi
-  echo "Updating package manager"
-  sudo apt update
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   echo 'Operating system is darwin' # macOS
   echo "Checking for package manager: brew"
   if command -v brew >/dev/null; then
-    echo "Package manager is installed"
+    echo "Package manager is installed, updating package manager"
+    brew update
   else
     echo "Package manager is not installed, installing now"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-  echo "Updating package manager"
-  brew update
+
 elif [[ "$OSTYPE" == "msys" ]]; then
   echo "Operating system: Windows" # Windows
   echo "Checking for package manager: winget"
   if command -v winget >/dev/null; then
-    echo "Package manager is installed"
+    echo "Package manager is installed, updating package manager"
+    winget upgrade --accept-source-agreements --accept-package-agreements
   else
     echo "Package manager is not installed, please install manually"
     exit 1
