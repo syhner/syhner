@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function mkcp() {
   if [[ "$#" -ne 2 ]]; then
     echo "Usage: mkcp <source> <destination>"
