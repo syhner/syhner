@@ -1,0 +1,7 @@
+source "$HOME/util/functions.sh"
+
+source "$HOME/modules/bat.sh"
+source "$HOME/modules/bun.sh"
+source "$HOME/modules/fnm.sh"
+source "$HOME/modules/git.sh"
+source "$HOME/modules/powerlevel10k.sh"
