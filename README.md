@@ -34,8 +34,28 @@ This will:
 
 ## TODO
 
+- git
+  - config
+  - aliases in bash
 - fonts
 - tmux
-- neovim
-- vscode
-- more cli tools
+- editors
+  - neovim
+  - vscode
+- cli tools
+  - exa
+  - cloudflared
+  - ngrok
+  - bat config
+- packages
+  - pyenv
+  - pnpm
+- mac
+  - trash-cli
+  - OS defaults
+  - karabiner
+  - yabai
+  - skhd
+  - homebrew casks
+- functions
+  - kill process on port with signal
