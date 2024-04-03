@@ -1,3 +1,8 @@
+if [[ "$SHELL" == *"bash" ]]; then
+  return # TODO - working git aliases in bash
+fi
+
+
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 
 # Git version checking

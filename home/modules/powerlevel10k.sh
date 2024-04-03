@@ -1,3 +1,7 @@
+if [[ "$SHELL" == *"bash" ]]; then
+  return
+fi
+
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   source "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "darwin"* ]]; then

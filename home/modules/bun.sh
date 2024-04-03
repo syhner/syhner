@@ -3,4 +3,4 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
 fi
 
 # Completions
-[ -s "$HOME/.bun/_bun" ] && source "/Users/siraj/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
