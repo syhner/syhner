@@ -1,5 +1,5 @@
-if [[ "$0" == *"bash" ]]; then
+if [[ $(current_shell) == "bash" ]]; then
   return # TODO
-elif [[ "$0" == *"zsh" ]]; then
+elif [[ $(current_shell) == "zsh" ]]; then
   return # TODO
 fi

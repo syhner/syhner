@@ -61,6 +61,14 @@ function install_package() {
   fi
 }
 
+function current_shell() {
+  if [[ -n "$BASH" ]]; then
+    echo 'bash'
+  elif [[ -n "$ZSH_NAME" ]]; then
+    echo 'zsh'
+  fi
+}
+
 function source_home() {
   if [[ "$#" -lt 1 ]]; then
     echo "Usage: source_home <file extension>"
@@ -70,11 +78,10 @@ function source_home() {
   local file_extension="$1"
 
   # Globs that don't match anything should be silent
-  if [[ "$0" == *"bash" ]]; then
+  if [[ $(current_shell) == "bash" ]]; then
     shopt -s nullglob
-  elif [[ "$0" == *"zsh" ]]; then
+  elif [[ $(current_shell) == "zsh" ]]; then
     setopt NULL_GLOB
-
   fi
 
   for dir in "$HOME/source-"*; do
@@ -84,4 +91,10 @@ function source_home() {
       fi
     done
   done
+
+  if [[ $(current_shell) == "bash" ]]; then
+    shopt -u nullglob
+  elif [[ $(current_shell) == "zsh" ]]; then
+    unsetopt NULL_GLOB
+  fi
 }
