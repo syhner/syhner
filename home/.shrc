@@ -1,8 +1,9 @@
 source "$HOME/util/functions.sh"
 
-for file in "$HOME/source-0/"*.sh; do
-  source "$file"
-done
-for file in "$HOME/source-1/"*.sh; do
-  source "$file"
+for dir in "$HOME/source-"*; do
+  for file in "$dir/"*.sh; do
+    if [[ -f "$file" ]]; then
+      source "$file"
+    fi
+  done
 done
