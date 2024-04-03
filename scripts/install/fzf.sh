@@ -11,7 +11,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
   if [[ ! -f "$HOME/.fzf/install" ]]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
-    "./$HOME/.fzf/install" --completion --key-bindings --
+    "./$HOME/.fzf/install" --completion --key-bindings --no-update-rc
     no-update-rc
   fi
 fi
