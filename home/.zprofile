@@ -1,1 +1,1 @@
-source "$HOME/modules/homebrew.zprofile"
+source "$HOME/source-0/homebrew.zprofile"
