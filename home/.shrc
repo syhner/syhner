@@ -1,5 +1,5 @@
 source "$HOME/util/functions.sh"
 
-for file in "$HOME/modules/"*.sh; do
+for file in "$HOME/source-auto/"*.sh; do
   source "$file"
 done

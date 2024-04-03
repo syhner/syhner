@@ -29,6 +29,9 @@ source "$HOME/.shrc"
 source "$HOME/modules/git.zsh"
 source "$HOME/modules/powerlevel10k.zsh"
 
+# syntax highlighting (needs to be after commands are loaded)
+source "$HOME/source-manual/zsh-syntax-highlighting.sh"
+
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
 fi
