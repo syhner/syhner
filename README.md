@@ -64,3 +64,6 @@ This will:
   - clean up custom install scripts
 - optimisations
   - parallelise package install scripts
+- UX
+  - nicer logs
+  - interactive installer (choose packages)
