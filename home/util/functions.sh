@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 function mkcp() {
   if [[ "$#" -ne 2 ]]; then
     echo "Usage: mkcp <source> <destination>"
@@ -61,4 +59,29 @@ function install_package() {
     echo "Unsupported OSTYPE: $OSTYPE"
     exit 1
   fi
+}
+
+function source_home() {
+  if [[ "$#" -lt 1 ]]; then
+    echo "Usage: source_home <file extension>"
+    exit 1
+  fi
+
+  local file_extension="$1"
+
+  # Globs that don't match anything should be silent
+  if [[ "$SHELL" == *"bash" ]]; then
+    shopt -s nullglob
+  elif [[ "$SHELL" == *"zsh" ]]; then
+    setopt NULL_GLOB
+
+  fi
+
+  for dir in "$HOME/source-"*; do
+    for file in "$dir/"*."$file_extension"; do
+      if [[ -f "$file" ]]; then
+        source "$file"
+      fi
+    done
+  done
 }

@@ -1,1 +1,3 @@
-source "$HOME/source-0/homebrew.zshenv"
+source "$HOME/util/functions.sh"
+
+source_home zshenv
