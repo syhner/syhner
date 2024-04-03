@@ -70,9 +70,9 @@ function source_home() {
   local file_extension="$1"
 
   # Globs that don't match anything should be silent
-  if [[ "$SHELL" == *"bash" ]]; then
+  if [[ "$0" == *"bash" ]]; then
     shopt -s nullglob
-  elif [[ "$SHELL" == *"zsh" ]]; then
+  elif [[ "$0" == *"zsh" ]]; then
     setopt NULL_GLOB
 
   fi

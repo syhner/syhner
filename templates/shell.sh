@@ -1,5 +1,5 @@
-if [[ "$SHELL" == *"bash" ]]; then
+if [[ "$0" == *"bash" ]]; then
   return # TODO
-elif [[ "$SHELL" == *"zsh" ]]; then
+elif [[ "$0" == *"zsh" ]]; then
   return # TODO
 fi

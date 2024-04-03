@@ -9,8 +9,8 @@ fi
 eval "$(fnm env --use-on-cd)"
 
 # Completions
-if [[ "$SHELL" == *"bash" ]]; then
+if [[ "$0" == *"bash" ]]; then
   eval "$(fnm completions --shell bash)"
-elif [[ "$SHELL" == *"zsh" ]]; then
+elif [[ "$0" == *"zsh" ]]; then
   eval "$(fnm completions --shell zsh)"
 fi
