@@ -8,7 +8,7 @@ export DOTFILES_HOME="$DOTFILES/home"
 source "$DOTFILES_HOME/util/functions.sh"
 
 echo "Installing packages"
-find "$DOTFILES/scripts/packages" -name '*.sh' -type f | while read -r script; do
+find "$DOTFILES/scripts/install" -name '*.sh' -type f | while read -r script; do
   echo "Running script: $script"
   . "$script"
 done
