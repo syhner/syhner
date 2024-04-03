@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-package_name="bat"
+package_name="exa"
 
 echo "Checking for $package_name installation"
 
@@ -9,5 +9,5 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then
-  install_package "sharkdp.bat"
+  return # Not yet supported
 fi

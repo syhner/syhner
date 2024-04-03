@@ -43,7 +43,6 @@ This will:
   - neovim
   - vscode
 - cli tools
-  - exa
   - cloudflared
   - ngrok
   - bat config
@@ -67,3 +66,6 @@ This will:
 - UX
   - nicer logs
   - interactive installer (choose packages)
+- robustness
+  - symlink home/ ?
+  - clean up deleted `source-<number>/` files

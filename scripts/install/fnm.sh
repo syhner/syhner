@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
     curl -fsSL https://fnm.vercel.app/install | bash
   fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  install_package "fnm"
+  install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
 fi
