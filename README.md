@@ -24,5 +24,18 @@ cd dotfiles
 This will:
 
 1. Copy files from [`home/`](home/) to your home directory. Replaced files are kept at `backups/` in your local dotfiles repo, which is gitignored.
+
+   - bash and zsh will source `home/source-<number>/*.sh` files in order
+   - bash will source `home/source-<number>/*.bash` files in order
+   - zsh will source `home/source-<number>/*.zsh` files in order
+
 2. Check for package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
-3. Run package install scripts in [`scripts/packages/`](scripts/packages/) using the right package manager
+3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
+
+## TODO
+
+- fonts
+- tmux
+- neovim
+- vscode
+- more cli tools
