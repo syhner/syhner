@@ -47,6 +47,7 @@ This will:
   - cloudflared
   - ngrok
   - bat config
+  - and more from previous Brewfile
 - packages
   - pyenv
   - pnpm
@@ -61,3 +62,5 @@ This will:
   - kill process on port with signal
 - refactoring
   - clean up custom install scripts
+- optimisations
+  - parallelise package install scripts
