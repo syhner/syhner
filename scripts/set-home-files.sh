@@ -23,7 +23,9 @@ function copy_home_file() {
   fi
 
   if [[ -f "$HOME/$file_path_relative" ]]; then
-    if ! diff -q "$HOME/$file_path_relative" "$file_path" >/dev/null; then
+    if diff -q "$HOME/$file_path_relative" "$file_path" >/dev/null; then
+      echo "Up to date: $HOME/$file_path_relative"
+    else
       unix_timestamp="$(date +%s)"
       mkcp "$HOME/$file_path_relative" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
       echo "Out of date: $HOME/$file_path_relative"
@@ -32,7 +34,6 @@ function copy_home_file() {
       cp -f "$file_path" "$HOME/$file_path_relative"
       echo "Replaced file: $HOME/$file_path_relative"
     fi
-    echo "Up to date: $file_path_relative"
   else
     # File does not exist so create it
     echo "Does not exist: $HOME/$file_path_relative"
