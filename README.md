@@ -66,6 +66,8 @@ This will:
 - UX
   - nicer logs
   - interactive installer (choose packages)
+  - uninstaller
 - robustness
   - symlink home/ ?
   - clean up deleted `source-<number>/` files
+  - CI shellcheck

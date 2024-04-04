@@ -69,6 +69,19 @@ function current_shell() {
   fi
 }
 
+function source_if_exists() {
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: source_if_exists <file>"
+    exit 1
+  fi
+
+  local package_name="$1"
+
+  if [[ -f "$1" ]]; then
+    source "$1"
+  fi
+}
+
 function source_home() {
   if [[ "$#" -lt 1 ]]; then
     echo "Usage: source_home <file extension>"
@@ -86,9 +99,7 @@ function source_home() {
 
   for dir in "$HOME/source-"*; do
     for file in "$dir/"*."$file_extension"; do
-      if [[ -f "$file" ]]; then
-        source "$file"
-      fi
+      source_if_exists "$file"
     done
   done
 
