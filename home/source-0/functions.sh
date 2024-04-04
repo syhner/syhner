@@ -112,3 +112,16 @@ function source_home() {
     unsetopt NULL_GLOB
   fi
 }
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  function reset_permissions() {
+    if [[ "$#" -lt 1 ]]; then
+      echo "Usage: reset_permissions <path_to_application>"
+      exit 1
+    fi
+
+    local path_to_application="$1"
+
+    mdls "$path_to_application" | grep kMDItemCF | awk -F'"' '{print $2}' | xargs tccutil reset All
+  }
+fi
