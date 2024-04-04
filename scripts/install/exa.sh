@@ -9,7 +9,7 @@ source "$DOTFILES_HOME/source-0/functions.sh"
 package_name="exa"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  install_package "$package_name"
+  return # TODO
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then
