@@ -50,7 +50,7 @@ function install_package() {
     check_installed_command="$1"
     install_command="$2"
 
-    if $check_installed_command &>/dev/null; then
+    if eval "$check_installed_command" &>/dev/null; then
       echo "Package is already installed"
     else
       echo "Installing package"
