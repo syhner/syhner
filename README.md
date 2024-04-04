@@ -37,7 +37,6 @@ This will:
 - git
   - config
   - aliases in bash
-- fonts
 - tmux
 - editors
   - neovim
