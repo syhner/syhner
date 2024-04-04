@@ -1,13 +1,13 @@
-if ! command -v p10k &> /dev/null; then
-  return
-fi
-
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   source_if_exists "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   source_if_exists "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "msys" ]]; then
   source_if_exists "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
+fi
+
+if ! command -v p10k &> /dev/null; then
+  return
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
