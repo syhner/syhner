@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
+set -euo pipefail # strict mode
+
+export DOTFILES
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
+export DOTFILES_HOME="$DOTFILES/home"
+source "$DOTFILES_HOME/source-0/functions.sh"
 
 package_name="powerlevel10k"
 
-echo "Checking for $package_name installation"
-
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  if [[ ! -f "$HOME/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/powerlevel10k"
-  fi
+  install_package "$([[ -f $HOME/powerlevel10k/powerlevel10k.zsh-theme ]])" "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then
-  if [[ ! -f "$HOME/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/powerlevel10k"
-  fi
+  install_package "$([[ -f "$HOME/powerlevel10k/powerlevel10k.zsh-theme" ]])" "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k"
 fi
-
-echo "Finished installing powerlevel10k"

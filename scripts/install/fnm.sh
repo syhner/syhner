@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
+set -euo pipefail # strict mode
+
+export DOTFILES
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
+export DOTFILES_HOME="$DOTFILES/home"
+source "$DOTFILES_HOME/source-0/functions.sh"
 
 package_name="fnm"
 
-echo "Checking for $package_name installation"
-
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  if command -v fnm >/dev/null; then
-    echo "$package_name is already installed"
-  else
-    echo "Installing $package_name with custom install command"
-    curl -fsSL https://fnm.vercel.app/install | bash
-  fi
+  install_package "$(command -v $package_name)" "curl -fsSL https://fnm.vercel.app/install | bash"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then

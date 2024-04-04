@@ -1,24 +1,17 @@
 #!/usr/bin/env bash
+set -euo pipefail # strict mode
+
+export DOTFILES
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
+export DOTFILES_HOME="$DOTFILES/home"
+source "$DOTFILES_HOME/source-0/functions.sh"
 
 package_name="bun"
 
-echo "Checking for $package_name installation"
-
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  if command -v bun >/dev/null; then
-    echo "$package_name is already installed"
-  else
-    echo "Installing $package_name with custom install command"
-    install_package "unzip"
-    curl -fsSL https://bun.sh/install | bash
-  fi
+  install_package "$(command -v $package_name)" "install_package unzip && curl -fsSL https://bun.sh/install | bash"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "oven-sh/bun/bun"
 elif [[ "$OSTYPE" == "msys" ]]; then
-  if command -v bun >/dev/null; then
-    echo "$package_name is already installed"
-  else
-    echo "Installing $package_name with custom install command"
-    powershell -c "irm bun.sh/install.ps1|iex"
-  fi
+  install_package "$(command -v $package_name)" "powershell -c \"irm bun.sh/install.ps1|iex\""
 fi

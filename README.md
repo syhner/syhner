@@ -59,8 +59,6 @@ This will:
   - homebrew casks
 - functions
   - kill process on port with signal
-- refactoring
-  - clean up custom install scripts
 - optimisations
   - parallelise package install scripts
 - UX

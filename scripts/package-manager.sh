@@ -6,7 +6,6 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel
 export DOTFILES_HOME="$DOTFILES/home"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  echo "Operating system is $OSTYPE" # Linux or WSL
   echo "Checking for package manager: apt"
   if command -v apt >/dev/null; then
     echo "Package manager is installed, updating package manager"
@@ -17,7 +16,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
     exit 1
   fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  echo 'Operating system is darwin' # macOS
   echo "Checking for package manager: brew"
   if command -v brew >/dev/null; then
     echo "Package manager is installed, updating package manager"
@@ -30,7 +28,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   fi
 
 elif [[ "$OSTYPE" == "msys" ]]; then
-  echo "Operating system: Windows" # Windows
   echo "Checking for package manager: winget"
   if command -v winget >/dev/null; then
     echo "Package manager is installed"

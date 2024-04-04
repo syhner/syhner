@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function mkcp() {
   if [[ "$#" -ne 2 ]]; then
     echo "Usage: mkcp <source> <destination>"
@@ -14,49 +16,50 @@ function mkcp() {
 }
 
 function install_package() {
-  if [[ "$#" -lt 1 ]]; then
-    echo "Usage: install_package <package_name> [install_command]"
-    exit 1
-  fi
+  local package_name
+  local check_installed_command
+  local install_command
 
-  local package_name="$1"
-  local install_command="${2:-""}"
+  if [[ "$#" -eq 1 ]]; then
+    package_name="$1"
 
-  if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-    if dpkg-query -W -f='${Status}' "$package_name" 2>/dev/null | grep -q "installed"; then
-      echo "$package_name is already installed with apt"
-    elif [[ "$install_command" == "" ]]; then
-      echo "Installing $package_name with package manager"
-      sudo apt install --yes "$package_name"
-    else
-      echo "Installing $package_name with custom install command"
-      eval "$install_command"
+    if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
+      if dpkg-query -W -f='${Status}' "$package_name" 2>/dev/null | grep -q "installed"; then
+        echo "$package_name is already installed with apt"
+      else
+        echo "Installing $package_name with package manager"
+        sudo apt install --yes "$package_name"
+      fi
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+      if brew list "$package_name" &>/dev/null; then
+        echo "$package_name is already installed with Homebrew."
+      else
+        echo "Installing $package_name with package manager"
+        brew install "$package_name"
+      fi
+
+    elif [[ "$OSTYPE" == "msys" ]]; then
+      if winget list --id "$package_name" &>/dev/null; then
+        echo "$package_name is already installed with winget."
+      else
+        echo "Installing $package_name with package manager"
+        winget install "--id=$package_name" --exact --accept-source-agreements --accept-package-agreements
+      fi
     fi
+  elif [[ "$#" -eq 2 ]]; then
+    check_installed_command="$1"
+    install_command="$2"
 
-  elif [[ "$OSTYPE" == "darwin"* ]]; then
-    if brew list "$package_name" &>/dev/null; then
-      echo "$package_name is already installed with Homebrew."
-    elif [[ "$install_command" == "" ]]; then
-      echo "Installing $package_name with package manager"
-      brew install "$package_name"
+    if $check_installed_command &>/dev/null; then
+      echo "Package is already installed"
     else
-      echo "Installing $package_name with custom install command"
-      eval "$install_command"
-    fi
-
-  elif [[ "$OSTYPE" == "msys" ]]; then
-    if winget list --id "$package_name" &>/dev/null; then
-      echo "$package_name is already installed with winget."
-    elif [[ "$install_command" == "" ]]; then
-      echo "Installing $package_name with package manager"
-      winget install "--id=$package_name" --exact --accept-source-agreements --accept-package-agreements
-    else
-      echo "Installing $package_name with custom install command"
+      echo "Installing package"
       eval "$install_command"
     fi
 
   else
-    echo "Unsupported OSTYPE: $OSTYPE"
+    echo "Usage: install_package <package_name>"
+    echo "Usage: install_package <check_installed_command> <install_command>"
     exit 1
   fi
 }

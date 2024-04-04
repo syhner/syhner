@@ -4,7 +4,6 @@ set -euo pipefail # strict mode
 export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
 export DOTFILES_HOME="$DOTFILES/home"
-
 source "$DOTFILES_HOME/source-0/functions.sh"
 
 function copy_home_file() {
@@ -24,7 +23,7 @@ function copy_home_file() {
 
   if [[ -f "$HOME/$file_path_relative" ]]; then
     if diff -q "$HOME/$file_path_relative" "$file_path" >/dev/null; then
-      echo "Up to date: $HOME/$file_path_relative"
+      true # echo "Up to date: $HOME/$file_path_relative"
     else
       unix_timestamp="$(date +%s)"
       mkcp "$HOME/$file_path_relative" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
