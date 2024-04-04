@@ -1,3 +1,7 @@
+if ! command -v p10k &> /dev/null; then
+  return
+fi
+
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   source_if_exists "$HOME/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "darwin"* ]]; then

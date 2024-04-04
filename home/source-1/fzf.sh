@@ -1,3 +1,7 @@
+if ! command -v fzf &>/dev/null; then
+  return
+fi
+
 # Completions
 if [[ $(current_shell) == "bash" ]]; then
   eval "$(fzf --bash)"

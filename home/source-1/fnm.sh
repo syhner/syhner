@@ -1,3 +1,7 @@
+if ! command -v fnm &>/dev/null; then
+  return
+fi
+
 if [ -d "$HOME/.fnm" ]; then
   export PATH="$HOME/.fnm:$PATH"
 elif [ -n "$XDG_DATA_HOME" ]; then
