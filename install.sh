@@ -3,7 +3,6 @@ set -euo pipefail # strict mode
 
 export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
-export DOTFILES_HOME="$DOTFILES/home"
 
 . "$DOTFILES/scripts/set-home-files.sh"
 . "$DOTFILES/scripts/package-manager.sh"

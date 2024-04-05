@@ -51,7 +51,6 @@ This will:
   - karabiner
   - yabai
   - skhd
-  - homebrew casks
 - functions
   - kill process on port with signal
   - get ip address
@@ -64,3 +63,5 @@ This will:
 - robustness
   - clean up deleted `source-<number>/` files
   - CI shellcheck
+- other
+  - move non-mac specific homebrew to install scripts

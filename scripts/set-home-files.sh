@@ -3,8 +3,7 @@ set -euo pipefail # strict mode
 
 export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
-export DOTFILES_HOME="$DOTFILES/home"
-source "$DOTFILES_HOME/source-0/functions.sh"
+source "$DOTFILES/home/source-0/functions.sh"
 
 function copy_home_file() {
   if [[ "$#" -ne 1 ]]; then
@@ -32,8 +31,8 @@ function copy_home_file() {
     exit 1
   fi
 
-  # Remove the $DOTFILES_HOME prefix
-  target_file=${file_path#"$DOTFILES_HOME/"}
+  # Remove the $DOTFILES/home prefix
+  target_file=${file_path#"$DOTFILES/home/"}
   # Remove the (<OS>) prefix
   target_file=${target_file#*(*)/}
   # Remove the .reference suffix
@@ -61,8 +60,8 @@ function copy_home_file() {
 }
 
 ignore_filenames=(.DS_Store)
-echo "Copying files from $DOTFILES_HOME to $HOME"
-find "$DOTFILES_HOME" -type f | while read -r home_file; do
+echo "Copying files from $DOTFILES/home to $HOME"
+find "$DOTFILES/home" -type f | while read -r home_file; do
   skip=false
   for ignore_file in "${ignore_filenames[@]}"; do
     filename=$(basename -- "$home_file")
@@ -85,4 +84,4 @@ find "$DOTFILES_HOME" -type f | while read -r home_file; do
 
   copy_home_file "$home_file"
 done
-echo "Finished copying files from $DOTFILES_HOME to $HOME"
+echo "Finished copying files from $DOTFILES/home to $HOME"
