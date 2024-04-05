@@ -47,7 +47,6 @@ This will:
 - packages
   - pyenv
 - mac
-  - trash-cli
   - OS defaults
   - karabiner
   - yabai
@@ -55,6 +54,7 @@ This will:
   - homebrew casks
 - functions
   - kill process on port with signal
+  - get ip address
 - optimisations
   - parallelise package install scripts
 - UX
