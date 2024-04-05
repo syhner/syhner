@@ -46,7 +46,6 @@ This will:
   - and more from previous Brewfile
 - packages
   - pyenv
-  - pnpm
 - mac
   - trash-cli
   - OS defaults

@@ -18,3 +18,5 @@ if [[ $(current_shell) == "bash" ]]; then
 elif [[ $(current_shell) == "zsh" ]]; then
   eval "$(fnm completions --shell zsh)"
 fi
+
+alias pnpx="pnpm dlx"
