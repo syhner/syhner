@@ -35,7 +35,6 @@ This will:
 ## TODO
 
 - git
-  - config
   - aliases in bash
 - tmux
 - editors
