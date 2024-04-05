@@ -16,12 +16,6 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
 fi
 
-if [ -d "$HOME/.fnm" ]; then
-  export PATH="$HOME/.fnm:$PATH"
-elif [ -n "$XDG_DATA_HOME" ]; then
-  export PATH="$XDG_DATA_HOME/fnm:$PATH"
-else
-  export PATH="$HOME/.local/share/fnm:$PATH"
+if command -v corepack &>/dev/null; then
+  corepack enable pnpm
 fi
-
-corepack enable pnpm
