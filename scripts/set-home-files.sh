@@ -13,31 +13,50 @@ function copy_home_file() {
   fi
 
   local file_path="$1"
-  local file_path_relative
-  file_path_relative="${file_path#*"home/"}"
 
-  if [[ ! -f "$file_path" ]]; then
-    echo "File $file_path does not exist in dotfiles"
+  local source_file
+  local target_file
+  local file_path_relative
+
+  if [[ $file_path == *".reference" ]]; then
+    source_file=$(cat "$file_path")
+  else
+    source_file="$file_path"
+  fi
+
+  if [[ ! -f "$source_file" ]]; then
+    echo "File $source_file does not exist"
+    if [[ $source_file != "$file_path" ]]; then
+      echo "Original source file: \"$file_path\""
+    fi
     exit 1
   fi
 
-  if [[ -f "$HOME/$file_path_relative" ]]; then
-    if diff -q "$HOME/$file_path_relative" "$file_path" >/dev/null; then
-      true # echo "Up to date: $HOME/$file_path_relative"
+  # Remove the $DOTFILES_HOME prefix
+  target_file=${file_path#"$DOTFILES_HOME/"}
+  # Remove the (<OS>) prefix
+  target_file=${target_file#*(*)/}
+  # Remove the .reference suffix
+  target_file=${target_file%.reference}
+  file_path_relative=$target_file
+  # Add the $HOME prefix
+  target_file="$HOME/$target_file"
+
+  if [[ -f "$target_file" ]]; then
+    if diff -q "$source_file" "$target_file" >/dev/null; then
+      true # File is up to date
     else
+      echo "Out of date: $file_path_relative"
       unix_timestamp="$(date +%s)"
-      mkcp "$HOME/$file_path_relative" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
-      echo "Out of date: $HOME/$file_path_relative"
+      mkcp "$target_file" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
       echo "Backup created: $DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
-      # Replace file in home directory
-      cp -f "$file_path" "$HOME/$file_path_relative"
-      echo "Replaced file: $HOME/$file_path_relative"
+      cp -f "$source_file" "$target_file"
+      echo "Replaced file: $target_file"
     fi
   else
-    # File does not exist so create it
-    echo "Does not exist: $HOME/$file_path_relative"
-    mkcp "$file_path" "$HOME/$file_path_relative"
-    echo "Created file: $HOME/$file_path_relative"
+    echo "Does not exist: $file_path_relative"
+    mkcp "$source_file" "$target_file"
+    echo "Created file: $target_file"
   fi
 }
 
@@ -51,8 +70,19 @@ find "$DOTFILES_HOME" -type f | while read -r home_file; do
       skip=true
     fi
   done
-  if ! $skip; then
-    copy_home_file "$home_file"
+
+  if $skip; then
+    continue
   fi
+
+  if [[ $home_file == *"home/(linux)"* ]] && [[ "$OSTYPE" != "linux-gnu"* ]] && [[ "$OSTYPE" != "cygwin"* ]]; then
+    continue
+  elif [[ $home_file == *"home/(mac)"* ]] && [[ "$OSTYPE" != "darwin"* ]]; then
+    continue
+  elif [[ $home_file == *"home/(windows)"* ]] && [[ "$OSTYPE" != "msys" ]]; then
+    continue
+  fi
+
+  copy_home_file "$home_file"
 done
 echo "Finished copying files from $DOTFILES_HOME to $HOME"

@@ -40,7 +40,6 @@ This will:
 - tmux
 - editors
   - neovim
-  - vscode
 - cli tools
   - cloudflared
   - ngrok
@@ -65,6 +64,5 @@ This will:
   - interactive installer (choose packages)
   - uninstaller
 - robustness
-  - symlink home/ ?
   - clean up deleted `source-<number>/` files
   - CI shellcheck
