@@ -58,7 +58,6 @@ This will:
   - nicer logs
   - interactive installer (choose packages)
   - uninstaller
-  - git hook `chmod +x scripts/install/*.sh`
 - robustness
   - clean up deleted `source-<number>/` files
   - CI shellcheck
