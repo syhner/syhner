@@ -434,5 +434,3 @@ alias gcob='git checkout -b'
 alias gcoB='git checkout -B'
 alias gsm='git switch -'
 alias gu='git reset --soft HEAD~1'
-
-alias gcdir="cd $(git rev-parse --show-toplevel)"
