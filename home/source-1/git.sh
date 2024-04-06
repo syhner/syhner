@@ -1,8 +1,11 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 
 # Git version checking
-autoload -Uz is-at-least
-git_version="${${(As: :)$(git version 2>/dev/null)}[3]}"
+if [[ $(current_shell) == "zsh" ]]; then
+  autoload -Uz is-at-least
+  git_version="${${(As: :)$(git version 2>/dev/null)}[3]}"
+fi
+
 
 #
 # Functions Current
@@ -100,7 +103,9 @@ function ggpnp() {
     ggl "${*}" && ggp "${*}"
   fi
 }
-compdef _git ggpnp=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggpnp=git-checkout
+fi
 
 alias ggpur='ggu'
 alias g='git'
@@ -181,7 +186,9 @@ function gccd() {
   # otherwise parse the repo URI and use the last part as the directory
   [[ -d "$_" ]] && cd "$_" || cd "${${repo:t}%.git/#}"
 }
-compdef _git gccd=git-clone
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git gccd=git-clone
+fi
 
 alias gcam='git commit --all --message'
 alias gcas='git commit --all --signoff'
@@ -207,22 +214,30 @@ alias gdcw='git diff --cached --word-diff'
 alias gds='git diff --staged'
 alias gdw='git diff --word-diff'
 
-function gdv() { git diff -w "$@" | view - }
-compdef _git gdv=git-diff
+function gdv() { 
+  git diff -w "$@" | view -
+}
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git gdv=git-diff
+fi
 
 alias gdup='git diff @{upstream}'
 
 function gdnolock() {
   git diff "$@" ":(exclude)package-lock.json" ":(exclude)*.lock"
 }
-compdef _git gdnolock=git-diff
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git gdnolock=git-diff
+fi
 
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gf='git fetch'
 # --jobs=<n> was added in git 2.8
-is-at-least 2.8 "$git_version" \
-  && alias gfa='git fetch --all --prune --jobs=10' \
-  || alias gfa='git fetch --all --prune'
+if [[ $(current_shell) == "zsh" ]]; then
+  is-at-least 2.8 "$git_version" \
+    && alias gfa='git fetch --all --prune --jobs=10' \
+    || alias gfa='git fetch --all --prune'
+fi
 alias gfo='git fetch origin'
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
@@ -245,7 +260,9 @@ function _git_log_prettily(){
     git log --pretty=$1
   fi
 }
-compdef _git _git_log_prettily=git-log
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git _git_log_prettily=git-log
+fi
 
 alias glp='_git_log_prettily'
 alias glg='git log --stat'
@@ -270,7 +287,9 @@ function ggu() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git pull --rebase origin "${b:=$1}"
 }
-compdef _git ggu=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggu=git-checkout
+fi
 
 alias gprom='git pull --rebase origin $(git_main_branch)'
 alias gpromi='git pull --rebase=interactive origin $(git_main_branch)'
@@ -284,7 +303,9 @@ function ggl() {
     git pull origin "${b:=$1}"
   fi
 }
-compdef _git ggl=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggl=git-checkout
+fi
 
 alias gluc='git pull upstream $(git_current_branch)'
 alias glum='git pull upstream $(git_main_branch)'
@@ -295,23 +316,31 @@ function ggf() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git push --force origin "${b:=$1}"
 }
-compdef _git ggf=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggf=git-checkout
+fi
 
 alias gpf!='git push --force'
-is-at-least 2.30 "$git_version" \
-  && alias gpf='git push --force-with-lease --force-if-includes' \
-  || alias gpf='git push --force-with-lease'
+if [[ $(current_shell) == "zsh" ]]; then
+  is-at-least 2.30 "$git_version" \
+    && alias gpf='git push --force-with-lease --force-if-includes' \
+    || alias gpf='git push --force-with-lease'
+fi
 
 function ggfl() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git push --force-with-lease origin "${b:=$1}"
 }
-compdef _git ggfl=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggfl=git-checkout
+fi
 
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
-is-at-least 2.30 "$git_version" \
-  && alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes' \
-  || alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease'
+if [[ $(current_shell) == "zsh" ]]; then
+  is-at-least 2.30 "$git_version" \
+    && alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes' \
+    || alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease'
+fi
 alias gpv='git push --verbose'
 alias gpoat='git push origin --all && git push origin --tags'
 alias gpod='git push origin --delete'
@@ -325,7 +354,9 @@ function ggp() {
     git push origin "${b:=$1}"
   fi
 }
-compdef _git ggp=git-checkout
+if [[ $(current_shell) == "zsh" ]]; then
+  compdef _git ggp=git-checkout
+fi
 
 alias gpu='git push upstream'
 alias grb='git rebase'
@@ -371,9 +402,11 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 # use the default stash push on git 2.13 and newer
-is-at-least 2.13 "$git_version" \
-  && alias gsta='git stash push' \
-  || alias gsta='git stash save'
+if [[ $(current_shell) == "zsh" ]]; then
+  is-at-least 2.13 "$git_version" \
+    && alias gsta='git stash push' \
+    || alias gsta='git stash save'
+fi
 alias gsts='git stash show --patch'
 alias gst='git status'
 alias gss='git status --short'
@@ -403,24 +436,28 @@ alias gtl='gtl(){ git tag --sort=-v:refname -n --list "${1}*" }; noglob gtl'
 alias gk='\gitk --all --branches &!'
 alias gke='\gitk --all $(git log --walk-reflogs --pretty=%h) &!'
 
-unset git_version
+if [[ $(current_shell) == "zsh" ]]; then
+  unset git_version
+fi
 
 # Logic for adding warnings on deprecated aliases
-local old_alias new_alias
-for old_alias new_alias (
-  # TODO(2023-10-19): remove deprecated `git pull --rebase` aliases
-  gup     gpr
-  gupv    gprv
-  gupa    gpra
-  gupav   gprav
-  gupom   gprom
-  gupomi  gpromi
-); do
-  aliases[$old_alias]="
-    print -Pu2 \"%F{yellow}[oh-my-zsh] '%F{red}${old_alias}%F{yellow}' is a deprecated alias, using '%F{green}${new_alias}%F{yellow}' instead.%f\"
-    $new_alias"
-done
-unset old_alias new_alias
+if [[ $(current_shell) == "zsh" ]]; then
+  local old_alias new_alias
+  for old_alias new_alias (
+    # TODO(2023-10-19): remove deprecated `git pull --rebase` aliases
+    gup     gpr
+    gupv    gprv
+    gupa    gpra
+    gupav   gprav
+    gupom   gprom
+    gupomi  gpromi
+  ); do
+    aliases[$old_alias]="
+      print -Pu2 \"%F{yellow}[oh-my-zsh] '%F{red}${old_alias}%F{yellow}' is a deprecated alias, using '%F{green}${new_alias}%F{yellow}' instead.%f\"
+      $new_alias"
+  done
+  unset old_alias new_alias
+fi
 
 # More aliases (not from oh-my-zsh)
 

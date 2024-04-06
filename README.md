@@ -34,8 +34,6 @@ This will:
 
 ## TODO
 
-- git
-  - aliases in bash
 - tmux
 - editors
   - neovim
