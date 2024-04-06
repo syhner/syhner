@@ -8,7 +8,7 @@ source "$DOTFILES/home/source-0/functions.sh"
 package_name="visual-studio-code"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  install_package code
+  true # Don't install
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then
