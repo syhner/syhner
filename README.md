@@ -44,8 +44,6 @@ This will:
   - ngrok
   - bat config
   - and more from previous Brewfile
-- packages
-  - pyenv
 - mac
   - OS defaults
   - karabiner

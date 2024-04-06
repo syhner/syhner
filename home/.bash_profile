@@ -1,3 +1,3 @@
 source "$HOME/source-0/functions.sh"
 source_home profile
-source_home zprofile
+source_home bash_profile

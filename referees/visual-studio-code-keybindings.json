@@ -614,5 +614,10 @@
     "key": "ctrl+k ctrl+p",
     "command": "copyRelativeFilePath",
     "when": "isWindows && !terminalFocus"
+  },
+  // TODO: Sort
+  {
+    "key": "cmd+s",
+    "command": "-relative-goto.select"
   }
 ]
