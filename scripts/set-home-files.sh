@@ -17,6 +17,8 @@ if [[ "$strategy" != "push" && "$strategy" != "pull" ]]; then
   exit 1
 fi
 
+unix_timestamp="$(date +%s)"
+
 function copy_home_file() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: copy_home_file <file_path>"
@@ -58,16 +60,14 @@ function copy_home_file() {
       true # File is up to date
     elif [[ $strategy == "push" ]]; then
       echo "Out of date: $file_path_relative"
-      unix_timestamp="$(date +%s)"
-      mkcp "$target_file" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
-      echo "Backup created: $DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
+      mkcp "$target_file" "$DOTFILES/backups/$unix_timestamp/$file_path_relative"
+      echo "Backup created: $DOTFILES/backups/$unix_timestamp/$file_path_relative"
       cp -f "$source_file" "$target_file"
       echo "Replaced file: $target_file"
     elif [[ $strategy == "pull" ]]; then
       echo "Out of date: $file_path_relative"
-      unix_timestamp="$(date +%s)"
-      mkcp "$source_file" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
-      echo "Backup created: $DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
+      mkcp "$source_file" "$DOTFILES/backups/$unix_timestamp/$file_path_relative"
+      echo "Backup created: $DOTFILES/backups/$unix_timestamp/$file_path_relative"
       cp -f "$target_file" "$source_file"
       echo "Replaced file: $source_file"
     fi
