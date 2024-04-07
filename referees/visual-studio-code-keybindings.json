@@ -301,6 +301,38 @@
     "command": "copyRelativeFilePath",
     "when": "isMac && !terminalFocus"
   },
+  // Go to symbol
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+b",
+    "command": "workbench.action.gotoSymbol",
+    "when": "isMac && !accessibilityHelpIsShown && !accessibleViewIsShown"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.showAllSymbols",
+    "when": "isMac"
+  },
+  // Relative goto
+  {
+    "key": "cmd+s",
+    "command": "-relative-goto.select",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+0",
+    "command": "relative-goto.goto",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar",
+    "when": "isMac"
+  },
 
   // Windows like mac
   {
@@ -615,9 +647,36 @@
     "command": "copyRelativeFilePath",
     "when": "isWindows && !terminalFocus"
   },
-  // TODO: Sort
+  // Go to symbol
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "when": "isWindows"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.gotoSymbol",
+    "when": "isWindows && !accessibilityHelpIsShown && !accessibleViewIsShown"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.showAllSymbols",
+    "when": "isWindows"
+  },
+  // Relative goto
   {
     "key": "cmd+s",
-    "command": "-relative-goto.select"
+    "command": "-relative-goto.select",
+    "when": "isWindows"
+  },
+  {
+    "key": "cmd+0",
+    "command": "relative-goto.goto",
+    "when": "isWindows"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar",
+    "when": "isWindows"
   }
 ]

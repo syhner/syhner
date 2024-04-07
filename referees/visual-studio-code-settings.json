@@ -62,9 +62,10 @@
   "workbench.preferredHighContrastColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "Tokyo Night",
   "window.restoreFullscreen": false,
   "workbench.activityBar.location": "hidden",
+  "editor.lineNumbers": "relative",
 
   // Editor
   "workbench.editor.showTabs": "single",
