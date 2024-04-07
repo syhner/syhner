@@ -246,22 +246,6 @@
     "command": "editor.action.showContextMenu",
     "when": "isMac && textInputFocus"
   },
-  // References
-  {
-    "key": "cmd+r",
-    "command": "editor.action.goToReferences",
-    "when": "isMac && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
-  {
-    "key": "cmd+r",
-    "command": "goToNextReference",
-    "when": "isMac && inReferenceSearchEditor || referenceSearchVisible"
-  },
-  {
-    "key": "shift+cmd+r",
-    "command": "goToPreviousReference",
-    "when": "isMac && inReferenceSearchEditor || referenceSearchVisible"
-  },
   // Suggestions
   {
     "key": "cmd+i",
@@ -317,7 +301,7 @@
     "command": "workbench.action.showAllSymbols",
     "when": "isMac"
   },
-  // Relative goto
+  // Relative goto line
   {
     "key": "cmd+s",
     "command": "-relative-goto.select",
@@ -333,6 +317,43 @@
     "command": "-workbench.action.focusSideBar",
     "when": "isMac"
   },
+  {
+    "key": "cmd+shift+0",
+    "command": "relative-goto.select",
+    "when": "isMac"
+  },
+  // Go to
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+t cmd+d",
+    "command": "editor.action.revealDefinition",
+    "when": "isMac && editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+t cmd+t",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+t cmd+i",
+    "command": "editor.action.goToImplementation",
+    "when": "isMac && editorHasImplementationProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+t cmd+r",
+    "command": "editor.action.goToReferences",
+    "when": "isMac && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+t cmd+s",
+    "command": "typescript.goToSourceDefinition",
+    "when": "isMac"
+  },
+
 
   // Windows like mac
   {
@@ -345,6 +366,7 @@
     "command": "deleteInsideWord",
     "when": "isWindows && textInputFocus && !editorReadonly"
   },
+
 
   /* Windows */
   {
@@ -592,22 +614,6 @@
     "command": "editor.action.showContextMenu",
     "when": "isWindows && textInputFocus"
   },
-  // References
-  {
-    "key": "ctrl+r",
-    "command": "editor.action.goToReferences",
-    "when": "isWindows && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "goToNextReference",
-    "when": "isWindows && inReferenceSearchEditor || referenceSearchVisible"
-  },
-  {
-    "key": "shift+ctrl+r",
-    "command": "goToPreviousReference",
-    "when": "isWindows && inReferenceSearchEditor || referenceSearchVisible"
-  },
   // Suggestions
   {
     "key": "ctrl+i",
@@ -663,7 +669,7 @@
     "command": "workbench.action.showAllSymbols",
     "when": "isWindows"
   },
-  // Relative goto
+  // Relative goto line
   {
     "key": "ctrl+s",
     "command": "-relative-goto.select",
@@ -677,6 +683,42 @@
   {
     "key": "ctrl+0",
     "command": "-workbench.action.focusSideBar",
+    "when": "isWindows"
+  },
+  {
+    "key": "cmd+shift+0",
+    "command": "relative-goto.select",
+    "when": "isMac"
+  },
+  // Go to
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.showAllSymbols",
+    "when": "isWindows"
+  },
+  {
+    "key": "ctrl+t ctrl+d",
+    "command": "editor.action.revealDefinition",
+    "when": "isWindows && editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+t ctrl+t",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "isWindows"
+  },
+  {
+    "key": "ctrl+t ctrl+i",
+    "command": "editor.action.goToImplementation",
+    "when": "isWindows && editorHasImplementationProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+t ctrl+r",
+    "command": "editor.action.goToReferences",
+    "when": "isWindows && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+t ctrl+s",
+    "command": "typescript.goToSourceDefinition",
     "when": "isWindows"
   }
 ]

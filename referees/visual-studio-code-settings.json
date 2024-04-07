@@ -58,14 +58,13 @@
   "window.autoDetectColorScheme": true,
   "breadcrumbs.enabled": false,
   "breadcrumbs.symbolPath": "off",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.colorTheme": "Tokyo Night",
   "window.restoreFullscreen": false,
   "workbench.activityBar.location": "hidden",
-  "editor.lineNumbers": "relative",
 
   // Editor
   "workbench.editor.showTabs": "single",
@@ -84,7 +83,7 @@
   "workbench.editor.enablePreview": true,
   "editor.folding": true,
   "editor.accessibilitySupport": "off",
-
+  "editor.lineNumbers": "relative",
 
   // Explorer
   "explorer.confirmDelete": false,

@@ -45,7 +45,6 @@ This will:
   - skhd
 - functions
   - kill process on port with signal
-  - get ip address
 - UX
   - nicer logs
   - interactive installer (choose packages)
