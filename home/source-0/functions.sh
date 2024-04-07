@@ -125,3 +125,13 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     mdls "$path_to_application" | grep kMDItemCF | awk -F'"' '{print $2}' | xargs tccutil reset All
   }
 fi
+
+function myip() {
+  if [[ "$OSTYPE" == "linux-gnu" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
+    hostname -I | awk '{print $1}'
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    ipconfig getifaddr en0
+  elif [[ $OSTYPE == "msys" ]]; then
+    ipconfig | grep -im1 'IPv4 Address' | cut -d ':' -f2 | cut -d ' ' -f2
+  fi
+}
