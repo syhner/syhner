@@ -268,12 +268,6 @@
     "command": "workbench.action.switchWindow",
     "when": "isMac"
   },
-  // Jump to pairing bracket
-  {
-    "key": "cmd+y",
-    "command": "editor.action.jumpToBracket",
-    "when": "isMac && editorTextFocus"
-  },
   // cmd+k shortcuts
   {
     "key": "cmd+k cmd+k",
@@ -285,7 +279,7 @@
     "command": "copyRelativeFilePath",
     "when": "isMac && !terminalFocus"
   },
-  // Go to symbol
+  // Go to
   {
     "key": "cmd+b",
     "command": "-workbench.action.toggleSidebarVisibility",
@@ -293,11 +287,16 @@
   },
   {
     "key": "cmd+b",
+    "command": "editor.action.jumpToBracket",
+    "when": "isMac && editorTextFocus"
+  },
+  {
+    "key": "cmd+y",
     "command": "workbench.action.gotoSymbol",
     "when": "isMac && !accessibilityHelpIsShown && !accessibleViewIsShown"
   },
   {
-    "key": "shift+cmd+b",
+    "key": "shift+cmd+y",
     "command": "workbench.action.showAllSymbols",
     "when": "isMac"
   },
@@ -322,7 +321,7 @@
     "command": "relative-goto.select",
     "when": "isMac"
   },
-  // Go to
+  // Go to (menu items)
   {
     "key": "cmd+t",
     "command": "-workbench.action.showAllSymbols",
@@ -352,6 +351,12 @@
     "key": "cmd+t cmd+s",
     "command": "typescript.goToSourceDefinition",
     "when": "isMac"
+  },
+  // Expand selection
+  {
+    "key": "cmd+[IntlBackslash]",
+    "command": "editor.action.smartSelect.expand",
+    "when": "isMac && editorTextFocus"
   },
 
 
@@ -636,12 +641,6 @@
     "command": "workbench.action.switchWindow",
     "when": "isWindows"
   },
-  // Jump to pairing bracket
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.jumpToBracket",
-    "when": "isWindows && editorTextFocus"
-  },
   // ctrl+k shortcuts
   {
     "key": "ctrl+k ctrl+k",
@@ -653,7 +652,7 @@
     "command": "copyRelativeFilePath",
     "when": "isWindows && !terminalFocus"
   },
-  // Go to symbol
+  // Go to
   {
     "key": "ctrl+b",
     "command": "-workbench.action.toggleSidebarVisibility",
@@ -661,11 +660,16 @@
   },
   {
     "key": "ctrl+b",
+    "command": "editor.action.jumpToBracket",
+    "when": "isWindows && editorTextFocus"
+  },
+  {
+    "key": "ctrl+y",
     "command": "workbench.action.gotoSymbol",
     "when": "isWindows && !accessibilityHelpIsShown && !accessibleViewIsShown"
   },
   {
-    "key": "ctrl+shift+b",
+    "key": "shift+ctrl+y",
     "command": "workbench.action.showAllSymbols",
     "when": "isWindows"
   },
@@ -686,11 +690,11 @@
     "when": "isWindows"
   },
   {
-    "key": "cmd+shift+0",
+    "key": "ctrl+shift+0",
     "command": "relative-goto.select",
-    "when": "isMac"
+    "when": "isWindows"
   },
-  // Go to
+  // Go to (menu items)
   {
     "key": "ctrl+t",
     "command": "-workbench.action.showAllSymbols",
@@ -720,5 +724,11 @@
     "key": "ctrl+t ctrl+s",
     "command": "typescript.goToSourceDefinition",
     "when": "isWindows"
+  },
+  // Expand selection
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "editor.action.smartSelect.expand",
+    "when": "isWindows && editorTextFocus"
   }
 ]
