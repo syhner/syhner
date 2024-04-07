@@ -32,6 +32,21 @@ This will:
 2. Check for package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
 3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
 
+## Guide
+
+[Scripts](scripts/) can also be called individually, e.g.
+
+```sh
+# Pushes dotfiles to local home directory
+./scripts/set-home-files.sh push
+
+# Pulls dotfiles from local home directory
+./scripts/set-home-files.sh pull
+
+# Installs fzf
+./scripts/install/fzf.sh
+```
+
 ## TODO
 
 - tmux

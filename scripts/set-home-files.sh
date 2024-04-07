@@ -5,6 +5,18 @@ export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
 source "$DOTFILES/home/source-0/functions.sh"
 
+if [[ "$#" -ne 1 ]]; then
+  echo "Usage: $0 <push|pull>"
+  exit 1
+fi
+
+strategy=$1
+
+if [[ "$strategy" != "push" && "$strategy" != "pull" ]]; then
+  echo "Strategy must be 'push' or 'pull'"
+  exit 1
+fi
+
 function copy_home_file() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: copy_home_file <file_path>"
@@ -44,13 +56,20 @@ function copy_home_file() {
   if [[ -f "$target_file" ]]; then
     if diff -q "$source_file" "$target_file" >/dev/null; then
       true # File is up to date
-    else
+    elif [[ $strategy == "push" ]]; then
       echo "Out of date: $file_path_relative"
       unix_timestamp="$(date +%s)"
       mkcp "$target_file" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
       echo "Backup created: $DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
       cp -f "$source_file" "$target_file"
       echo "Replaced file: $target_file"
+    elif [[ $strategy == "pull" ]]; then
+      echo "Out of date: $file_path_relative"
+      unix_timestamp="$(date +%s)"
+      mkcp "$source_file" "$DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
+      echo "Backup created: $DOTFILES/backups/$file_path_relative-$unix_timestamp.bak"
+      cp -f "$target_file" "$source_file"
+      echo "Replaced file: $source_file"
     fi
   else
     echo "Does not exist: $file_path_relative"
