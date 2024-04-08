@@ -1,3 +1,10 @@
+alias gzg="cat $HOME/source-1/git.sh \
+  | grep -E '^alias' \
+  | fzf --header 'Choose a command to run' \
+  | awk -F '=' '{print \$2}' \
+  | sed -e 's/^.//' -e 's/.$//' \
+  | sh"
+
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 
 # Git version checking
