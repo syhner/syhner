@@ -16,7 +16,7 @@ Installed packages may not be found / not add to your PATH automatically (i.e. d
 ## Install
 
 ```sh
-git clone https://github.com/syhner/dotfiles.git
+git clone --depth 1 https://github.com/syhner/dotfiles.git
 cd dotfiles
 ./install.sh
 ```
