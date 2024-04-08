@@ -48,7 +48,7 @@
     "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
     "[aria-label='Terminal actions']": "display: none !important",
     ".actions-container .codicon-panel-close": "display: none !important",
-    ".actions-container .codicon-panel-maximize": "display: none !important"
+    ".actions-container .codicon-panel-maximize": "display: none !important",
   },
   "window.customTitleBarVisibility": "never",
   "window.commandCenter": false,
@@ -69,7 +69,7 @@
   // Editor
   "workbench.editor.showTabs": "single",
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnType": false,
   "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
@@ -225,5 +225,5 @@
       "command": "diffOnClick",
       "sequence": ["settings.cycle.apcStylesheet"]
     }
-  ]
+  ],
 }
