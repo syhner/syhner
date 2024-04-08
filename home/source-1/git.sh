@@ -3,7 +3,7 @@ alias gzg="cat $HOME/source-1/git.sh \
   | fzf --header 'Choose a command to run' \
   | awk -F '=' '{print \$2}' \
   | sed -e 's/^.//' -e 's/.$//' \
-  | sh"
+  | tee >(sh)"
 
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 
