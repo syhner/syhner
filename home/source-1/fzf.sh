@@ -12,3 +12,14 @@ elif [[ $(current_shell) == "zsh" ]]; then
     eval "$(fzf --zsh)"
   fi
 fi
+
+if ! command -v fzf &>/dev/null; then
+  return
+fi
+
+alias fman="compgen -c | fzf | xargs man"
+
+function aliases() {
+  eval "$(alias | fzf | awk -F '=' '{print $1}')"
+}
+alias a="aliases"
