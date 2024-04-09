@@ -19,4 +19,7 @@ elif [[ $(current_shell) == "zsh" ]]; then
   eval "$(fnm completions --shell zsh)"
 fi
 
-alias pnpx="pnpm dlx"
+if command -v pnpm &>/dev/null; then
+  eval "$(pnpm setup)"
+  alias pnpx="pnpm dlx"
+fi
