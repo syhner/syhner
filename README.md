@@ -64,6 +64,7 @@ This will:
   - nicer logs
   - interactive installer (choose packages)
   - uninstaller
+  - restore from backup
 - robustness
   - clean up deleted `source-<number>/` files
   - CI shellcheck
