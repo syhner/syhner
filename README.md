@@ -23,13 +23,13 @@ cd dotfiles
 
 This will:
 
-1. Copy files from [`home/`](home/) to your home directory. Replaced files are kept at `backups/` in your local dotfiles repo, which is gitignored.
+1. Copy files from [`home/`](home/) to your home directory. Replaced files are saved to `backups/` (and gitignored) in your local dotfiles repo.
 
    - bash and zsh will source `home/source-<number>/*.sh` files in order
    - bash will source `home/source-<number>/*.bash` files in order
    - zsh will source `home/source-<number>/*.zsh` files in order
 
-2. Check for package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
+2. Check for / update package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
 3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
 
 ## Guide
@@ -37,13 +37,16 @@ This will:
 [Scripts](scripts/) can also be called individually, e.g.
 
 ```sh
-# Pushes dotfiles to local home directory
-./scripts/set-home-files.sh push
+# Push dotfiles to your home directory
+./scripts/set-home-files.sh push $HOME
 
-# Pulls dotfiles from local home directory
-./scripts/set-home-files.sh pull
+# Pull dotfiles from your home directory
+./scripts/set-home-files.sh pull $HOME
 
-# Installs fzf
+# Pull dotfiles from a backup
+./scripts/set-home-files.sh pull backups/2000-01-01T00:00:00Z
+
+# Install a package (e.g. fzf)
 ./scripts/install/fzf.sh
 ```
 
@@ -64,7 +67,6 @@ This will:
   - nicer logs
   - interactive installer (choose packages)
   - uninstaller
-  - restore from backup
 - robustness
   - clean up deleted `source-<number>/` files
   - CI shellcheck

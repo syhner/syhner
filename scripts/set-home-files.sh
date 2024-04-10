@@ -5,19 +5,21 @@ export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
 source "$DOTFILES/home/source-0/functions.sh"
 
-if [[ "$#" -ne 1 ]]; then
-  echo "Usage: $0 <push|pull>"
+if [[ "$#" -lt 1 ]] || [[ "$#" -gt 2 ]]; then
+  echo "Usage: $0 <push> [to_directory = $HOME]"
+  echo "       $0 <pull> [from_directory = $HOME]"
   exit 1
 fi
 
 strategy=$1
+directory=${2:-$HOME}
 
 if [[ "$strategy" != "push" && "$strategy" != "pull" ]]; then
   echo "Strategy must be 'push' or 'pull'"
   exit 1
 fi
 
-unix_timestamp="$(date +%s)"
+unix_timestamp="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
 function copy_home_file() {
   if [[ "$#" -ne 1 ]]; then
@@ -27,54 +29,61 @@ function copy_home_file() {
 
   local file_path="$1"
 
-  local source_file
-  local target_file
+  local file_dot
+  local file_non_dot
   local file_path_relative
+  local file_source
+  local file_target
 
   if [[ $file_path == *".reference" ]]; then
-    source_file=$(cat "$file_path")
+    file_dot=$(cat "$file_path")
   else
-    source_file="$file_path"
+    file_dot="$file_path"
   fi
 
-  if [[ ! -f "$source_file" ]]; then
-    echo "File $source_file does not exist"
-    if [[ $source_file != "$file_path" ]]; then
-      echo "Original source file: \"$file_path\""
+  if [[ ! -f "$file_dot" ]]; then
+    echo "File $file_dot does not exist in dotfiles repository"
+    if [[ $file_dot != "$file_path" ]]; then
+      echo "Using reference from: \"$file_path\""
     fi
     exit 1
   fi
 
   # Remove the $DOTFILES/home prefix
-  target_file=${file_path#"$DOTFILES/home/"}
+  file_non_dot=${file_path#"$DOTFILES/home/"}
   # Remove the (<OS>) prefix
-  target_file=${target_file#*(*)/}
+  file_non_dot=${file_non_dot#*(*)/}
   # Remove the .reference suffix
-  target_file=${target_file%.reference}
-  file_path_relative=$target_file
-  # Add the $HOME prefix
-  target_file="$HOME/$target_file"
+  file_non_dot=${file_non_dot%.reference}
+  file_path_relative=$file_non_dot
+  file_non_dot="$directory/$file_non_dot"
 
-  if [[ -f "$target_file" ]]; then
-    if diff -q "$source_file" "$target_file" >/dev/null; then
+  if [[ $strategy == "push" ]]; then
+    file_source="$file_dot"
+    file_target="$file_non_dot"
+  elif [[ $strategy == "pull" ]]; then
+    file_source="$file_non_dot"
+    file_target="$file_dot"
+  fi
+
+  if [[ ! -f "$file_source" ]]; then
+    return
+  fi
+
+  if [[ -f "$file_target" ]]; then
+    if diff -q "$file_source" "$file_target" >/dev/null; then
       true # File is up to date
-    elif [[ $strategy == "push" ]]; then
+    else
       echo "Out of date: $file_path_relative"
-      mkcp "$target_file" "$DOTFILES/backups/$unix_timestamp/$file_path_relative"
+      mkcp "$file_target" "$DOTFILES/backups/$unix_timestamp/$file_path_relative"
       echo "Backup created: $DOTFILES/backups/$unix_timestamp/$file_path_relative"
-      cp -f "$source_file" "$target_file"
-      echo "Replaced file: $target_file"
-    elif [[ $strategy == "pull" ]]; then
-      echo "Out of date: $file_path_relative"
-      mkcp "$source_file" "$DOTFILES/backups/$unix_timestamp/$file_path_relative"
-      echo "Backup created: $DOTFILES/backups/$unix_timestamp/$file_path_relative"
-      cp -f "$target_file" "$source_file"
-      echo "Replaced file: $source_file"
+      cp -f "$file_source" "$file_target"
+      echo "Replaced file: $file_target"
     fi
   else
     echo "Does not exist: $file_path_relative"
-    mkcp "$source_file" "$target_file"
-    echo "Created file: $target_file"
+    mkcp "$file_source" "$file_target"
+    echo "Created file: $file_target"
   fi
 }
 
