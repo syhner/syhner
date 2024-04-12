@@ -20,6 +20,5 @@ elif [[ $(current_shell) == "zsh" ]]; then
 fi
 
 if command -v pnpm &>/dev/null; then
-  eval "$(pnpm setup)"
   alias pnpx="pnpm dlx"
 fi

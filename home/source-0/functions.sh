@@ -78,10 +78,10 @@ function source_if_exists() {
     exit 1
   fi
 
-  local package_name="$1"
+  local file="$1"
 
   if [[ -f "$1" ]]; then
-    source "$1"
+    source "$file"
   fi
 }
 
