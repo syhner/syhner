@@ -20,6 +20,6 @@ fi
 alias fman="compgen -c | fzf | xargs man"
 
 function aliases() {
-  eval "$(alias | fzf | awk -F '=' '{print $1}')"
+  eval "$(alias | fzf | awk -F '=' '{print $1}' | cut -d ' ' -f2)"
 }
 alias a="aliases"
