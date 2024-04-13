@@ -14,3 +14,30 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package Microsoft.VisualStudioCode
 fi
+
+if ! command -v code &>/dev/null; then
+  return
+fi
+
+echo 'Installing Visual Studio Code extensions...'
+
+# Used in settings / keybindings
+code --install-extension antfu.where-am-i
+code --install-extension akil-s.tokyo-light
+code --install-extension drcika.apc-extension
+code --install-extension enkia.tokyo-night
+code --install-extension hoovercj.vscode-settings-cycler
+code --install-extension PKief.material-icon-theme
+code --install-extension ryuta46.multi-command
+code --install-extension usernamehw.errorlens
+code --install-extension EnkelDigital.relative-goto
+
+# Not used in settings / keybindings, improves DX, language agnostic
+code --install-extension aaron-bond.better-comments
+code --install-extension adpyke.codesnap
+code --install-extension beatzoid.http-status-codes
+code --install-extension EditorConfig.EditorConfig
+code --install-extension mikestead.dotenv
+code --install-extension timonwong.shellcheck
+
+echo 'Finished installing Visual Studio Code extensions.'

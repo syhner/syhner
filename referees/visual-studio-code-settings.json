@@ -1,14 +1,4 @@
 {
-  // Extensions to install:
-  // drcika.apc-extension
-  // usernamehw.errorlens
-  // PKief.material-icon-theme
-  // ryuta46.multi-command
-  // hoovercj.vscode-settings-cycler
-  // akil-s.tokyo-light
-  // enkia.tokyo-night
-  // antfu.where-am-i
-
   // Font
   "apc.font.family": "geist mono",
   "apc.monospace.font.family": "geist mono",
@@ -96,7 +86,7 @@
   },
   "explorer.fileNesting.enabled": true,
   "explorer.compactFolders": false,
-  "explorer.excludeGitIgnore": false,
+  "explorer.excludeGitIgnore": false, 
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
