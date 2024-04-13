@@ -15,5 +15,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "pnpm"
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
-  install_package "pnpm"
+  install_package "pnpm.pnpm"
 fi
