@@ -19,6 +19,13 @@ elif [[ $(current_shell) == "zsh" ]]; then
   eval "$(fnm completions --shell zsh)"
 fi
 
-if command -v pnpm &>/dev/null; then
-  alias pnpx="pnpm dlx"
+if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export PNPM_HOME="$HOME/Library/pnpm"
+elif [[ "$OSTYPE" == "msys" ]]; then
+  export PNPM_HOME="$HOME/AppData/Local/pnpm"
 fi
+
+export PATH="$PNPM_HOME:$PATH"
+alias pnpx="pnpm dlx"

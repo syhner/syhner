@@ -16,6 +16,4 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
 fi
 
-if command -v corepack &>/dev/null; then
-  corepack enable pnpm
-fi
+corepack enable pnpm
