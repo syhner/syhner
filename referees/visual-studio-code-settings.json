@@ -38,7 +38,7 @@
     "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
     "[aria-label='Terminal actions']": "display: none !important",
     ".actions-container .codicon-panel-close": "display: none !important",
-    ".actions-container .codicon-panel-maximize": "display: none !important",
+    ".actions-container .codicon-panel-maximize": "display: none !important"
   },
   "window.customTitleBarVisibility": "never",
   "window.commandCenter": false,
@@ -71,10 +71,11 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "window.titleBarStyle": "native",
   "workbench.editor.enablePreview": true,
-  "editor.folding": false,
   "editor.accessibilitySupport": "off",
   "editor.lineNumbers": "relative",
   "editor.glyphMargin": false,
+  "editor.showFoldingControls": "never",
+  "editor.scrollbar.verticalScrollbarSize": 0,
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -86,7 +87,7 @@
   },
   "explorer.fileNesting.enabled": true,
   "explorer.compactFolders": false,
-  "explorer.excludeGitIgnore": false, 
+  "explorer.excludeGitIgnore": false,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
@@ -215,5 +216,5 @@
       "command": "diffOnClick",
       "sequence": ["settings.cycle.apcStylesheet"]
     }
-  ],
+  ]
 }
