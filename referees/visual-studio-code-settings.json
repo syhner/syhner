@@ -18,13 +18,13 @@
   // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar
   "apc.activityBar": {
     "position": "bottom",
-    "size": 24
+    "size": 22
   },
   "apc.electron": {
     "titleBarStyle": "hiddenInset"
   },
   "apc.statusBar": {
-    "position": "editor-bottom" // Breaks full screen panel (terminal)
+    "position": "editor-bottom" 
   },
   "apc.stylesheet": {
     ".sidebar > .title > .title-label": "opacity: 0",
@@ -104,7 +104,7 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.scrollback": 2000,
   "terminal.integrated.tabs.location": "right",
-  "workbench.panel.defaultLocation": "right",
+  "workbench.panel.defaultLocation": "bottom",
 
   // Window behaviour
   "security.workspace.trust.untrustedFiles": "open",
