@@ -1,3 +1,3 @@
 <samp>
-  Get in touch -> syhner.com
+  Get in touch -> <a href="https://syhner.com">syhner.com</a>
 </samp>
