@@ -3,33 +3,28 @@
   "apc.font.family": "geist mono",
   "apc.monospace.font.family": "geist mono",
   "chat.editor.fontFamily": "geist mono",
-  "editor.experimentalInlineEdit.fontFamily": "geist mono",
   "debug.console.fontFamily": "geist mono",
   "editor.codeLensFontFamily": "geist mono",
+  "editor.experimentalInlineEdit.fontFamily": "geist mono",
+  "editor.fontFamily": "geist mono",
   "editor.inlayHints.fontFamily": "geist mono",
   "editor.inlineSuggest.fontFamily": "geist mono",
-  "editor.fontFamily": "geist mono",
   "errorLens.fontFamily": "geist mono",
   "notebook.output.fontFamily": "geist mono",
   "scm.inputFontFamily": "geist mono",
   "terminal.integrated.fontFamily": "geist mono",
 
   // Styling
+  // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar
   "apc.activityBar": {
     "position": "bottom",
-    "size": 28
+    "size": 24
   },
   "apc.electron": {
     "titleBarStyle": "hiddenInset"
   },
-  "apc.header": {
-    "height": 37
-  },
-  "apc.sidebar.titlebar": {
-    "height": 37
-  },
   "apc.statusBar": {
-    "height": 28
+    // "position": "editor-bottom", // Breaks full screen panel (terminal)
   },
   "apc.stylesheet": {
     ".sidebar > .title > .title-label": "opacity: 0",
@@ -40,77 +35,76 @@
     ".actions-container .codicon-panel-close": "display: none !important",
     ".actions-container .codicon-panel-maximize": "display: none !important"
   },
-  "window.customTitleBarVisibility": "never",
-  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.symbolPath": "off",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "window.autoDetectColorScheme": true,
-  "breadcrumbs.enabled": false,
-  "breadcrumbs.symbolPath": "off",
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
+  "window.restoreFullscreen": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.layoutControl.enabled": false,
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "window.restoreFullscreen": false,
-  "workbench.activityBar.location": "hidden",
 
   // Editor
-  "workbench.editor.showTabs": "single",
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.folding": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
+  "editor.glyphMargin": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
-  "editor.tabSize": 2,
+  "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
+  "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
-  "editor.cursorBlinking": "smooth",
-  "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": "on",
   "window.titleBarStyle": "native",
   "workbench.editor.enablePreview": true,
-  "editor.accessibilitySupport": "off",
-  "editor.lineNumbers": "relative",
-  "editor.glyphMargin": false,
-  "editor.showFoldingControls": "never",
-  "editor.scrollbar.verticalScrollbarSize": 0,
+  "workbench.editor.showTabs": "single",
 
   // Explorer
+  "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.copyRelativePathSeparator": "/",
-  "explorer.fileNesting.expand": false,
-  "workbench.editorAssociations": {
-    "*.db": "sqlite-viewer.option"
-  },
-  "explorer.fileNesting.enabled": true,
-  "explorer.compactFolders": false,
   "explorer.excludeGitIgnore": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.theme": "classic",
-  "material-icon-theme.hidesExplorerArrows": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
   "files.associations": {
     "*.json": "jsonc"
   },
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.editorAssociations": {
+    "*.db": "sqlite-viewer.option"
+  },
+  "workbench.iconTheme": "material-icon-theme",
 
   // Git
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "git.confirmSync": false, // Stop confirming when push/pulling
   "git.enableSmartCommit": true, // Commit all when no files are staged
   "githubPullRequests.pullBranch": "never",
-  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-  "diffEditor.ignoreTrimWhitespace": true,
-  "diffEditor.hideUnchangedRegions.enabled": false,
-  "diffEditor.renderSideBySide": true,
 
   // Terminal
-  "terminal.integrated.scrollback": 2000,
-  "terminal.integrated.tabs.location": "right",
-  "workbench.panel.defaultLocation": "right",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.scrollback": 2000,
+  "terminal.integrated.tabs.location": "right",
+  "workbench.panel.defaultLocation": "right",
 
   // Window behaviour
   "security.workspace.trust.untrustedFiles": "open",
