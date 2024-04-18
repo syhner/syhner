@@ -24,7 +24,7 @@
     "titleBarStyle": "hiddenInset"
   },
   "apc.statusBar": {
-    // "position": "editor-bottom", // Breaks full screen panel (terminal)
+    "position": "editor-bottom" // Breaks full screen panel (terminal)
   },
   "apc.stylesheet": {
     ".sidebar > .title > .title-label": "opacity: 0",
