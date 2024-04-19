@@ -22,6 +22,7 @@ format = ssh
 path = ~/.gitconfig-os
 path = ~/.gitconfig-editor
 path = ~/.gitconfig-personal
+path = ~/.gitconfig-delta
 [includeIf "gitdir:~/work/"]
 path = ~/work/.gitconfig
 
