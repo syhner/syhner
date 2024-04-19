@@ -17,3 +17,5 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   install_package "Schniz.fnm"
   install_package "pnpm.pnpm"
 fi
+
+pnpm add -g tldr
