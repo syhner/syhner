@@ -17,6 +17,9 @@ if ! command -v fzf &>/dev/null; then
   return
 fi
 
+# https://github.com/folke/tokyonight.nvim/blob/main/extras/fzf/tokyonight_night.zsh
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --color=hl:#ff9e64,hl+:#ff9e64,info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff,marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+
 alias fman="compgen -c | fzf | xargs man"
 
 function aliases() {
