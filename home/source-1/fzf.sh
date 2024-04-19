@@ -17,6 +17,20 @@ if ! command -v fzf &>/dev/null; then
   return
 fi
 
+if command -v fd &>/dev/null; then
+  export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+  export FZF_CTRL_T_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+  export FZF_ALT_C_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git --type d"
+
+  _fzf_compgen_path() {
+    fd --hideden --exclude .git . "$1"
+  }
+
+  _fzf_compgen_dir() {
+    fd --hidden --exclude .git --type=d . "$1"
+  }
+fi
+
 alias fman="compgen -c | fzf | xargs man"
 
 function aliases() {
