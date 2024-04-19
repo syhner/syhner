@@ -14,3 +14,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package junegunn.fzf
 fi
+
+install_package "[[ -f $HOME/fzf-git/fzf-git.sh ]]" "git clone --depth=1 https://github.com/junegunn/fzf-git.sh.git $HOME/fzf-git"
