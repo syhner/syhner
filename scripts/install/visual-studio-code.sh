@@ -25,12 +25,13 @@ echo 'Installing Visual Studio Code extensions...'
 code --install-extension antfu.where-am-i
 code --install-extension akil-s.tokyo-light
 code --install-extension drcika.apc-extension
+code --install-extension EnkelDigital.relative-goto
 code --install-extension enkia.tokyo-night
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension PKief.material-icon-theme
 code --install-extension ryuta46.multi-command
+code --install-extension TomRijndorp.find-it-faster
 code --install-extension usernamehw.errorlens
-code --install-extension EnkelDigital.relative-goto
 
 # Not used in settings / keybindings, improves DX, language agnostic
 code --install-extension aaron-bond.better-comments
