@@ -52,7 +52,7 @@ This will:
 
 ## TODO
 
-- tmux
+- tmux / zellij
 - editors
   - neovim
 - cli tools
