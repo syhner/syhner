@@ -69,4 +69,8 @@ This will:
   - uninstaller
 - robustness
   - clean up deleted `source-<number>/` files
-  - CI shellcheck
+  - CI
+    - shellcheck
+    - build on different platforms
+- encrypted secrets
+- anything personal to be injected through toml file inputs
