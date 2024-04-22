@@ -25,5 +25,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "msys" ]]; then
   export PNPM_HOME="$HOME/AppData/Local/pnpm"
 fi
+export PATH="$PNPM_HOME:$PATH"
 
 pnpm add -g tldr
