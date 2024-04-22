@@ -33,7 +33,7 @@ if command -v fd &>/dev/null; then
   export FZF_ALT_C_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git --type d"
 
   _fzf_compgen_path() {
-    fd --hideden --exclude .git . "$1"
+    fd --hidden --exclude .git . "$1"
   }
 
   _fzf_compgen_dir() {
