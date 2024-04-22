@@ -23,3 +23,33 @@ blue = "#7da6ff"
 magenta = "#bb9af7"
 cyan = "#0db9d7"
 white = "#acb0d0"
+
+[[keyboard.bindings]]
+mods = "Alt"
+key = "Left"
+chars = "\u001bb"
+
+[[keyboard.bindings]]
+mods = "Alt"
+key = "Right"
+chars = "\u001bf"
+
+[[keyboard.bindings]]
+mods = "Alt"
+key = "Back"
+chars = "\u001b\u007f"
+
+[[keyboard.bindings]]
+mods = "Command"
+key = "Left"
+chars = "\u001bOH"
+
+[[keyboard.bindings]]
+mods = "Command"
+key = "Right"
+chars = "\u001bOF"
+
+[[keyboard.bindings]]
+mods = "Command"
+key = "Back"
+chars = "\u0015"
