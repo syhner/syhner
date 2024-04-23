@@ -100,10 +100,8 @@ function source_home() {
     setopt NULL_GLOB
   fi
 
-  for dir in "$HOME/source-"*; do
-    for file in "$dir/"*."$file_extension"; do
-      source_if_exists "$file"
-    done
+  for file in "$HOME/source/"*."$file_extension"; do
+    source_if_exists "$file"
   done
 
   if [[ $(current_shell) == "bash" ]]; then

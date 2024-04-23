@@ -25,9 +25,9 @@ This will:
 
 1. Copy files from [`home/`](home/) to your home directory. Replaced files are saved to `backups/` (and gitignored) in your local dotfiles repo.
 
-   - bash and zsh will source `home/source-<number>/*.sh` files in order
-   - bash will source `home/source-<number>/*.bash` files in order
-   - zsh will source `home/source-<number>/*.zsh` files in order
+   - both bash and zsh will source `$HOME/source/*.sh` files in order
+   - bash will source `$HOME/source/*.bash` files in order
+   - zsh will source `$HOME/source/*.zsh` files in order
 
 2. Check for / update package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
 3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
