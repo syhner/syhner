@@ -8,7 +8,7 @@ source "$DOTFILES/home/source/0-functions.sh"
 package_name="zsh-history-substring-search"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  install_package "[[ -f $HOME/zsh-history-substring-search/zsh-history-substring-search.zsh ]]" "git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search.git $HOME/zsh-history-substring-search"
+  install_package "[[ -f $HOME/repos/zsh-history-substring-search/zsh-history-substring-search.zsh ]]" "git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search.git $HOME/repos/zsh-history-substring-search"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
 elif [[ "$OSTYPE" == "msys" ]]; then

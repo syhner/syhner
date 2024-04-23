@@ -7,12 +7,12 @@ source "$DOTFILES/home/source/0-functions.sh"
 
 package_name="nerd-fonts"
 
-if [[ -d "$HOME/nerd-fonts" ]]; then
+if [[ -d "$HOME/repos/nerd-fonts" ]]; then
   echo "$package_name is already installed"
 else
   echo "Installing $package_name"
   mkdir -p "$HOME/.local/share/fonts"
-  git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git "$HOME/nerd-fonts"
+  git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git "$HOME/repos/nerd-fonts"
 fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
@@ -27,13 +27,13 @@ fi
 fonts=("src/unpatched-fonts/GeistMono")
 
 for font in "${fonts[@]}"; do
-  if [[ -d "$HOME/nerd-fonts/$font" ]]; then
+  if [[ -d "$HOME/repos/nerd-fonts/$font" ]]; then
     echo "Font $font is already installed"
   else
     echo "Installing font $font"
-    cd "$HOME/nerd-fonts" && git sparse-checkout add "$font"
+    cd "$HOME/repos/nerd-fonts" && git sparse-checkout add "$font"
 
-    for file in "$HOME/nerd-fonts/$font/"*."otf"; do
+    for file in "$HOME/repos/nerd-fonts/$font/"*."otf"; do
       if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
         cp "$file" "$HOME/.local/share/fonts"
       elif [[ "$OSTYPE" == "darwin"* ]]; then

@@ -1,3 +1,3 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  export FPATH="$HOME/zsh-completions/src:$FPATH"
+  export FPATH="$HOME/repos/zsh-completions/src:$FPATH"
 fi
