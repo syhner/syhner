@@ -68,9 +68,10 @@ This will:
   - interactive installer (choose packages)
   - uninstaller
 - robustness
-  - clean up deleted `source-<number>/` files
+  - overwrite source directory when pushing
   - CI
     - shellcheck
     - build on different platforms
-- encrypted secrets
+- encrypted secrets / files
+- templates
 - anything personal to be injected through toml file inputs
