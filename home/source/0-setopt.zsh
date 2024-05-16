@@ -7,10 +7,19 @@
 # 03 - Expansion and Globbing
 
 # 04 - History
-setopt extendedHistory
-setopt histIgnoreAllDups
-setopt histNoStore
-setopt incAppendHistoryTime
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt append_history
+setopt share_history
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+setopt extended_history
+setopt hist_no_store
+setopt inc_append_history_time
 
 # 05 - Initialisation
 
