@@ -1,11 +1,15 @@
 [core]
 editor = "code --wait"
 fsmonitor = true
+
 [diff]
 tool = vscode
+
 [rebase]
 tool = vscode
+
 [difftool "vscode"]
 cmd = "code --wait --diff $LOCAL $REMOTE"
+
 [merge]
 tool = vscode
