@@ -33,3 +33,14 @@ bindings = [
   { mods = "Command", key = "Right", chars = "\u001bOF" },
   { mods = "Command", key = "Back", chars = "\u0015" },
 ]
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "buttonless"
+opacity = 1
+blur = true
+option_as_alt = "both"
+
+[font]
+normal.family = "Geist Mono"
