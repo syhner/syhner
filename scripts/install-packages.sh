@@ -9,6 +9,3 @@ echo "Installing packages"
 mkdir -p "$HOME/repos"
 find "$DOTFILES/scripts/install" -name '*.sh' -type f | while read -r script; do
   echo "Running script: $(basename -- "$script")"
-  . "$script"
-done
-echo "Finished installing packages"
