@@ -371,6 +371,11 @@
     "command": "deleteInsideWord",
     "when": "isWindows && textInputFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.quickSwitchWindow",
+    "when": "isWindows"
+  },
 
 
   /* Windows */
