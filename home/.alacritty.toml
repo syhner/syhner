@@ -43,4 +43,4 @@ blur = true
 option_as_alt = "both"
 
 [font]
-normal.family = "Geist Mono"
+normal.family = "Cascadia Mono"

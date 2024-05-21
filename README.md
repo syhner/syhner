@@ -52,6 +52,8 @@ This will:
 
 ## TODO
 
+- clone repos to dotfiles repo
+- ls tab colors matching eza
 - tmux / zellij
 - editors
   - neovim

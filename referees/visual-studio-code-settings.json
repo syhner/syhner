@@ -1,18 +1,18 @@
 {
   // Font
-  "apc.font.family": "geist mono",
-  "apc.monospace.font.family": "geist mono",
-  "chat.editor.fontFamily": "geist mono",
-  "debug.console.fontFamily": "geist mono",
-  "editor.codeLensFontFamily": "geist mono",
-  "editor.experimentalInlineEdit.fontFamily": "geist mono",
-  "editor.fontFamily": "geist mono",
-  "editor.inlayHints.fontFamily": "geist mono",
-  "editor.inlineSuggest.fontFamily": "geist mono",
-  "errorLens.fontFamily": "geist mono",
-  "notebook.output.fontFamily": "geist mono",
-  "scm.inputFontFamily": "geist mono",
-  "terminal.integrated.fontFamily": "geist mono",
+  "apc.font.family": "Cascadia Mono",
+  "apc.monospace.font.family": "Cascadia Mono",
+  "chat.editor.fontFamily": "Cascadia Mono",
+  "debug.console.fontFamily": "Cascadia Mono",
+  "editor.codeLensFontFamily": "Cascadia Mono",
+  "editor.experimentalInlineEdit.fontFamily": "Cascadia Mono",
+  "editor.fontFamily": "Cascadia Mono",
+  "editor.inlayHints.fontFamily": "Cascadia Mono",
+  "editor.inlineSuggest.fontFamily": "Cascadia Mono",
+  "errorLens.fontFamily": "Cascadia Mono",
+  "notebook.output.fontFamily": "Cascadia Mono",
+  "scm.inputFontFamily": "Cascadia Mono",
+  "terminal.integrated.fontFamily": "Cascadia Mono",
 
   // Styling
   // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar

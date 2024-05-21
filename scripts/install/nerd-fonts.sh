@@ -24,7 +24,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
 fi
 
 # Relative paths in https://github.com/ryanoasis/nerd-fonts
-fonts=("src/unpatched-fonts/GeistMono")
+fonts=("src/unpatched-fonts/GeistMono" "src/unpatched-fonts/CascadiaMono")
 
 for font in "${fonts[@]}"; do
   if [[ -d "$HOME/repos/nerd-fonts/$font" ]]; then
@@ -33,14 +33,29 @@ for font in "${fonts[@]}"; do
     echo "Installing font $font"
     cd "$HOME/repos/nerd-fonts" && git sparse-checkout add "$font"
 
-    for file in "$HOME/repos/nerd-fonts/$font/"*."otf"; do
+    # Globs that don't match anything should be silent
+    if [[ $(current_shell) == "bash" ]]; then
+      shopt -s nullglob
+    elif [[ $(current_shell) == "zsh" ]]; then
+      setopt NULL_GLOB
+    fi
+
+    for file in "$HOME/repos/nerd-fonts/$font/"*.{otf,ttf}; do
       if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
         cp "$file" "$HOME/.local/share/fonts"
       elif [[ "$OSTYPE" == "darwin"* ]]; then
+        echo "Copying $file to $HOME/Library/Fonts"
         cp "$file" "$HOME/Library/Fonts"
       elif [[ "$OSTYPE" == "msys" ]]; then
         cp "$file" "$HOME/../../Fonts"
       fi
     done
+
+    if [[ $(current_shell) == "bash" ]]; then
+      shopt -u nullglob
+    elif [[ $(current_shell) == "zsh" ]]; then
+      unsetopt NULL_GLOB
+    fi
+
   fi
 done
