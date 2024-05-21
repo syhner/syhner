@@ -24,7 +24,7 @@
     "titleBarStyle": "hiddenInset"
   },
   "apc.statusBar": {
-    "position": "editor-bottom" 
+    "position": "editor-bottom"
   },
   "apc.stylesheet": {
     ".sidebar > .title > .title-label": "opacity: 0",
@@ -55,17 +55,16 @@
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.folding": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.glyphMargin": false,
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
+  "editor.showFoldingControls": "never",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.tabSize": 2,
-  "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
   "window.titleBarStyle": "native",
   "workbench.editor.enablePreview": true,
@@ -148,14 +147,14 @@
       ]
     },
     {
-      "id": "explorerGitIgnore",
+      "id": "explorer.excludeGitIgnore",
       "values": [
         { "explorer.excludeGitIgnore": true },
         { "explorer.excludeGitIgnore": false }
       ]
     },
     {
-      "id": "apcStylesheet",
+      "id": "apc.stylesheet",
       "values": [
         {
           "apc.stylesheet": {}
@@ -177,6 +176,28 @@
             // Panel maximize
             ".actions-container .codicon-panel-maximize": "display: none !important"
           }
+        }
+      ]
+    },
+    {
+      "id": "git.openDiffOnClick",
+      "values": [
+        {
+          "git.openDiffOnClick": false
+        },
+        {
+          "git.openDiffOnClick": true
+        }
+      ]
+    },
+    {
+      "id": "editor.wordWrap",
+      "values": [
+        {
+          "editor.wordWrap": "on"
+        },
+        {
+          "editor.wordWrap": "off"
         }
       ]
     }
@@ -203,12 +224,16 @@
       "sequence": ["workbench.scm.focus", "workbench.scm.focus"]
     },
     {
-      "command": "apcStylesheet",
-      "sequence": ["settings.cycle.apcStylesheet"]
+      "command": "apc.stylesheet",
+      "sequence": ["settings.cycle.apc.stylesheet"]
     },
     {
-      "command": "diffOnClick",
-      "sequence": ["settings.cycle.apcStylesheet"]
+      "command": "git.openDiffOnClick",
+      "sequence": ["settings.cycle.git.openDiffOnClick"]
+    },
+    {
+      "command": "editor.wordWrap",
+      "sequence": ["settings.cycle.editor.wordWrap"]
     }
   ]
 }

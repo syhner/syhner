@@ -205,7 +205,7 @@
   },
   {
     "key": "cmd+g cmd+i",
-    "command": "settings.cycle.explorerGitIgnore",
+    "command": "settings.cycle.explorer.excludeGitIgnore",
     "when": "isMac && explorerViewletFocus"
   },
   // Toggle between editor and diff view
@@ -358,7 +358,47 @@
     "command": "editor.action.smartSelect.expand",
     "when": "isMac && editorTextFocus"
   },
-
+  // Harpoon
+  {
+    "key": "alt+a",
+    "command": "vscode-harpoon.addEditor",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+o",
+    "command": "vscode-harpoon.editEditors",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+p",
+    "command": "vscode-harpoon.editorQuickPick",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+1",
+    "command": "vscode-harpoon.gotoEditor1",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+2",
+    "command": "vscode-harpoon.gotoEditor2",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+3",
+    "command": "vscode-harpoon.gotoEditor3",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+4",
+    "command": "vscode-harpoon.gotoEditor4",
+    "when": "isMac"
+  },
+  {
+    "key": "alt+5",
+    "command": "vscode-harpoon.gotoEditor5",
+    "when": "isMac"
+  },
 
   // Windows like mac
   {
@@ -583,7 +623,7 @@
   },
   {
     "key": "ctrl+g ctrl+i",
-    "command": "settings.cycle.explorerGitIgnore",
+    "command": "settings.cycle.explorer.excludeGitIgnore",
     "when": "isWindows && explorerViewletFocus"
   },
   // Toggle between editor and diff view
@@ -735,5 +775,46 @@
     "key": "ctrl+[IntlBackslash]",
     "command": "editor.action.smartSelect.expand",
     "when": "isWindows && editorTextFocus"
+  },
+  // Harpoon
+  {
+    "key": "alt+a",
+    "command": "vscode-harpoon.addEditor",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+o",
+    "command": "vscode-harpoon.editEditors",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+p",
+    "command": "vscode-harpoon.editorQuickPick",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+1",
+    "command": "vscode-harpoon.gotoEditor1",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+2",
+    "command": "vscode-harpoon.gotoEditor2",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+3",
+    "command": "vscode-harpoon.gotoEditor3",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+4",
+    "command": "vscode-harpoon.gotoEditor4",
+    "when": "isWindows"
+  },
+  {
+    "key": "alt+5",
+    "command": "vscode-harpoon.gotoEditor5",
+    "when": "isWindows"
   }
 ]
