@@ -35,7 +35,6 @@
     ".actions-container .codicon-panel-close": "display: none !important",
     ".actions-container .codicon-panel-maximize": "display: none !important"
   },
-  "breadcrumbs.enabled": false,
   "breadcrumbs.symbolPath": "off",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
@@ -89,8 +88,7 @@
   "workbench.iconTheme": "material-icon-theme",
 
   // Git
-  "diffEditor.hideUnchangedRegions.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "git.confirmSync": false, // Stop confirming when push/pulling
@@ -182,23 +180,19 @@
     {
       "id": "git.openDiffOnClick",
       "values": [
-        {
-          "git.openDiffOnClick": false
-        },
-        {
-          "git.openDiffOnClick": true
-        }
+        { "git.openDiffOnClick": false },
+        { "git.openDiffOnClick": true }
       ]
     },
     {
       "id": "editor.wordWrap",
+      "values": [{ "editor.wordWrap": "on" }, { "editor.wordWrap": "off" }]
+    },
+    {
+      "id": "diffEditor.hideUnchangedRegions.enabled",
       "values": [
-        {
-          "editor.wordWrap": "on"
-        },
-        {
-          "editor.wordWrap": "off"
-        }
+        { "diffEditor.hideUnchangedRegions.enabled": false },
+        { "diffEditor.hideUnchangedRegions.enabled": true }
       ]
     }
   ],
@@ -234,6 +228,11 @@
     {
       "command": "editor.wordWrap",
       "sequence": ["settings.cycle.editor.wordWrap"]
+    },
+    {
+      "command": "diffEditor.hideUnchangedRegions.enabled",
+      "sequence": ["settings.cycle.diffEditor.hideUnchangedRegions.enabled"]
     }
-  ]
+  ],
+  "diffEditor.hideUnchangedRegions.enabled": true
 }

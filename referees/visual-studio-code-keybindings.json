@@ -61,16 +61,16 @@
     "when": "isMac && terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
   },
   // File navigations preview
-  // {
-  //   "key": "down",
-  //   "command": "multiCommand.navigateExplorerDownAndPreviewFile",
-  //   "when": "isMac && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && listFocus && !inputFocus"
-  // },
-  // {
-  //   "key": "up",
-  //   "command": "multiCommand.navigateExplorerUpAndPreviewFile",
-  //   "when": "isMac && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && listFocus && !inputFocus"
-  // },
+  {
+    "key": "down",
+    "command": "multiCommand.navigateExplorerDownAndPreviewFile",
+    "when": "isMac && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && listFocus && !inputFocus"
+  },
+  {
+    "key": "up",
+    "command": "multiCommand.navigateExplorerUpAndPreviewFile",
+    "when": "isMac && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && listFocus && !inputFocus"
+  },
   // File navigation
   {
     "key": "left",
@@ -416,7 +416,6 @@
     "command": "workbench.action.quickSwitchWindow",
     "when": "isWindows"
   },
-
 
   /* Windows */
   {
