@@ -99,6 +99,7 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.scrollback": 2000,
   "terminal.integrated.tabs.location": "right",
   "workbench.panel.defaultLocation": "bottom",
