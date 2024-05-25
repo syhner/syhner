@@ -8,6 +8,4 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel
 . "$DOTFILES/scripts/set-home-files.sh" push
 . "$DOTFILES/scripts/package-manager.sh"
 . "$DOTFILES/scripts/install-packages.sh"
-
-# Run manually
-# . "$DOTFILES/scripts/mac-defaults.sh"
+. "$DOTFILES/scripts/mac-defaults.sh"
