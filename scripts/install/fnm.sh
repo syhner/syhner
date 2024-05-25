@@ -27,4 +27,9 @@ elif [[ "$OSTYPE" == "msys" ]]; then
 fi
 export PATH="$PNPM_HOME:$PATH"
 
+# pnpm add requires node
+if ! command -v node &>/dev/null; then
+  fnm install --lts
+fi
+
 pnpm add -g tldr
