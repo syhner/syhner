@@ -17,11 +17,15 @@ brew install gh
 brew install neofetch 
 
 # TODO - handle these brew cask installs better
-brew install cask awscli
-brew install cask loudflared
-brew install cask btop
-brew install cask gh
-brew install cask neofetch  
+brew install cask arc
+brew install cask discord
+brew install cask monitorcontrol
+brew install cask obsidian
+brew install cask purevpn
+brew install cask raycast
+brew install cask slack
+brew install cask spotify
+brew install cask vlc
 
 echo "Setting mac defaults"
 
