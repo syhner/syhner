@@ -44,3 +44,4 @@ option_as_alt = "both"
 
 [font]
 normal.family = "Cascadia Mono"
+size = 16
