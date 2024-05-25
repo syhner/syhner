@@ -91,6 +91,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "git.autofetch": true,
   "git.confirmSync": false, // Stop confirming when push/pulling
   "git.enableSmartCommit": true, // Commit all when no files are staged
   "githubPullRequests.pullBranch": "never",
@@ -234,6 +235,5 @@
       "command": "diffEditor.hideUnchangedRegions.enabled",
       "sequence": ["settings.cycle.diffEditor.hideUnchangedRegions.enabled"]
     }
-  ],
-  "diffEditor.hideUnchangedRegions.enabled": true
+  ]
 }
