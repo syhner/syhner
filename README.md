@@ -55,8 +55,7 @@ This will:
 - clone repos to dotfiles repo
 - ls tab colors matching eza
 - tmux / zellij
-- editors
-  - neovim
+- handle folder sync between platforms (e.g. neovim)
 - cli tools
   - and more from previous Brewfile
 - mac
