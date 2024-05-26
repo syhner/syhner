@@ -10,11 +10,11 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
 fi
 
 # TODO - handle these brew installs better
-brew install awscli 
+brew install awscli
 brew install cloudflared
-brew install btop 
+brew install btop
 brew install gh
-brew install neofetch 
+brew install neofetch
 
 # TODO - handle these brew cask installs better
 brew install cask arc
@@ -23,6 +23,7 @@ brew install cask monitorcontrol
 brew install cask obsidian
 brew install cask purevpn
 brew install cask raycast
+brew install cask setapp
 brew install cask slack
 brew install cask spotify
 brew install cask vlc
