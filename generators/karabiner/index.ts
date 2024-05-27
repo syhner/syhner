@@ -57,7 +57,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    // a: {},
+    // AVOID q,a,z 
     // Browse
     b: {
       t: open("https://twitter.com"),
@@ -77,6 +77,7 @@ const rules: KarabinerRules[] = [
     // n: {},
     // Open
     o: {
+      b: app("Arc"),
       d: app("Discord"),
       f: app("Finder"),
       i: app("Messages"), // Imessage
@@ -88,7 +89,6 @@ const rules: KarabinerRules[] = [
       z: app("zoom.us"),
     },
     // p: {},
-    // q: {},
     // Raycast
     r: {
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
@@ -185,7 +185,6 @@ const rules: KarabinerRules[] = [
     },
     // x: {},
     // y: {},
-    // z: {},
   }),
 ];
 
