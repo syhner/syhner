@@ -56,8 +56,9 @@ const rules: KarabinerRules[] = [
       //      },
     ],
   },
-  ...createHyperSubLayers({
-    // AVOID q,a,z 
+  // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
+  // Note: Avoid sub-layers which use the same finger as the layer
+  ...createHyperSubLayers({ 
     // Browse
     b: {
       t: open("https://twitter.com"),
