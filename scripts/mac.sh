@@ -18,6 +18,7 @@ brew install neofetch
 
 # TODO - handle these brew cask installs better
 brew install cask arc
+brew install cask barrier
 brew install cask discord
 # install homerow.app and change keybindings to karabiner usage
 brew install cask karabiner-elements
