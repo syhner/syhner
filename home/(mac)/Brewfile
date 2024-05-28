@@ -1,15 +1,3 @@
-tap "getsentry/tools"
-tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
-tap "koekeishiya/formulae"
-tap "libsql/sqld"
-tap "oven-sh/bun"
-tap "tursodatabase/tap"
-tap "warrensbox/tap"
-
 brew "docker-compose"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
@@ -43,12 +31,6 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "tursodatabase/tap/turso"
-# The tfswitch command lets you switch between terraform versions.
-cask "aldente"
-# Open-source KVM software
-cask "barrier"
-# Menu bar icon organiser
-cask "bartender"
 # Utility improving 3rd party mouse performance and functionalities
 cask "bettermouse"
 # Multi-platform client-side cloud file encryption tool
