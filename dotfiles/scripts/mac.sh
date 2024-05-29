@@ -14,7 +14,9 @@ brew install awscli
 brew install cloudflared
 brew install btop
 brew install gh
+brew install gnupg
 brew install neofetch
+brew install ngrok/ngrok/ngrok
 
 # TODO - handle these brew cask installs better
 brew install cask arc
