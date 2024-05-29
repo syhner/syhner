@@ -1,0 +1,239 @@
+{
+  // Font
+  "apc.font.family": "Cascadia Mono",
+  "apc.monospace.font.family": "Cascadia Mono",
+  "chat.editor.fontFamily": "Cascadia Mono",
+  "debug.console.fontFamily": "Cascadia Mono",
+  "editor.codeLensFontFamily": "Cascadia Mono",
+  "editor.experimentalInlineEdit.fontFamily": "Cascadia Mono",
+  "editor.fontFamily": "Cascadia Mono",
+  "editor.inlayHints.fontFamily": "Cascadia Mono",
+  "editor.inlineSuggest.fontFamily": "Cascadia Mono",
+  "errorLens.fontFamily": "Cascadia Mono",
+  "notebook.output.fontFamily": "Cascadia Mono",
+  "scm.inputFontFamily": "Cascadia Mono",
+  "terminal.integrated.fontFamily": "Cascadia Mono",
+
+  // Styling
+  // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 22
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset"
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom"
+  },
+  "apc.stylesheet": {
+    ".sidebar > .title > .title-label": "opacity: 0",
+    ".sidebar .title-actions": "display: none !important",
+    ".editor-group-container .title-actions": "display: none !important",
+    "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
+    "[aria-label='Terminal actions']": "display: none !important",
+    ".actions-container .codicon-panel-close": "display: none !important",
+    ".actions-container .codicon-panel-maximize": "display: none !important"
+  },
+  "breadcrumbs.symbolPath": "off",
+  "editor.minimap.autohide": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
+  "window.restoreFullscreen": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.layoutControl.enabled": false,
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredHighContrastColorTheme": "Tokyo Night",
+  "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+
+  // Editor
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.glyphMargin": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.showFoldingControls": "never",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "window.titleBarStyle": "native",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.showTabs": "single",
+
+  // Explorer
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.copyRelativePathSeparator": "/",
+  "explorer.excludeGitIgnore": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.editorAssociations": {
+    "*.db": "sqlite-viewer.option"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Git
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "git.autofetch": true,
+  "git.confirmSync": false, // Stop confirming when push/pulling
+  "git.enableSmartCommit": true, // Commit all when no files are staged
+  "githubPullRequests.pullBranch": "never",
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.scrollback": 2000,
+  "terminal.integrated.tabs.location": "right",
+  "workbench.panel.defaultLocation": "bottom",
+
+  // Window behaviour
+  "security.workspace.trust.untrustedFiles": "open",
+  "update.showReleaseNotes": false,
+
+  // Javascript / Typescript
+  "javascript.preferGoToSourceDefinition": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // Extensions
+  "codesnap.containerPadding": "2em",
+  "codesnap.showWindowControls": false,
+  "codesnap.shutterAction": "copy",
+  "codesnap.target": "window",
+  "codesnap.transparentBackground": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "svelte.enable-ts-plugin": true,
+  "where-am-i.colorful": false,
+  "where-am-i.textTransfrom": "none",
+  "settings.cycle": [
+    {
+      "id": "themeDark",
+      "values": [
+        { "workbench.colorTheme": "Tokyo Night Storm" },
+        { "workbench.colorTheme": "Tokyo Night" }
+      ]
+    },
+    {
+      "id": "themeLight",
+      "values": [
+        { "workbench.colorTheme": "Tokyo Night Light" },
+        { "workbench.colorTheme": "Tokyo (Light)" }
+      ]
+    },
+    {
+      "id": "explorer.excludeGitIgnore",
+      "values": [
+        { "explorer.excludeGitIgnore": true },
+        { "explorer.excludeGitIgnore": false }
+      ]
+    },
+    {
+      "id": "apc.stylesheet",
+      "values": [
+        {
+          "apc.stylesheet": {}
+        },
+        {
+          "apc.stylesheet": {
+            // Sidebar category (e.g. Explorer) text, conflicts with mac window buttons
+            ".sidebar > .title > .title-label": "opacity: 0",
+            // Sidebar actions (e.g. fold all files)
+            ".sidebar .title-actions": "display: none !important",
+            // Editor actions (e.g. open preview)
+            ".editor-group-container .title-actions": "display: none !important",
+            // Auxiliary bar actions (e.g. commit when source control is in auxiliary bar)
+            "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
+            // Terminal actions (e.g. new terminal)
+            "[aria-label='Terminal actions']": "display: none !important",
+            // Panel close
+            ".actions-container .codicon-panel-close": "display: none !important",
+            // Panel maximize
+            ".actions-container .codicon-panel-maximize": "display: none !important"
+          }
+        }
+      ]
+    },
+    {
+      "id": "git.openDiffOnClick",
+      "values": [
+        { "git.openDiffOnClick": false },
+        { "git.openDiffOnClick": true }
+      ]
+    },
+    {
+      "id": "editor.wordWrap",
+      "values": [{ "editor.wordWrap": "on" }, { "editor.wordWrap": "off" }]
+    },
+    {
+      "id": "diffEditor.hideUnchangedRegions.enabled",
+      "values": [
+        { "diffEditor.hideUnchangedRegions.enabled": false },
+        { "diffEditor.hideUnchangedRegions.enabled": true }
+      ]
+    }
+  ],
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.navigateExplorerDownAndPreviewFile",
+      "sequence": ["list.focusDown", "filesExplorer.openFilePreserveFocus"]
+    },
+    {
+      "command": "multiCommand.navigateExplorerUpAndPreviewFile",
+      "sequence": ["list.focusUp", "filesExplorer.openFilePreserveFocus"]
+    },
+    {
+      "command": "multiCommand.focusPrev",
+      "sequence": ["list.focusParent", "list.focusDown"]
+    },
+    {
+      "command": "multiCommand.focusNext",
+      "sequence": ["list.focusParent", "list.collapse", "list.focusDown"]
+    },
+    {
+      "command": "multiCommand.scmOpenAndFocus",
+      "sequence": ["workbench.scm.focus", "workbench.scm.focus"]
+    },
+    {
+      "command": "apc.stylesheet",
+      "sequence": ["settings.cycle.apc.stylesheet"]
+    },
+    {
+      "command": "git.openDiffOnClick",
+      "sequence": ["settings.cycle.git.openDiffOnClick"]
+    },
+    {
+      "command": "editor.wordWrap",
+      "sequence": ["settings.cycle.editor.wordWrap"]
+    },
+    {
+      "command": "diffEditor.hideUnchangedRegions.enabled",
+      "sequence": ["settings.cycle.diffEditor.hideUnchangedRegions.enabled"]
+    }
+  ]
+}
