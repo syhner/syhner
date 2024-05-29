@@ -1,5 +1,3 @@
-<samp> Get in touch -> <a href="https://sirajh.com">sirajh.com</a></samp>
+Repo of personal but public files, such as:
 
-&nbsp;
-
-- [dotfiles](./dotfiles): Cross-platform dotfiles (Linux, macOS, Windows). Install with a single command.
+- [dotfiles](./dotfiles): Cross-platform dotfiles (Linux, macOS, Windows) installable with a single command.
