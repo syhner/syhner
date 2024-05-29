@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "db",
+  "private": true,
+  "scripts": {
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:push": "drizzle-kit push:sqlite",
+    "db:seed": "bun seed.ts",
+    "db:view": "drizzle-kit studio",
+    "db:drop": "drizzle-kit drop"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.5.0",
+    "drizzle-orm": "^0.29.3",
+    "env": "workspace:*",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^9.4.1",
+    "drizzle-kit": "^0.20.14"
+  }
+}

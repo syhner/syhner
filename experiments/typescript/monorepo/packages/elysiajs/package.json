@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "elysiajs",
+  "private": true,
+  "scripts": {
+    "check-ts": "tsc --noEmit",
+    "dev": "bun --hot src/index.ts",
+    "test": "bun test",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "add": "workspace:*",
+    "db": "workspace:*",
+    "elysia": "^0.8.17",
+    "env": "workspace:*"
+  }
+}

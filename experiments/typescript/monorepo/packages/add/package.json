@@ -1,0 +1,18 @@
+{
+  "name": "add",
+  "description": "Adds two numbers",
+  "private": true,
+  "main": "src/index.ts",
+  "publishConfig": {
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "scripts": {
+    "bundle": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2"
+  },
+  "keywords": []
+}
