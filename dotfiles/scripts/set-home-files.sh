@@ -2,7 +2,7 @@
 set -euo pipefail # strict mode
 
 export DOTFILES
-DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)"
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)/dotfiles"
 source "$DOTFILES/home/source/0-functions.sh"
 
 if [[ "$#" -lt 1 ]] || [[ "$#" -gt 2 ]]; then
@@ -42,6 +42,10 @@ function copy_home_file() {
   fi
 
   if [[ ! -f "$file_dot" ]]; then
+    if [[ $file_dot == "encrypted/"* ]]; then
+      echo "Encrypted file $file_dot missing, skipping"
+      return
+    fi
     echo "File $file_dot does not exist in dotfiles repository"
     if [[ $file_dot != "$file_path" ]]; then
       echo "Using reference from: \"$file_path\""
