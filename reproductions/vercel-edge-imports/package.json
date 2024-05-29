@@ -1,0 +1,15 @@
+{
+  "name": "vercel-edge-imports",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@vercel/edge": "1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "5.2.2"
+  }
+}
