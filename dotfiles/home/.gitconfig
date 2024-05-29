@@ -24,7 +24,7 @@ path = ~/.gitconfig-editor
 path = ~/.gitconfig-personal
 path = ~/.gitconfig-delta
 [includeIf "gitdir:~/work/"]
-path = ~/work/.gitconfig
+path = ~/.gitconfig-work
 
 [alias]
 open = "!f() { \

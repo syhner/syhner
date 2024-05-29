@@ -32,16 +32,33 @@ This will:
 2. Check for / update package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
 3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
 
+## Encryption
+
+https://www.gnupg.org/gph/en/manual/book1.html
+
+### Encrypting files
+
+```sh
+find ./encrypted -type f ! -name "*.gpg" -print0 | xargs -0 gpg --encrypt-files --yes
+```
+
+### Decrypting files
+
+```sh
+gpg --decrypt-files --yes encrypted/*.gpg
+./scripts/set-home-files.sh push
+```
+
 ## Guide
 
 [Scripts](scripts/) can also be called individually, e.g.
 
 ```sh
-# Push dotfiles to your home directory
-./scripts/set-home-files.sh push $HOME
+# Push dotfiles
+./scripts/set-home-files.sh push [directory=$HOME]
 
-# Pull dotfiles from your home directory
-./scripts/set-home-files.sh pull $HOME
+# Pull dotfiles
+./scripts/set-home-files.sh pull [directory=$HOME]
 
 # Pull dotfiles from a backup
 ./scripts/set-home-files.sh pull backups/2000-01-01T00:00:00Z
@@ -73,6 +90,5 @@ This will:
   - CI
     - shellcheck
     - build on different platforms
-- encrypted secrets / files
 - templates
 - anything personal to be injected through toml file inputs

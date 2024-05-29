@@ -1,4 +1,8 @@
 backups/
 .DS_Store
-*.*-personal
 node_modules/
+
+# encrypted
+.aws/config
+.aws/credentials
+.gitconfig-work
