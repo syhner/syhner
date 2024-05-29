@@ -1,0 +1,8 @@
+# sensitive
+key
+
+# terraform
+.terraform/
+*tfstate*
+*tfplan*
+*.tfvars
