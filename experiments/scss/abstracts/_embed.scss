@@ -1,0 +1,19 @@
+%embed {
+  display: block;
+  font-family: 'La Belle Aurore', sans-serif;
+  color: white;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+@mixin embeds($tag) {
+  &::before {
+    @extend %embed;
+    content: '<' + $tag + '>';
+  }
+
+  &::after {
+    @extend %embed;
+    content: '</' + $tag + '>';
+  }
+}

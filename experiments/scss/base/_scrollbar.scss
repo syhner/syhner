@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+html {
+  $track: #5555;
+  $thumb: #7775;
+
+  // Firefox
+  scrollbar-width: auto;
+
+  scrollbar-color: $thumb $track;
+  &::-webkit-scrollbar {
+    width: 1vw;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $track;
+    border-radius: 100vw;
+    margin-block: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    background-color: $thumb;
+
+    &:hover {
+      background-color: color.adjust($thumb, $alpha: 1);
+    }
+  }
+}

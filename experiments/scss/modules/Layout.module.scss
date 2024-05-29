@@ -1,0 +1,36 @@
+@use '../abstracts';
+
+.main {
+  box-sizing: border-box;
+  animation: fade-in 2.5s linear forwards;
+
+  @include abstracts.not-mobile {
+    padding-inline: 2rem;
+    margin-left: 5rem;
+  }
+
+  @include abstracts.mobile {
+    padding-inline: 1rem;
+  }
+
+  section {
+    height: 100vh;
+    width: 100%;
+    @include abstracts.mobile {
+      height: calc(100vh - 5rem);
+
+      &:last-child {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

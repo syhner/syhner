@@ -1,0 +1,21 @@
+@use '../abstracts';
+
+:root {
+  font-size: 16px;
+  font-family: 'Arial';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// px: very small things e.g. drop shadows
+
+// em: properties of element when element has an explicit
+// font size
+
+// %: sharing space
+
+// vh, vw: sparingly, vh can change on mobile with keyboard
+
+// rem: everything else

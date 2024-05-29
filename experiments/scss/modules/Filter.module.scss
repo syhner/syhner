@@ -1,0 +1,132 @@
+@use '../abstracts';
+
+// nav-item
+.filter {
+  width: fit-content;
+  margin-left: auto;
+}
+
+// icon-button
+.filterHeader {
+  color: white;
+  border: 1px solid white;
+  background: abstracts.$primary-dark;
+
+  cursor: pointer;
+  transition: filter 300ms;
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  color: white;
+  border-radius: 0.5em;
+  background-color: abstracts.$secondary-light;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  &:hover {
+    background-color: abstracts.$secondary-dark;
+  }
+
+  svg {
+    width: 10px;
+    fill: white;
+    margin-left: 10px;
+  }
+}
+
+// dropdown
+.dropdown_menu {
+  // Remove from DOM flow
+  position: absolute;
+  // Make visible over other elements on DOM
+  z-index: 3;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 10rem;
+  transition: height 500ms ease;
+}
+
+// menu-item
+.dropdown_item {
+  height: 2rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 1s;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  user-select: none;
+
+  &:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+
+  &:hover label::after {
+    background-color: abstracts.$primary-light;
+  }
+
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &::after {
+      content: '';
+      width: 1em;
+      height: 1em;
+      border: 0.05em solid black;
+      border-radius: 0.15em;
+      position: absolute;
+      margin-left: 6.5rem;
+    }
+
+    &:hover::after {
+      background-color: abstracts.$primary-light;
+    }
+  }
+
+  input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+
+    &:hover + label::after {
+      background-color: abstracts.$primary-light;
+    }
+
+    &:checked + label::after {
+      content: '\002714';
+      background-color: abstracts.$primary-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.icon_right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.icon_left {
+  display: flex;
+  align-items: center;
+
+  svg {
+    height: 1em;
+    margin-right: 0.5em;
+  }
+}

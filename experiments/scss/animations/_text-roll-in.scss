@@ -1,0 +1,25 @@
+.text_animate {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+  min-width: 10px;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 13 {
+  .text_animate._#{$i} {
+    animation-delay: #{$i / 5}s;
+  }
+}

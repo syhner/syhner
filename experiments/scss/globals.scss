@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+@import 'base';
+@import 'abstracts';
+@import 'animations';
+@import 'components';
+@import 'themes';
+@import 'utilities';
+@import 'vendors';
+
+body {
+  background-color: $primary-dark;
+}
+
+svg use svg {
+  fill: inherit;
+}

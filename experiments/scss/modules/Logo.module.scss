@@ -1,0 +1,80 @@
+@use '../abstracts';
+
+.logo {
+  height: 100%;
+  width: 50%;
+  margin-right: 1rem;
+
+  @include abstracts.mobile {
+    display: none;
+  }
+
+  @include abstracts.not-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+.svg_container {
+  max-width: 40rem;
+
+  @include abstracts.embeds('svg');
+}
+
+.svg {
+  height: auto;
+}
+
+@mixin animate-path($length, $color) {
+  animation: draw 4s ease-in-out;
+  animation-fill-mode: forwards;
+  stroke: $color;
+  fill: $color;
+  fill-opacity: 0;
+  stroke-dasharray: $length;
+  stroke-dashoffset: $length;
+}
+
+@keyframes draw {
+  80% {
+    fill-opacity: 0;
+  }
+
+  80% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+.circle {
+  @include animate-path(3017, white);
+}
+
+.neck {
+  @include animate-path(1548, abstracts.$secondary-light);
+}
+
+.mouth {
+  @include animate-path(403, abstracts.$secondary-light);
+}
+
+.face {
+  @include animate-path(1436, abstracts.$secondary-light);
+}
+
+.eyebrow_r {
+  @include animate-path(331, black);
+}
+
+.eyebrow_l {
+  @include animate-path(69, black);
+}
+
+.hair {
+  @include animate-path(4042, black);
+}
