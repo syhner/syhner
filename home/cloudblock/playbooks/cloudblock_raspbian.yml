@@ -1,0 +1,368 @@
+---
+- name: Cloudblock - raspbian arm64 standalone variant
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  become: true
+  tasks:
+
+    - name: Custom facts
+      ansible.builtin.set_fact:
+        url_from_doh_provider:
+          adguard: https://dns.adguard.com/dns-query
+          cloudflare: https://cloudflare-dns.com/dns-query
+          cloudflare-security: https://security.cloudflare-dns.com/dns-query
+          cloudflare-family: https://family.cloudflare-dns.com/dns-query
+          applied-privacy: https://doh.applied-privacy.net/query
+          google: https://dns.google/dns-query
+          hurricane-electric: https://ordns.he.net/dns-query
+          pi-dns: https://doh.pi-dns.com/dns-query
+          quad9-recommended: https://dns.quad9.net/dns-query
+          libre-dns: https://doh.libredns.gr/dns-query
+          opendns: https://doh.opendns.com/dns-query
+
+    - name: Sanity check for doh_provider set
+      ansible.builtin.fail:
+        msg: "Exiting - the required variable 'doh_provider' not set"
+      when: doh_provider is not defined
+
+    - name: Sanity check for doh_provider blank
+      ansible.builtin.fail:
+        msg: "Exiting - the required variable 'doh_provider' is set but blank"
+      when: doh_provider == ""
+
+    - name: Wireguard_hostname auto if not set
+      ansible.builtin.set_fact:
+        wireguard_hostname: "auto"
+      when: wireguard_hostname is not defined
+
+    - name: Wireguard_hostname auto if blank
+      ansible.builtin.set_fact:
+        wireguard_hostname: "auto"
+      when: wireguard_hostname == ""
+
+    - name: Get dpkg architecture
+      ansible.builtin.shell: |
+        dpkg --print-architecture
+      register: dpkg_arch
+
+    - name: Add repo using key from URL
+      deb822_repository:
+        name: docker
+        types: deb
+        uris: https://download.docker.com/linux/raspbian
+        suites: '{{ ansible_distribution_release }}'
+        components: stable
+        architectures: arm64
+        signed_by: https://download.docker.com/linux/raspbian/gpg
+
+    - name: Absent packages
+      ansible.builtin.apt:
+        pkg:
+          - containerd
+          - docker-compose
+          - docker-doc
+          - docker.io
+          - podman-docker
+          - runc
+        state: absent
+
+    - name: Required packages
+      ansible.builtin.apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - "{% if dpkg_arch.stdout == 'arm64' %}docker.io{% else %}docker-ce{% endif %}"
+          - libcap2-bin
+          - python3-pip
+          - raspberrypi-kernel-headers
+          - ssl-cert
+        state: present
+        update_cache: true
+
+    - name: Ansible docker system python
+      ansible.builtin.pip:
+        name:
+          - ansible
+          - docker
+        executable: /usr/bin/pip3
+        state: present
+
+    - name: IP Forwarding enable/persist
+      ansible.posix.sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        state: present
+        reload: true
+        sysctl_set: true
+        sysctl_file: /etc/sysctl.conf
+
+    - name: Docker service started/enabled
+      ansible.builtin.systemd:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Various container directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: "999"
+        group: "999"
+        mode: '0750'
+      with_items:
+        - /opt/cloudflared
+        - /opt/pihole
+        - /opt/pihole/etc
+        - /opt/pihole/dnsmasq.d
+        - /opt/webproxy
+        - /opt/wireguard
+
+    - name: Determine ph_password file exists
+      ansible.builtin.stat:
+        path: /opt/pihole/ph_password
+      register: ph_password_file
+
+    - name: Generate ph_password if not exists
+      ansible.builtin.set_fact:
+        ph_password: "{{ lookup('password', '/dev/null length=15 chars=ascii_letters') }}"
+      when: not ph_password_file.stat.exists
+      no_log: true
+
+    - name: Set ph_password if not exists
+      ansible.builtin.lineinfile:
+        path: /opt/pihole/ph_password
+        create: true
+        owner: root
+        group: root
+        mode: '0600'
+        line: "{{ ph_password }}"
+      when: not ph_password_file.stat.exists
+      no_log: true
+
+    - name: Get ph_password if exists
+      ansible.builtin.slurp:
+        src: /opt/pihole/ph_password
+      register: ph_password_content
+      when: ph_password_file.stat.exists
+
+    - name: Register ph_password if exists
+      ansible.builtin.set_fact:
+        ph_password: "{{ ph_password_content['content'] | b64decode | trim }}"
+      when: ph_password_file.stat.exists
+
+    - name: Secure proxy to pihole confs
+      ansible.builtin.template:
+        src: "{{ item }}"
+        dest: "/opt/webproxy/{{ item }}"
+        owner: root
+        group: root
+        mode: '0444'
+      with_items:
+        - httpd-ssl.conf
+        - httpd.conf
+
+    - name: DoH Endpoints File Clear
+      ansible.builtin.file:
+        path: /opt/cloudflared/endpoints
+        state: absent
+
+    - name: DoH Endpoints
+      ansible.builtin.lineinfile:
+        create: true
+        mode: '0644'
+        path: /opt/cloudflared/endpoints
+        line: "{{ item }}"
+      with_items:
+        adguard https://dns.adguard.com/dns-query
+        cloudflare https://cloudflare-dns.com/dns-query
+        cloudflare-security https://security.cloudflare-dns.com/dns-query
+        cloudflare-family https://family.cloudflare-dns.com/dns-query
+        applied-privacy https://doh.applied-privacy.net/query
+        google https://dns.google/dns-query
+        hurricane-electric https://ordns.he.net/dns-query
+        pi-dns https://doh.pi-dns.com/dns-query
+        quad9-recommended https://dns.quad9.net/dns-query
+        libre-dns https://doh.libredns.gr/dns-query
+        opendns https://doh.opendns.com/dns-query
+
+    - name: Set DoH URL from DoH provider var
+      ansible.builtin.shell: |
+        awk '/{{ doh_provider }}/ { print $2 }' /opt/cloudflared/endpoints
+      register: doh_url
+
+    - name: Cloudflared Dockerfile
+      ansible.builtin.blockinfile:
+        create: true
+        mode: '0644'
+        path: /opt/cloudflared/Dockerfile
+        block: |
+          FROM {% if ansible_architecture == 'aarch64' %}arm64v8{% else %}arm32v7{% endif %}/ubuntu:22.04
+          EXPOSE 53/tcp
+          EXPOSE 53/udp
+          RUN apt-get update && \
+              apt-get install -y wget && \
+              wget https://github.com/cloudflare/cloudflared/releases/download/2023.6.1/cloudflared-linux-arm --directory-prefix=/usr/local/bin/ && \
+              chmod 555 /usr/local/bin/cloudflared-linux-arm
+          ENTRYPOINT ["/usr/local/bin/cloudflared-linux-arm", "proxy-dns","--address", "{{ docker_doh }}", "--port", "53", "--upstream", "{{ url_from_doh_provider[doh_provider] }}"]
+      register: cloudflared_doh_dockerfile
+
+    - name: Check cloudflared image exists
+      community.docker.docker_image:
+        name: cloudflared_doh
+        state: present
+        source: local
+      register: cloudflared_image_check
+      ignore_errors: true
+
+    - name: Cloudflared image
+      community.docker.docker_image:
+        name: cloudflared_doh
+        build:
+          path: /opt/cloudflared
+        source: build
+        state: present
+        force_source: "{{ cloudflared_doh_dockerfile.changed or cloudflared_image_check.failed }}"
+
+    - name: Cloudflared pihole and wireguard network
+      community.docker.docker_network:
+        name: cloudblock
+        driver: bridge
+        driver_options:
+          com.docker.network.driver.mtu: 1500
+        ipam_config:
+          - subnet: "{{ docker_network }}/24"
+            gateway: "{{ docker_gw }}"
+
+    - name: Cloudflared_doh container
+      community.docker.docker_container:
+        name: cloudflared_doh
+        image: cloudflared_doh
+        networks:
+          - name: cloudblock
+            ipv4_address: "{{ docker_doh }}"
+        container_default_behavior: compatibility
+        networks_cli_compatible: false
+        restart_policy: "always"
+
+    - name: Pihole container - without DNS listen
+      community.docker.docker_container:
+        name: pihole
+        hostname: cloudblockpihole
+        env:
+          DNS1: "{{ docker_doh }}"
+          DNS2: "{{ docker_doh }}"
+          WEBPASSWORD: "{{ ph_password }}"
+        image: pihole/pihole:latest
+        networks:
+          - name: cloudblock
+            ipv4_address: "{{ docker_pihole }}"
+        volumes:
+          - /opt/pihole/etc:/etc/pihole/:rw
+          - /opt/pihole/dnsmasq.d:/etc/dnsmasq.d:rw
+        pull: true
+        restart_policy: "always"
+      when: dns_novpn == "0"
+
+    - name: Pihole container - with DNS listen
+      community.docker.docker_container:
+        name: pihole
+        hostname: cloudblockpihole
+        env:
+          DNS1: "{{ docker_doh }}"
+          DNS2: "{{ docker_doh }}"
+          WEBPASSWORD: "{{ ph_password }}"
+          DNSMASQ_USER: root
+        image: pihole/pihole:latest
+        networks:
+          - name: cloudblock
+            ipv4_address: "{{ docker_pihole }}"
+        ports:
+          - "53:53"
+          - "53:53/udp"
+        volumes:
+          - /opt/pihole/etc:/etc/pihole/:rw
+          - /opt/pihole/dnsmasq.d:/etc/dnsmasq.d:rw
+        pull: true
+        restart_policy: "always"
+      when: dns_novpn == "1"
+      no_log: true
+
+    - name: Wireguard container
+      community.docker.docker_container:
+        name: wireguard
+        capabilities:
+          - NET_ADMIN
+          - SYS_MODULE
+        env:
+          PUID: "1000"
+          PGID: "1000"
+          TZ: "Etc/UTC"
+          SERVERURL: "{{ wireguard_hostname }}"
+          SERVERPORT: "51820"
+          ALLOWEDIPS: "{% if vpn_traffic is not defined %}{{ docker_pihole }}/32,{{ docker_webproxy }}/32{% elif vpn_traffic == 'dns' %}{{ docker_pihole }}/32,{{ docker_webproxy }}/32{% elif vpn_traffic == 'peers' %}{{ docker_pihole }}/32,{{ docker_webproxy }}/32,{{ wireguard_network }}/24{% elif vpn_traffic == 'all' %}0.0.0.0/0{% else %}{{ docker_pihole }}/32,{{ docker_webproxy }}/32{% endif %}"
+          PEERS: "{{ wireguard_peers }}"
+          PEERDNS: "{{ docker_pihole }}"
+          INTERNAL_SUBNET: "{{ wireguard_network }}"
+        image: "{% if ansible_architecture == 'aarch64' %}linuxserver/wireguard{% else %}linuxserver/wireguard:legacy-v1.0.20210914-ls8{% endif %}"
+        networks:
+          - name: cloudblock
+            ipv4_address: "{{ docker_wireguard }}"
+        ports:
+          - "51820:51820/udp"
+        sysctls:
+          net.ipv4.conf.all.src_valid_mark: 1
+        volumes:
+          - /opt/wireguard:/config:rw
+          - /lib/modules:/lib/modules
+        pull: true
+        container_default_behavior: compatibility
+        networks_cli_compatible: false
+        restart_policy: "always"
+
+    - name: Web proxy container for pihole
+      community.docker.docker_container:
+        name: web_proxy
+        image: httpd:2.4
+        networks:
+          - name: cloudblock
+            ipv4_address: "{{ docker_webproxy }}"
+        ports:
+          - "443:443"
+        volumes:
+          - /opt/webproxy/httpd-ssl.conf:/usr/local/apache2/conf/extra/httpd-ssl.conf:ro
+          - /opt/webproxy/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+          - /etc/ssl/certs/ssl-cert-snakeoil.pem:/usr/local/apache2/conf/server.crt:ro
+          - /etc/ssl/private/ssl-cert-snakeoil.key:/usr/local/apache2/conf/server.key:ro
+        pull: true
+        container_default_behavior: compatibility
+        networks_cli_compatible: false
+        restart_policy: "always"
+
+    - name: Wait for final peer conf (Wireguard)
+      ansible.builtin.wait_for:
+        path: "/opt/wireguard/peer{{ wireguard_peers }}/{{ item }}"
+        state: present
+        timeout: 600
+        sleep: 1
+      with_items:
+        - "publickey-peer{{ wireguard_peers }}"
+        - "privatekey-peer{{ wireguard_peers }}"
+        - "peer{{ wireguard_peers }}.conf"
+        - "peer{{ wireguard_peers }}.png"
+
+    - name: Playbook Summary
+      ansible.builtin.debug:
+        msg:
+          - Cloudblock completed installation of Wireguard, Pihole, Cloudflared, and Web Proxy!
+          - ""
+          - "Pihole WebUI (Local): https://{{ ansible_default_ipv4.address }}/admin/"
+          - "Pihole WebUI (VPN): https://{{ docker_webproxy }}/admin/"
+          - "Pihole DNS (Local): {{ ansible_default_ipv4.address }}"
+          - ""
+          - "Wireguard Client Files:"
+          - "ls -l /opt/wireguard/peer*"
+          - ""
+          - "Wireguard Client QR Codes via CLI:"
+          - "sudo docker logs wireguard"

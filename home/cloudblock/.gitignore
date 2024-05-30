@@ -1,0 +1,9 @@
+*terraform.*
+*.terraform
+*.terraform*.tfstate*.lock*.
+*pvars.*
+*-setup-*.sh
+*-init-*.yml
+*.swp
+.DS_Store
+.vscode
