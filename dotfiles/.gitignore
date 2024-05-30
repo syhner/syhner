@@ -2,7 +2,5 @@ backups/
 .DS_Store
 node_modules/
 
-# encrypted
-.aws/config
-.aws/credentials
-.gitconfig-work
+encrypted/*
+!encrypted/*.gpg
