@@ -1,0 +1,14 @@
+{
+  "name": "playwright-performance",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "playwright": "^1.44.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
