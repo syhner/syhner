@@ -24,6 +24,7 @@ brew install cask barrier
 brew install cask discord
 # install homerow.app and change keybindings to karabiner usage
 brew install cask karabiner-elements
+brew install cask mechvibes
 brew install cask monitorcontrol
 brew install cask obsidian
 brew install cask purevpn
