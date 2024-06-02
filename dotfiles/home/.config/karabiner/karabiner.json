@@ -42,6 +42,42 @@
                   }
                 ],
                 "type": "basic"
+              },
+              {
+                "type": "basic",
+                "description": "Disable escape to force Hyper Key usage",
+                "from": {
+                  "key_code": "escape"
+                },
+                "to": [
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "description": "Reachable control key",
+                "from": {
+                  "key_code": "right_command"
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "description": "Disable control to force Right Control usage",
+                "from": {
+                  "key_code": "left_control"
+                },
+                "to": [
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
               }
             ]
           },

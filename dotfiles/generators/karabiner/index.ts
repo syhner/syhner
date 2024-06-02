@@ -4,61 +4,45 @@ import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 const FILE_NAME = `${__dirname}/../../home/.config/karabiner/karabiner.json`;
 
 const rules: KarabinerRules[] = [
-  // Define the Hyper key itself
   {
+    // Define the Hyper key itself
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
       {
         description: "Caps Lock -> Hyper Key",
         from: {
           key_code: "caps_lock",
-          modifiers: {
-            optional: ["any"],
-          },
+          modifiers: { optional: ["any"] },
         },
-        to: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 1,
-            },
-          },
-        ],
-        to_after_key_up: [
-          {
-            set_variable: {
-              name: "hyper",
-              value: 0,
-            },
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
+        to: [{ set_variable: { name: "hyper", value: 1 } }],
+        to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
+        to_if_alone: [{ key_code: "escape" }],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
+      {
+        type: "basic",
+        description: "Disable escape to force Hyper Key usage",
+        from: { key_code: "escape" },
+        to: [{ key_code: "vk_none" }],
+      },
+      // Use right command as left control
+      {
+        type: "basic",
+        description: "Reachable control key",
+        from: { key_code: "right_command" },
+        to: [{ key_code: "left_control" }],
+      },
+      {
+        type: "basic",
+        description: "Disable control to force Right Control usage",
+        from: { key_code: "left_control" },
+        to: [{ key_code: "vk_none" }],
+      },
     ],
   },
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
-  ...createHyperSubLayers({ 
+  ...createHyperSubLayers({
     // Browse
     b: {
       t: open("https://twitter.com"),
@@ -94,12 +78,8 @@ const rules: KarabinerRules[] = [
     r: {
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
+      e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
+      h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
     },
     // s: {},
@@ -140,26 +120,14 @@ const rules: KarabinerRules[] = [
         description: "Window: Hide",
         to: [{ key_code: "h", modifiers: ["right_command"] }],
       },
-      hyphen: open(
-        "-g raycast://extensions/raycast/window-management/make-smaller"
-      ),
-      equal_sign: open(
-        "-g raycast://extensions/raycast/window-management/make-larger"
-      ),
+      hyphen: open("-g raycast://extensions/raycast/window-management/make-smaller"),
+      equal_sign: open("-g raycast://extensions/raycast/window-management/make-larger"),
 
       // quadrants
-      u: open(
-        "-g raycast://extensions/raycast/window-management/top-left-quarter"
-      ),
-      i: open(
-        "-g raycast://extensions/raycast/window-management/top-right-quarter"
-      ),
-      j: open(
-        "-g raycast://extensions/raycast/window-management/bottom-left-quarter"
-      ),
-      k: open(
-        "-g raycast://extensions/raycast/window-management/bottom-right-quarter"
-      ),
+      u: open("-g raycast://extensions/raycast/window-management/top-left-quarter"),
+      i: open("-g raycast://extensions/raycast/window-management/top-right-quarter"),
+      j: open("-g raycast://extensions/raycast/window-management/bottom-left-quarter"),
+      k: open("-g raycast://extensions/raycast/window-management/bottom-right-quarter"),
 
       // halves
       h: open("-g raycast://extensions/raycast/window-management/left-half"),
@@ -167,21 +135,13 @@ const rules: KarabinerRules[] = [
 
       // center
       c: open("-g raycast://extensions/raycast/window-management/center"),
-      r: open(
-        "-g raycast://extensions/raycast/window-management/reasonable-size"
-      ),
-      "comma": open(
-        "-g raycast://extensions/raycast/window-management/almost-maximize"
-      ),
+      r: open("-g raycast://extensions/raycast/window-management/reasonable-size"),
+      comma: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
       m: open("-g raycast://extensions/raycast/window-management/maximize"),
-      f: open(
-        "-g raycast://extensions/raycast/window-management/toggle-fullscreen"
-      ),
+      f: open("-g raycast://extensions/raycast/window-management/toggle-fullscreen"),
 
       // displays
-      p: open(
-        "-g raycast://extensions/raycast/window-management/previous-display"
-      ),
+      p: open("-g raycast://extensions/raycast/window-management/previous-display"),
       n: open("-g raycast://extensions/raycast/window-management/next-display"),
     },
     // x: {},
