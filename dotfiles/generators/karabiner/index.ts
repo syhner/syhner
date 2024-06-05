@@ -9,6 +9,7 @@ const rules: KarabinerRules[] = [
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
       {
+        type: "basic",
         description: "Caps Lock -> Hyper Key",
         from: {
           key_code: "caps_lock",
@@ -17,7 +18,6 @@ const rules: KarabinerRules[] = [
         to: [{ set_variable: { name: "hyper", value: 1 } }],
         to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
         to_if_alone: [{ key_code: "escape" }],
-        type: "basic",
       },
       {
         type: "basic",
@@ -32,11 +32,18 @@ const rules: KarabinerRules[] = [
         from: { key_code: "right_command" },
         to: [{ key_code: "left_control" }],
       },
+      // Next / previous with on home row
       {
         type: "basic",
-        description: "Disable control to force Right Control usage",
-        from: { key_code: "left_control" },
-        to: [{ key_code: "vk_none" }],
+        description: "Ctrl j -> Ctrl n",
+        from: { key_code: "j", modifiers: { mandatory: ["left_control"] } },
+        to: [{ key_code: "n", modifiers: ["left_control"] }],
+      },
+      {
+        type: "basic",
+        description: "Ctrl k -> Ctrl p",
+        from: { key_code: "k", modifiers: { mandatory: ["left_control"] } },
+        to: [{ key_code: "p", modifiers: ["left_control"] }],
       },
     ],
   },

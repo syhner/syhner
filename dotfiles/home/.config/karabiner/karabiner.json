@@ -11,6 +11,7 @@
             "description": "Hyper Key (⌃⌥⇧⌘)",
             "manipulators": [
               {
+                "type": "basic",
                 "description": "Caps Lock -> Hyper Key",
                 "from": {
                   "key_code": "caps_lock",
@@ -40,8 +41,7 @@
                   {
                     "key_code": "escape"
                   }
-                ],
-                "type": "basic"
+                ]
               },
               {
                 "type": "basic",
@@ -69,13 +69,41 @@
               },
               {
                 "type": "basic",
-                "description": "Disable control to force Right Control usage",
+                "description": "Ctrl j -> Ctrl n",
                 "from": {
-                  "key_code": "left_control"
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ]
+                  }
                 },
                 "to": [
                   {
-                    "key_code": "vk_none"
+                    "key_code": "n",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "description": "Ctrl k -> Ctrl p",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "left_control"
+                    ]
                   }
                 ]
               }
