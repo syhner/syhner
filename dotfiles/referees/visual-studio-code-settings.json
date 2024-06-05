@@ -117,6 +117,11 @@
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
 
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 100
+  },
+
   // Extensions
   "codesnap.containerPadding": "2em",
   "codesnap.showWindowControls": false,
