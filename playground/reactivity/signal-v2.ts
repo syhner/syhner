@@ -39,7 +39,7 @@ function cleanup(subscription: Subscription) {
   subscription.dependencies.clear();
 }
 
-export function effect(cb: () => void) {
+function effect(cb: () => void) {
   const subscription = {
     runEffect: () => {
       cleanup(subscription);
@@ -53,7 +53,7 @@ export function effect(cb: () => void) {
   subscription.runEffect();
 }
 
-export function derived(cb: () => void) {
+function derived(cb: () => void) {
   const [derived, setDerived] = signal();
   effect(() => setDerived(cb()));
   return derived;
