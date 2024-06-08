@@ -53,7 +53,7 @@ This will:
 ### Encrypting files
 
 ```sh
-find ./encrypted -type f ! -name "*.gpg" -print0 | xargs -0 gpg --encrypt-files --yes
+find ./encrypted -type f ! -name "*.gpg" -print0 | xargs -0 gpg --batch --encrypt-files --recipient "<your id/email>"
 ```
 
 ### Decrypting files
