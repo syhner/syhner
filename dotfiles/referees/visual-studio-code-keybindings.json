@@ -399,6 +399,27 @@
     "command": "vscode-harpoon.gotoEditor5",
     "when": "isMac"
   },
+  // Pane navigation
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "isMac && !terminalFocus"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.navigateDown",
+    "when": "isMac && !terminalFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.navigateUp",
+    "when": "isMac && !terminalFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.navigateRight",
+    "when": "isMac && !terminalFocus"
+  },
 
   // Windows like mac
   {
@@ -815,5 +836,26 @@
     "key": "alt+5",
     "command": "vscode-harpoon.gotoEditor5",
     "when": "isWindows"
+  },
+  // Pane navigation
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "isWindows && !terminalFocus"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.navigateDown",
+    "when": "isWindows && !terminalFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.navigateUp",
+    "when": "isWindows && !terminalFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.navigateRight",
+    "when": "isWindows && !terminalFocus"
   }
 ]
