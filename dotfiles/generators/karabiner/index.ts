@@ -19,12 +19,6 @@ const rules: KarabinerRules[] = [
         to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
         to_if_alone: [{ key_code: "escape" }],
       },
-      {
-        type: "basic",
-        description: "Disable escape to force Hyper Key usage",
-        from: { key_code: "escape" },
-        to: [{ key_code: "vk_none" }],
-      },
       // Use right command as left control
       {
         type: "basic",
@@ -32,18 +26,30 @@ const rules: KarabinerRules[] = [
         from: { key_code: "right_command" },
         to: [{ key_code: "left_control" }],
       },
-      // Next / previous with on home row
+      // Arrow keys on home row
       {
         type: "basic",
-        description: "Ctrl j -> Ctrl n",
-        from: { key_code: "j", modifiers: { mandatory: ["left_control"] } },
-        to: [{ key_code: "n", modifiers: ["left_control"] }],
+        description: "Ctrl h -> left",
+        from: { key_code: "h", modifiers: { mandatory: ["left_control"] } },
+        to: [{ key_code: "left_arrow" }],
       },
       {
         type: "basic",
-        description: "Ctrl k -> Ctrl p",
+        description: "Ctrl j -> down",
+        from: { key_code: "j", modifiers: { mandatory: ["left_control"] } },
+        to: [{ key_code: "down_arrow" }],
+      },
+      {
+        type: "basic",
+        description: "Ctrl k -> up",
         from: { key_code: "k", modifiers: { mandatory: ["left_control"] } },
-        to: [{ key_code: "p", modifiers: ["left_control"] }],
+        to: [{ key_code: "up_arrow" }],
+      },
+      {
+        type: "basic",
+        description: "Ctrl l -> right",
+        from: { key_code: "l", modifiers: { mandatory: ["left_control"] } },
+        to: [{ key_code: "right_arrow" }],
       },
     ],
   },

@@ -11,6 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
   true # Don't install
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   install_package "$package_name"
+  defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 elif [[ "$OSTYPE" == "msys" ]]; then
   install_package Microsoft.VisualStudioCode
 fi
@@ -30,6 +31,7 @@ code --install-extension enkia.tokyo-night
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension PKief.material-icon-theme
 code --install-extension ryuta46.multi-command
+code --install-extension timonwong.shellcheck
 code --install-extension TomRijndorp.find-it-faster
 code --install-extension usernamehw.errorlens
 

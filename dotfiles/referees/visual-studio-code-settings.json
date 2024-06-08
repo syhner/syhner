@@ -87,6 +87,9 @@
   },
   "workbench.iconTheme": "material-icon-theme",
 
+  // Search
+  "search.smartCase": true,
+
   // Git
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
@@ -101,6 +104,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.scrollback": 2000,
   "terminal.integrated.tabs.location": "right",
   "workbench.panel.defaultLocation": "bottom",
@@ -134,6 +138,10 @@
   "rust-analyzer.inlayHints.bindingModeHints.enable": true,
   "rust-analyzer.inlayHints.typeHints.enable": true,
   "svelte.enable-ts-plugin": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.highlightedyank.enable": true,
   "where-am-i.colorful": false,
   "where-am-i.textTransfrom": "none",
   "settings.cycle": [
