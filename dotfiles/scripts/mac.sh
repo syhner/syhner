@@ -15,6 +15,7 @@ brew install cloudflared
 brew install btop
 brew install gh
 brew install gnupg
+brew install jesseduffield/lazygit/lazygit
 brew install neofetch
 brew install ngrok/ngrok/ngrok
 
