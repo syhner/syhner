@@ -26,7 +26,6 @@ echo 'Installing Visual Studio Code extensions...'
 code --install-extension antfu.where-am-i
 code --install-extension akil-s.tokyo-light
 code --install-extension drcika.apc-extension
-code --install-extension EnkelDigital.relative-goto
 code --install-extension enkia.tokyo-night
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension PKief.material-icon-theme

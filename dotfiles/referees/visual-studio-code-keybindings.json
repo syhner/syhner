@@ -300,27 +300,6 @@
     "command": "workbench.action.showAllSymbols",
     "when": "isMac"
   },
-  // Relative goto line
-  {
-    "key": "cmd+s",
-    "command": "-relative-goto.select",
-    "when": "isMac"
-  },
-  {
-    "key": "cmd+0",
-    "command": "relative-goto.goto",
-    "when": "isMac"
-  },
-  {
-    "key": "cmd+0",
-    "command": "-workbench.action.focusSideBar",
-    "when": "isMac"
-  },
-  {
-    "key": "cmd+shift+0",
-    "command": "relative-goto.select",
-    "when": "isMac"
-  },
   // Go to (menu items)
   {
     "key": "cmd+t",
@@ -736,27 +715,6 @@
   {
     "key": "shift+ctrl+y",
     "command": "workbench.action.showAllSymbols",
-    "when": "isWindows"
-  },
-  // Relative goto line
-  {
-    "key": "ctrl+s",
-    "command": "-relative-goto.select",
-    "when": "isWindows"
-  },
-  {
-    "key": "ctrl+0",
-    "command": "relative-goto.goto",
-    "when": "isWindows"
-  },
-  {
-    "key": "ctrl+0",
-    "command": "-workbench.action.focusSideBar",
-    "when": "isWindows"
-  },
-  {
-    "key": "ctrl+shift+0",
-    "command": "relative-goto.select",
     "when": "isWindows"
   },
   // Go to (menu items)
