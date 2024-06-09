@@ -1,18 +1,18 @@
 {
   // Font
-  "apc.font.family": "Cascadia Mono",
-  "apc.monospace.font.family": "Cascadia Mono",
-  "chat.editor.fontFamily": "Cascadia Mono",
-  "debug.console.fontFamily": "Cascadia Mono",
-  "editor.codeLensFontFamily": "Cascadia Mono",
-  "editor.experimentalInlineEdit.fontFamily": "Cascadia Mono",
-  "editor.fontFamily": "Cascadia Mono",
-  "editor.inlayHints.fontFamily": "Cascadia Mono",
-  "editor.inlineSuggest.fontFamily": "Cascadia Mono",
-  "errorLens.fontFamily": "Cascadia Mono",
-  "notebook.output.fontFamily": "Cascadia Mono",
-  "scm.inputFontFamily": "Cascadia Mono",
-  "terminal.integrated.fontFamily": "Cascadia Mono",
+  "apc.font.family": "CaskaydiaCove Nerd Font Mono",
+  "apc.monospace.font.family": "CaskaydiaCove Nerd Font Mono",
+  "chat.editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "debug.console.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.codeLensFontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.experimentalInlineEdit.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.inlayHints.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.inlineSuggest.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "errorLens.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "notebook.output.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "scm.inputFontFamily": "CaskaydiaCove Nerd Font Mono",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
 
   // Styling
   // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar

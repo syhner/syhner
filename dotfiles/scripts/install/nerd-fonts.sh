@@ -24,7 +24,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
 fi
 
 # Relative paths in https://github.com/ryanoasis/nerd-fonts
-fonts=("src/unpatched-fonts/GeistMono" "src/unpatched-fonts/CascadiaMono")
+fonts=("src/unpatched-fonts/GeistMono" "patched-fonts/CascadiaCode")
 
 for font in "${fonts[@]}"; do
   if [[ -d "$HOME/repos/nerd-fonts/$font" ]]; then
@@ -40,7 +40,7 @@ for font in "${fonts[@]}"; do
       setopt NULL_GLOB
     fi
 
-    for file in "$HOME/repos/nerd-fonts/$font/"*.{otf,ttf}; do
+    for file in "$HOME/repos/nerd-fonts/$font/"**/*.{otf,ttf}; do
       if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
         cp "$file" "$HOME/.local/share/fonts"
       elif [[ "$OSTYPE" == "darwin"* ]]; then
