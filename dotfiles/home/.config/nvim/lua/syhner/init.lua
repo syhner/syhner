@@ -1,0 +1,5 @@
+require('syhner.vim-globals')
+require('syhner.vim-options')
+require('syhner.vim-keymaps')
+require('syhner.vim-autocmds')
+require('syhner.lazy')
