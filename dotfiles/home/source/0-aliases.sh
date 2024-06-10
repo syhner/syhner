@@ -8,3 +8,4 @@ alias cwd="pwd | pbcopy"
 alias exitcode="echo \$?"
 alias mkdir="mkdir -p"
 alias sudo="sudo " # Allow aliases to be sudoed
+alias x="exit"
