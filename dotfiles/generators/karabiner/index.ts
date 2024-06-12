@@ -174,4 +174,8 @@ const contents = {
   ],
 };
 
+console.log("Generating karabiner config");
+
 Bun.write(FILE_NAME, JSON.stringify(contents, null, 2));
+
+console.log("Generated karabiner config");
