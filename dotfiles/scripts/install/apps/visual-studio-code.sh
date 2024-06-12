@@ -33,6 +33,7 @@ code --install-extension ryuta46.multi-command
 code --install-extension timonwong.shellcheck
 code --install-extension TomRijndorp.find-it-faster
 code --install-extension usernamehw.errorlens
+code --install-extension vscodevim.vim
 
 # Not used in settings / keybindings, improves DX, language agnostic
 code --install-extension aaron-bond.better-comments
