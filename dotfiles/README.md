@@ -2,6 +2,15 @@
 
 Cross-platform dotfiles. Works on Linux, macOS, Windows, and WSL.
 
+## Overview
+
+- Terminal emulator - Alacritty
+- Terminal multiplexer - Zellij
+- Shell - zsh
+- Editor - Neovim / VS Code
+- Font - CaskaydiaCove Nerd Font Mono
+- Theme - Tokyo Night
+
 ## Prerequisites
 
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -65,26 +74,20 @@ gpg --decrypt-files --yes encrypted/*.gpg
 
 ## TODO
 
-- clone repos to dotfiles repo
 - ls tab colors matching eza
-- tmux / zellij
 - handle folder sync between platforms (e.g. neovim)
-- cli tools
-  - and more from previous Brewfile
-- mac
-  - karabiner
-  - yabai
-  - skhd
 - functions
   - kill process on port with signal
-- UX
-  - nicer logs
-  - interactive installer (choose packages)
-  - uninstaller
 - robustness
   - overwrite source directory when pushing
   - CI
     - shellcheck
     - build on different platforms
-- templates
-- anything personal to be injected through toml file inputs
+- add
+  - email
+  - IRC
+  - RSS reader
+  - monitor
+  - audio?
+  - file manager?
+- set $DOTFILES in a single place
