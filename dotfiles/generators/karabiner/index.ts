@@ -56,7 +56,8 @@ const rules: KarabinerRules[] = [
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
   ...createHyperSubLayers({
-    // Browse
+    // [B]rowse
+    // a: AVOID
     b: {
       t: open("https://twitter.com"),
       y: open("https://news.ycombinator.com"),
@@ -68,12 +69,29 @@ const rules: KarabinerRules[] = [
     // g: {},
     // h: {},
     // i: {},
-    // j: {},
+    // [J]ump
+    j: {
+      // clic[K] mode (via homerow.app)
+      k: {
+        to: [{ key_code: "k", modifiers: ["right_control", "right_option"] }],
+      },
+      // scro[L]l mode (via homerow.app)
+      l: {
+        to: [{ key_code: "l", modifiers: ["right_control", "right_option"] }],
+      },
+      // [S]earch mode (via homerow.app)
+      s: {
+        to: [{ key_code: "s", modifiers: ["right_control", "right_option"] }],
+      },
+      u: {
+        to: [{ key_code: "page_down" }],
+      },
+    },
     // k: {},
     // l: {},
     // m: {},
     // n: {},
-    // Open
+    // [O]pen
     o: {
       b: app("Arc"),
       d: app("Discord"),
@@ -87,7 +105,8 @@ const rules: KarabinerRules[] = [
       z: app("zoom.us"),
     },
     // p: {},
-    // Raycast
+    // q: AVOID
+    // [R]aycast
     r: {
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
@@ -98,35 +117,7 @@ const rules: KarabinerRules[] = [
     // s: {},
     // t: {},
     // u: {},
-    // moVe / Vim
-    v: {
-      h: {
-        to: [{ key_code: "left_arrow" }],
-      },
-      i: {
-        to: [{ key_code: "page_up" }],
-      },
-      j: {
-        to: [{ key_code: "down_arrow" }],
-      },
-      k: {
-        to: [{ key_code: "up_arrow" }],
-      },
-      l: {
-        to: [{ key_code: "right_arrow" }],
-      },
-      // scrOll mode (via homerow.app)
-      o: {
-        to: [{ key_code: "o", modifiers: ["right_control", "right_option"] }],
-      },
-      // Search mode (via homerow.app)
-      s: {
-        to: [{ key_code: "s", modifiers: ["right_control", "right_option"] }],
-      },
-      u: {
-        to: [{ key_code: "page_down" }],
-      },
-    },
+    // j: {},
     w: {
       // size
       d: {
@@ -159,6 +150,7 @@ const rules: KarabinerRules[] = [
     },
     // x: {},
     // y: {},
+    // z: AVOID
   }),
 ];
 
