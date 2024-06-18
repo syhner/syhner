@@ -1,0 +1,5 @@
+{
+  "linux": "~/.config/Code/User",
+  "mac": "~/Library/Application Support/Code/User",
+  "windows": "~/AppData/Roaming/Code/User"
+}

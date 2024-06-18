@@ -1,7 +1,7 @@
 import type { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
-const FILE_NAME = `${__dirname}/../../home/.config/karabiner/karabiner.json`;
+const FILE_NAME = `${__dirname}/../../home/karabiner/.config/karabiner/karabiner.json`;
 
 const rules: KarabinerRules[] = [
   {

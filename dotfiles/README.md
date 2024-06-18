@@ -32,7 +32,7 @@ cd dotfiles
 
 This will:
 
-1. Copy files from [`home/`](home/) to your home directory. Replaced files are saved to `backups/` (and gitignored) in your local dotfiles repo.
+1. Copy files from [`home/`](home/) to your home directory
 
    - both bash and zsh will source `$HOME/source/*.sh` files in order
    - bash will source `$HOME/source/*.bash` files in order
@@ -46,14 +46,11 @@ This will:
 [Scripts](scripts/) can also be called individually, e.g.
 
 ```sh
-# Push dotfiles
-./scripts/set-home-files.sh push [directory=$HOME]
+# Set home files
+./scripts/set-home-files.sh
 
-# Pull dotfiles
-./scripts/set-home-files.sh pull [directory=$HOME]
-
-# Pull dotfiles from a backup
-./scripts/set-home-files.sh pull backups/2000-01-01T00:00:00Z
+# Set home files for a particular package
+./scripts/set-home-files.sh nvim
 
 # Install a package (e.g. fzf)
 ./scripts/install/fzf.sh
@@ -62,14 +59,13 @@ This will:
 ### Encrypting files
 
 ```sh
-find ./encrypted -type f ! -name "*.gpg" -print0 | xargs -0 gpg --batch --encrypt-files --recipient "<your id/email>"
+gpg --encrypt-files --recipient "<your id/email>" <files>
 ```
 
 ### Decrypting files
 
 ```sh
-gpg --decrypt-files --yes encrypted/*.gpg
-./scripts/set-home-files.sh push
+gpg --decrypt-files --yes <files>
 ```
 
 ## TODO
@@ -91,3 +87,4 @@ gpg --decrypt-files --yes encrypted/*.gpg
   - audio?
   - file manager?
 - set $DOTFILES in a single place
+- use get_os() instead of $OSTYPE
