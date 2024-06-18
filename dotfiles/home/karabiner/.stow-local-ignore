@@ -1,2 +1,3 @@
 ^generate/.*$
 target.json
+.gitignore
