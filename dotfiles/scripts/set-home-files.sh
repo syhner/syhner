@@ -5,7 +5,7 @@ set -euo pipefail # strict mode
 
 export DOTFILES
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel)/dotfiles"
-source "$DOTFILES/home/shell/source/0-functions.sh"
+source "$DOTFILES/home/shell/shell/source/0-functions.sh"
 
 package=${1:-}
 
@@ -14,7 +14,7 @@ cd "$DOTFILES"/home
 if [[ -n "$package" ]]; then
   echo "Copying files for package $package/home/$package"
   if [[ ! -d "$package" ]]; then
-    echo "$DOTFILES/home/$package does not exist"
+    echo "$DOTFILES/home/shell/$package does not exist"
     exit 1
   fi
 
