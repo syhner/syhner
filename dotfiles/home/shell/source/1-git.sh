@@ -168,6 +168,7 @@ alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias gbg='LANG=C git branch -vv | grep ": gone\]"'
 alias gco='git checkout'
 alias gcor='git checkout --recurse-submodules'
+alias gcos='git sparse-checkout'
 alias gcb='git checkout -b'
 alias gcB='git checkout -B'
 alias gcd='git checkout $(git_develop_branch)'
@@ -177,6 +178,7 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gclean='git clean --interactive -d'
 alias gcl='git clone --recurse-submodules'
+alias gcls='git clone --filter=blob:none --sparse'
 
 function gccd() {
   setopt localoptions extendedglob
