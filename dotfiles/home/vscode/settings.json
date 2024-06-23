@@ -75,8 +75,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.copyRelativePathSeparator": "/",
   "explorer.excludeGitIgnore": false,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
   "files.associations": {
     "*.json": "jsonc"
   },
