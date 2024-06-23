@@ -112,6 +112,8 @@ const rules: KarabinerRules[] = [
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
       e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
       h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
+      n: open("raycast://extensions/raycast/floating-notes/toggle-floating-notes-focus"),
+      m: open("raycast://extensions/raycast/floating-notes/toggle-floating-notes-window"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
     },
     // s: {},
