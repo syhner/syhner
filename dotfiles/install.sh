@@ -7,5 +7,6 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && git rev-parse --show-toplevel
 . "$DOTFILES/scripts/add-git-hooks.sh"
 . "$DOTFILES/scripts/package-manager.sh"
 . "$DOTFILES/scripts/install-packages.sh"
-. "$DOTFILES/scripts/mac-defaults.sh"
+. "$DOTFILES/scripts/mac.sh"
+. "$DOTFILES/scripts/windows.sh"
 . "$DOTFILES/scripts/stow.sh"
