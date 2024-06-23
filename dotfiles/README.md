@@ -88,3 +88,4 @@ gpg --decrypt-files --yes <files>
   - file manager?
 - set $DOTFILES in a single place
 - use get_os() instead of $OSTYPE
+- fix zellij copy_command on non-mac (since it runs system executables as commands, not wrapped by system shell)
