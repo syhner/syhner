@@ -66,6 +66,7 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "window.titleBarStyle": "native",
+  "window.zoomLevel": 0.8,
   "workbench.editor.enablePreview": true,
   "workbench.editor.showTabs": "single",
 
