@@ -15,9 +15,11 @@ brew install cloudflared
 brew install btop
 brew install gh
 brew install gnupg
+brew install httpie
 brew install jesseduffield/lazygit/lazygit
 brew install neofetch
 brew install ngrok/ngrok/ngrok
+brew install sst/tap/sst
 
 # TODO - handle these brew cask installs better
 brew install cask arc
@@ -29,10 +31,12 @@ brew install cask mechvibes
 brew install cask monitorcontrol
 brew install cask obsidian
 brew install cask purevpn
+brew install cask qbittorrent
 brew install cask raycast
 brew install cask setapp
 brew install cask slack
 brew install cask spotify
+brew install cask steam
 brew install cask vlc
 
 echo "Setting mac defaults"
