@@ -19,13 +19,6 @@ const rules: KarabinerRules[] = [
         to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
         to_if_alone: [{ key_code: "escape" }],
       },
-      // Use right command as left control
-      {
-        type: "basic",
-        description: "Reachable control key",
-        from: { key_code: "right_command" },
-        to: [{ key_code: "left_control" }],
-      },
       // Arrow keys on home row
       {
         type: "basic",
@@ -50,6 +43,80 @@ const rules: KarabinerRules[] = [
         description: "Ctrl l -> right",
         from: { key_code: "l", modifiers: { mandatory: ["left_control"] } },
         to: [{ key_code: "right_arrow" }],
+      },
+      // With left command
+      {
+        type: "basic",
+        description: "Left cmd + Right cmd + h -> Cmd + left",
+        from: {
+          key_code: "h",
+          modifiers: { mandatory: ["left_command", "right_command"] },
+        },
+        to: [{ key_code: "left_arrow", modifiers: ["left_command"] }],
+      },
+      {
+        type: "basic",
+        description: "Left cmd + Right cmd + j -> Cmd + down",
+        from: {
+          key_code: "j",
+          modifiers: { mandatory: ["left_command", "right_command"] },
+        },
+        to: [{ key_code: "down_arrow", modifiers: ["left_command"] }],
+      },
+      {
+        type: "basic",
+        description: "Left cmd + Right cmd + k -> Cmd + up",
+        from: {
+          key_code: "k",
+          modifiers: { mandatory: ["left_command", "right_command"] },
+        },
+        to: [{ key_code: "up_arrow", modifiers: ["left_command"] }],
+      },
+      {
+        type: "basic",
+        description: "Left cmd + Right cmd + l -> Cmd + right",
+        from: {
+          key_code: "l",
+          modifiers: { mandatory: ["left_command", "right_command"] },
+        },
+        to: [{ key_code: "right_arrow", modifiers: ["left_command"] }],
+      },
+      // With left option
+      {
+        type: "basic",
+        description: "Left option + Right cmd + h -> Cmd + left",
+        from: {
+          key_code: "h",
+          modifiers: { mandatory: ["left_option", "right_command"] },
+        },
+        to: [{ key_code: "left_arrow", modifiers: ["left_option"] }],
+      },
+      {
+        type: "basic",
+        description: "Left option + Right cmd + j -> Cmd + down",
+        from: {
+          key_code: "j",
+          modifiers: { mandatory: ["left_option", "right_command"] },
+        },
+        to: [{ key_code: "down_arrow", modifiers: ["left_option"] }],
+      },
+      {
+        type: "basic",
+        description: "Left option + Right cmd + k -> Cmd + up",
+        from: {
+          key_code: "k",
+          modifiers: { mandatory: ["left_option", "right_command"] },
+        },
+        to: [{ key_code: "up_arrow", modifiers: ["left_option"] }],
+      },
+      {
+        type: "basic",
+        description: "Left option + Right cmd + l -> Cmd + right",
+        from: {
+          key_code: "l",
+          modifiers: { mandatory: ["left_option", "right_command"] },
+        },
+        to: [{ key_code: "right_arrow", modifiers: ["left_option"] }],
       },
     ],
   },
