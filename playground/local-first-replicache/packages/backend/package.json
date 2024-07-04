@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.4.11",
+    "pg-mem": "^2.8.1",
+    "pg-promise": "^11.8.0",
+    "pusher": "^5.2.0",
+    "shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
