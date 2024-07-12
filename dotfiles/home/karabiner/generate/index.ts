@@ -241,16 +241,17 @@ const rules: KarabinerRules[] = [
     // n: {},
     // [O]pen
     o: {
-      b: app("Arc"),
+      a: app("Arc"), // [A]rc
+      b: app("Obsidian"), // o[B]sidian
       d: app("Discord"),
       f: app("Finder"),
-      i: app("Messages"), // Imessage
+      i: app("Messages"), // [I]message
       k: app("Slack"),
-      m: app("Obsidian"), // Markdown
+      m: app("Mail"),
       s: app("Spotify"),
       t: app("Alacritty"),
       v: app("Visual Studio Code"),
-      z: app("zoom.us"),
+      z: app("Zed"),
     },
     // p: {},
     // q: AVOID
