@@ -241,8 +241,8 @@ const rules: KarabinerRules[] = [
     // n: {},
     // [O]pen
     o: {
-      a: app("Arc"), // [A]rc
       b: app("Obsidian"), // o[B]sidian
+      c: app("Arc"), // ar[C]
       d: app("Discord"),
       f: app("Finder"),
       i: app("Messages"), // [I]message
