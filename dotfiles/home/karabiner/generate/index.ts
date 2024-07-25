@@ -217,22 +217,19 @@ const rules: KarabinerRules[] = [
     // g: {},
     // h: {},
     // i: {},
-    // [J]ump
+    // [J]ump (via homerow.app) (requires homerow keybinds to be set)
     j: {
-      // clic[K] mode (via homerow.app)
+      // clic[K]
       k: {
-        to: [{ key_code: "k", modifiers: ["right_control", "right_option"] }],
+        to: [{ key_code: "k", modifiers: ["right_command", "right_shift", "right_option"] }],
       },
-      // scro[L]l mode (via homerow.app)
+      // scro[L]l
       l: {
-        to: [{ key_code: "l", modifiers: ["right_control", "right_option"] }],
+        to: [{ key_code: "l", modifiers: ["right_command", "right_shift", "right_option"] }],
       },
-      // [S]earch mode (via homerow.app)
+      // [S]earch
       s: {
-        to: [{ key_code: "s", modifiers: ["right_control", "right_option"] }],
-      },
-      u: {
-        to: [{ key_code: "page_down" }],
+        to: [{ key_code: "s", modifiers: ["right_command", "right_shift", "right_option"] }],
       },
     },
     // k: {},
@@ -242,16 +239,20 @@ const rules: KarabinerRules[] = [
     // [O]pen
     o: {
       b: app("Obsidian"), // o[B]sidian
-      c: app("Arc"), // ar[C]
-      d: app("Discord"),
-      f: app("Finder"),
+      c: app("Arc"), // Ar[C]
+      d: app("Discord"), // [D]iscord
+      f: app("Finder"), // [F]inder
       i: app("Messages"), // [I]message
-      k: app("Slack"),
-      m: app("Mail"),
-      s: app("Spotify"),
-      t: app("Alacritty"),
-      v: app("Visual Studio Code"),
-      z: app("Zed"),
+      k: app("Slack"), // slac[K]
+      m: app("Mail"), // [M]ail
+      n: app("Notes"), // [N]otes
+      p: app("Preview"), // [P]review
+      s: app("Spotify"), // [S]potify
+      t: app("Alacritty"), // [T]erminal
+      v: app("Visual Studio Code"), // [V]isual Studio Code
+      w: app("Weather"), // [W]eather
+      y: app("Yubico Authenticator"), // [Y]ubico Authenticator
+      z: app("Zed"), // [Z]ed
     },
     // p: {},
     // q: AVOID
