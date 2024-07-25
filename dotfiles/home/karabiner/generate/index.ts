@@ -5,8 +5,7 @@ const FILE_NAME = `${__dirname}/../.config/karabiner/karabiner.json`;
 
 const rules: KarabinerRules[] = [
   {
-    // Define the Hyper key itself
-    description: "Hyper Key (⌃⌥⇧⌘)",
+    description: "Hyper Key (caps lock -> ctrl + option + shift + command)",
     manipulators: [
       {
         type: "basic",
@@ -19,180 +18,293 @@ const rules: KarabinerRules[] = [
         to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
         to_if_alone: [{ key_code: "escape" }],
       },
-      // Right cmd -> left control
+    ],
+  },
+  {
+    description: "Change left_shift + right_shift to caps_lock",
+    manipulators: [
+      {
+        from: {
+          key_code: "left_shift",
+          modifiers: {
+            mandatory: ["right_shift"],
+            optional: ["caps_lock"],
+          },
+        },
+        to: [
+          {
+            key_code: "caps_lock",
+          },
+        ],
+        type: "basic",
+      },
+      {
+        from: {
+          key_code: "right_shift",
+          modifiers: {
+            mandatory: ["left_shift"],
+            optional: ["caps_lock"],
+          },
+        },
+        to: [
+          {
+            key_code: "caps_lock",
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
+  {
+    description: "right_command -> left_control",
+    manipulators: [
       {
         type: "basic",
-        description: "Right cmd -> left control",
         from: { key_code: "right_command" },
         to: [{ key_code: "left_control" }],
       },
-      // Arrow keys on home row
+    ],
+  },
+  {
+    description: "home row arrow keys (left)",
+    manipulators: [
       {
         type: "basic",
-        description: "Ctrl h -> left",
         from: { key_code: "h", modifiers: { mandatory: ["left_control"] } },
         to: [{ key_code: "left_arrow" }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (down)",
+    manipulators: [
       {
         type: "basic",
-        description: "Ctrl j -> down",
         from: { key_code: "j", modifiers: { mandatory: ["left_control"] } },
         to: [{ key_code: "down_arrow" }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (up)",
+    manipulators: [
       {
         type: "basic",
-        description: "Ctrl k -> up",
         from: { key_code: "k", modifiers: { mandatory: ["left_control"] } },
         to: [{ key_code: "up_arrow" }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (right)",
+    manipulators: [
       {
         type: "basic",
-        description: "Ctrl l -> right",
         from: { key_code: "l", modifiers: { mandatory: ["left_control"] } },
         to: [{ key_code: "right_arrow" }],
       },
-      // With left command
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + left",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + h -> Cmd + left",
         from: {
           key_code: "h",
           modifiers: { mandatory: ["left_command", "left_control"] },
         },
         to: [{ key_code: "left_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + down)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + j -> Cmd + down",
         from: {
           key_code: "j",
           modifiers: { mandatory: ["left_command", "left_control"] },
         },
         to: [{ key_code: "down_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + up)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + k -> Cmd + up",
         from: {
           key_code: "k",
           modifiers: { mandatory: ["left_command", "left_control"] },
         },
-        to: [{ key_code: "up_arrow", modifiers: ["left_command"] }],
+        to: [{ key_code: "down_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + right)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + l -> Cmd + right",
         from: {
           key_code: "l",
           modifiers: { mandatory: ["left_command", "left_control"] },
         },
         to: [{ key_code: "right_arrow", modifiers: ["left_command"] }],
       },
-      // With left option
+    ],
+  },
+  {
+    description: "home row arrow keys (option + left)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + h -> Cmd + left",
         from: {
           key_code: "h",
           modifiers: { mandatory: ["left_option", "left_control"] },
         },
         to: [{ key_code: "left_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + down)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + j -> Cmd + down",
         from: {
           key_code: "j",
           modifiers: { mandatory: ["left_option", "left_control"] },
         },
         to: [{ key_code: "down_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + up)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + k -> Cmd + up",
         from: {
           key_code: "k",
           modifiers: { mandatory: ["left_option", "left_control"] },
         },
         to: [{ key_code: "up_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + right)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + l -> Cmd + right",
         from: {
           key_code: "l",
           modifiers: { mandatory: ["left_option", "left_control"] },
         },
         to: [{ key_code: "right_arrow", modifiers: ["left_option"] }],
       },
-      // With left command (right cmd pressed first)
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + left) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + h -> Cmd + left",
         from: {
           key_code: "h",
           modifiers: { mandatory: ["left_command", "right_command"] },
         },
         to: [{ key_code: "left_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + down) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + j -> Cmd + down",
         from: {
           key_code: "j",
           modifiers: { mandatory: ["left_command", "right_command"] },
         },
         to: [{ key_code: "down_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + up) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + k -> Cmd + up",
         from: {
           key_code: "k",
           modifiers: { mandatory: ["left_command", "right_command"] },
         },
         to: [{ key_code: "up_arrow", modifiers: ["left_command"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (cmd + right) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left cmd + Right cmd + l -> Cmd + right",
         from: {
           key_code: "l",
           modifiers: { mandatory: ["left_command", "right_command"] },
         },
         to: [{ key_code: "right_arrow", modifiers: ["left_command"] }],
       },
-      // With left option (right cmd pressed first)
+    ],
+  },
+  {
+    description: "home row arrow keys (option + left) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + h -> Cmd + left",
         from: {
           key_code: "h",
           modifiers: { mandatory: ["left_option", "right_command"] },
         },
         to: [{ key_code: "left_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + down) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + j -> Cmd + down",
         from: {
           key_code: "j",
           modifiers: { mandatory: ["left_option", "right_command"] },
         },
         to: [{ key_code: "down_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + up) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + k -> Cmd + up",
         from: {
           key_code: "k",
           modifiers: { mandatory: ["left_option", "right_command"] },
         },
         to: [{ key_code: "up_arrow", modifiers: ["left_option"] }],
       },
+    ],
+  },
+  {
+    description: "home row arrow keys (option + right) (right cmd pressed first)",
+    manipulators: [
       {
         type: "basic",
-        description: "Left option + Right cmd + l -> Cmd + right",
         from: {
           key_code: "l",
           modifiers: { mandatory: ["left_option", "right_command"] },
@@ -201,6 +313,7 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
   ...createHyperSubLayers({
