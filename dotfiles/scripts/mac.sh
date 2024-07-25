@@ -11,6 +11,7 @@ fi
 
 # TODO - handle these brew installs better
 brew install awscli
+brew install awsume
 brew install cloudflared
 brew install btop
 brew install gh
@@ -30,14 +31,17 @@ brew install cask karabiner-elements
 brew install cask mechvibes
 brew install cask monitorcontrol
 brew install cask obsidian
+brew install cask orbstack
 brew install cask purevpn
 brew install cask qbittorrent
 brew install cask raycast
+brew install cask scroll-reverser
 brew install cask setapp
 brew install cask slack
 brew install cask spotify
 brew install cask steam
 brew install cask vlc
+brew install cask zed
 
 echo "Setting mac defaults"
 
