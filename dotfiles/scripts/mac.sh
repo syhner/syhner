@@ -21,6 +21,7 @@ brew install jesseduffield/lazygit/lazygit
 brew install neofetch
 brew install ngrok/ngrok/ngrok
 brew install sst/tap/sst
+brew install tree
 
 # TODO - handle these brew cask installs better
 brew install cask arc
