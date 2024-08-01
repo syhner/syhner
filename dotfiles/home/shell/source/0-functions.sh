@@ -144,3 +144,22 @@ function get_os() {
   fi
 
 }
+
+# quickly jump to workspace in a monorepo
+function workspace() {
+  # take in a single input arg
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: workspace <workspace_name>"
+    return
+  fi
+
+  cd "$(git rev-parse --show-toplevel || echo .)" || return
+
+  # [ modules/*, packages/* ]
+  jq -r '.workspaces' package.json | cut -d\" -f2 | cut -d/ -f1 | while read -r workspace; do
+    if [[ -d "$workspace/$1" ]]; then
+      cd "$workspace/$1" || return
+    fi
+  done
+}
+alias ws="workspace"
