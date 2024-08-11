@@ -8,7 +8,7 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Hyper Key (⌃⌥⇧⌘)",
+            "description": "Hyper Key (caps lock -> ctrl + option + shift + command)",
             "manipulators": [
               {
                 "type": "basic",
@@ -1441,10 +1441,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/raycast/floating-notes/toggle-floating-notes-window"
+                    "shell_command": "open raycast://extensions/raycast/navigation/search-menu-items"
                   }
                 ],
-                "description": "Open raycast://extensions/raycast/floating-notes/toggle-floating-notes-window",
+                "description": "Open raycast://extensions/raycast/navigation/search-menu-items",
                 "type": "basic",
                 "from": {
                   "key_code": "m",
