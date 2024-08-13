@@ -925,30 +925,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Arc.app'"
-                  }
-                ],
-                "description": "Open -a 'Arc.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Discord.app'"
                   }
                 ],
@@ -997,13 +973,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Messages.app'"
+                    "shell_command": "open -a 'Ghostty.app'"
                   }
                 ],
-                "description": "Open -a 'Messages.app'",
+                "description": "Open -a 'Ghostty.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "i",
+                  "key_code": "g",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1117,37 +1093,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Spotify.app'"
+                    "shell_command": "open -a 'Safari.app'"
                   }
                 ],
-                "description": "Open -a 'Spotify.app'",
+                "description": "Open -a 'Safari.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "s",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Alacritty.app'"
-                  }
-                ],
-                "description": "Open -a 'Alacritty.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "t",
                   "modifiers": {
                     "optional": [
                       "any"

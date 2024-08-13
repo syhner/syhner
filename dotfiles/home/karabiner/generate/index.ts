@@ -352,16 +352,14 @@ const rules: KarabinerRules[] = [
     // [O]pen
     o: {
       b: app("Obsidian"), // o[B]sidian
-      c: app("Arc"), // Ar[C]
       d: app("Discord"), // [D]iscord
       f: app("Finder"), // [F]inder
-      i: app("Messages"), // [I]message
+      g: app("Ghostty"), // [G]hostty
       k: app("Slack"), // slac[K]
       m: app("Mail"), // [M]ail
       n: app("Notes"), // [N]otes
       p: app("Preview"), // [P]review
-      s: app("Spotify"), // [S]potify
-      t: app("Alacritty"), // [T]erminal
+      s: app("Safari"), // [S]afari
       v: app("Visual Studio Code"), // [V]isual Studio Code
       w: app("Weather"), // [W]eather
       y: app("Yubico Authenticator"), // [Y]ubico Authenticator
