@@ -360,6 +360,7 @@ const rules: KarabinerRules[] = [
       n: app("Notes"), // [N]otes
       p: app("Preview"), // [P]review
       s: app("Safari"), // [S]afari
+      t: app("TickTick"), // [T]ickTick
       v: app("Visual Studio Code"), // [V]isual Studio Code
       w: app("Weather"), // [W]eather
       y: app("Yubico Authenticator"), // [Y]ubico Authenticator
