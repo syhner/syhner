@@ -43,6 +43,10 @@ brew install cask steam
 brew install cask vlc
 brew install cask zed
 
+# mac apps
+# ghostery
+# raindrop
+
 echo "Setting mac defaults"
 
 defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
