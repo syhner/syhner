@@ -925,6 +925,30 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'Calendar.app'"
+                  }
+                ],
+                "description": "Open -a 'Calendar.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open -a 'Discord.app'"
                   }
                 ],
@@ -932,6 +956,30 @@
                 "type": "basic",
                 "from": {
                   "key_code": "d",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Electron.app'"
+                  }
+                ],
+                "description": "Open -a 'Electron.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "e",
                   "modifiers": {
                     "optional": [
                       "any"
