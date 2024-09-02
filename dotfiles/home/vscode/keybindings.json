@@ -2,20 +2,20 @@
   /* Mac */
 
   {
-    "key": "cmd+'",
+    "key": "cmd+j",
     "command": "workbench.action.terminal.focus",
     "when": "isMac && !terminalFocus"
   },
   {
-    "key": "cmd+'",
+    "key": "cmd+j",
     "command": "workbench.action.closePanel",
     "when": "isMac && terminalFocus"
   },
   // Maximize terminal
   {
-    "key": "cmd+shift+'",
+    "key": "shift+cmd+j",
     "command": "workbench.action.toggleMaximizedPanel",
-    "when": "isMac"
+    "when": "true"
   },
   // New terminal
   {
@@ -419,20 +419,20 @@
 
   /* Windows */
   {
-    "key": "ctrl+'",
+    "key": "ctrl+j",
     "command": "workbench.action.terminal.focus",
     "when": "isWindows && !terminalFocus"
   },
   {
-    "key": "ctrl+'",
+    "key": "ctrl+j",
     "command": "workbench.action.closePanel",
     "when": "isWindows && terminalFocus"
   },
   // Maximize terminal
   {
-    "key": "ctrl+shift+'",
+    "key": "ctrl+shift+j",
     "command": "workbench.action.toggleMaximizedPanel",
-    "when": "isWindows"
+    "when": "false"
   },
   // New terminal
   {
@@ -815,5 +815,13 @@
     "key": "alt+l",
     "command": "workbench.action.navigateRight",
     "when": "isWindows && !terminalFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-supermaven.editWithSupermaven"
+  },
+  {
+    "key": "cmd+k cmd+g",
+    "command": "workbench.action.debug.selectandstart"
   }
 ]

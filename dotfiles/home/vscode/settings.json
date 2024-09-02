@@ -264,7 +264,4 @@
     }
   ],
   "trailing-comma-hack": true
-  // "update.mode": "manual",
-  // "gitlens.currentLine.enabled": false,
-  // "explorer.confirmPasteNative": false,
 }
