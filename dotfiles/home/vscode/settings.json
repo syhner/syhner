@@ -56,17 +56,22 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true, // TODO: add a keybind for debug
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
-  "editor.showFoldingControls": "never",
+  "editor.showFoldingControls": "never", // folding controls
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "window.titleBarStyle": "native",
-  "window.zoomLevel": 0.8,
+  "window.zoomLevel": 1,
+  "workbench.editor.customLabels.patterns": {
+    "**/index.html": "/${dirname}",
+    "**/index.ts": "/${dirname}",
+    "**/index.tsx": "/${dirname}"
+  },
   "workbench.editor.enablePreview": true,
   "workbench.editor.showTabs": "single",
 
@@ -111,6 +116,7 @@
   // Window behaviour
   "security.workspace.trust.untrustedFiles": "open",
   "update.showReleaseNotes": false,
+  "window.newWindowDimensions": "maximized",
 
   // Javascript / Typescript
   "javascript.preferGoToSourceDefinition": true,
@@ -160,10 +166,7 @@
     },
     {
       "id": "explorer.excludeGitIgnore",
-      "values": [
-        { "explorer.excludeGitIgnore": true },
-        { "explorer.excludeGitIgnore": false }
-      ]
+      "values": [{ "explorer.excludeGitIgnore": true }, { "explorer.excludeGitIgnore": false }]
     },
     {
       "id": "apc.stylesheet",
@@ -193,10 +196,7 @@
     },
     {
       "id": "git.openDiffOnClick",
-      "values": [
-        { "git.openDiffOnClick": false },
-        { "git.openDiffOnClick": true }
-      ]
+      "values": [{ "git.openDiffOnClick": false }, { "git.openDiffOnClick": true }]
     },
     {
       "id": "editor.wordWrap",
@@ -207,6 +207,17 @@
       "values": [
         { "diffEditor.hideUnchangedRegions.enabled": false },
         { "diffEditor.hideUnchangedRegions.enabled": true }
+      ]
+    },
+    {
+      "id": "editor.rulers",
+      "values": [
+        {
+          "editor.rulers": [80]
+        },
+        {
+          "editor.rulers": []
+        }
       ]
     }
   ],
@@ -246,6 +257,14 @@
     {
       "command": "diffEditor.hideUnchangedRegions.enabled",
       "sequence": ["settings.cycle.diffEditor.hideUnchangedRegions.enabled"]
+    },
+    {
+      "command": "editor.rulers",
+      "sequence": ["settings.cycle.editor.rulers"]
     }
-  ]
+  ],
+  "trailing-comma-hack": true
+  // "update.mode": "manual",
+  // "gitlens.currentLine.enabled": false,
+  // "explorer.confirmPasteNative": false,
 }
