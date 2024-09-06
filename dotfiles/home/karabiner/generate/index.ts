@@ -56,6 +56,16 @@ const rules: KarabinerRules[] = [
     ],
   },
   {
+    description: "right_command -> left_control",
+    manipulators: [
+      {
+        type: "basic",
+        from: { key_code: "right_command" },
+        to: [{ key_code: "left_control" }],
+      },
+    ],
+  },
+  {
     description: "Change right_command+hjkl to arrow keys",
     manipulators: [
       {
