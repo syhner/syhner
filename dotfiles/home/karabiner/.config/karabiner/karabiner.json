@@ -94,7 +94,12 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "right_command"
+                  "key_code": "right_command",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
