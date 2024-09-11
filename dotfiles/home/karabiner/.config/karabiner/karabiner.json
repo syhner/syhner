@@ -113,7 +113,7 @@
                   "key_code": "h",
                   "modifiers": {
                     "mandatory": [
-                      "right_command"
+                      "left_control"
                     ],
                     "optional": [
                       "any"
@@ -132,7 +132,7 @@
                   "key_code": "j",
                   "modifiers": {
                     "mandatory": [
-                      "right_command"
+                      "left_control"
                     ],
                     "optional": [
                       "any"
@@ -151,7 +151,7 @@
                   "key_code": "k",
                   "modifiers": {
                     "mandatory": [
-                      "right_command"
+                      "left_control"
                     ],
                     "optional": [
                       "any"
@@ -170,7 +170,7 @@
                   "key_code": "l",
                   "modifiers": {
                     "mandatory": [
-                      "right_command"
+                      "left_control"
                     ],
                     "optional": [
                       "any"

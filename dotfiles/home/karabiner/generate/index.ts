@@ -10,10 +10,7 @@ const rules: KarabinerRules[] = [
       {
         type: "basic",
         description: "Caps Lock -> Hyper Key",
-        from: {
-          key_code: "caps_lock",
-          modifiers: { optional: ["any"] },
-        },
+        from: { key_code: "caps_lock", modifiers: { optional: ["any"] } },
         to: [{ set_variable: { name: "hyper", value: 1 } }],
         to_after_key_up: [{ set_variable: { name: "hyper", value: 0 } }],
         to_if_alone: [{ key_code: "escape" }],
@@ -26,31 +23,17 @@ const rules: KarabinerRules[] = [
       {
         from: {
           key_code: "left_shift",
-          modifiers: {
-            mandatory: ["right_shift"],
-            optional: ["caps_lock"],
-          },
+          modifiers: { mandatory: ["right_shift"], optional: ["caps_lock"] },
         },
-        to: [
-          {
-            key_code: "caps_lock",
-          },
-        ],
+        to: [{ key_code: "caps_lock" }],
         type: "basic",
       },
       {
         from: {
           key_code: "right_shift",
-          modifiers: {
-            mandatory: ["left_shift"],
-            optional: ["caps_lock"],
-          },
+          modifiers: { mandatory: ["left_shift"], optional: ["caps_lock"] },
         },
-        to: [
-          {
-            key_code: "caps_lock",
-          },
-        ],
+        to: [{ key_code: "caps_lock" }],
         type: "basic",
       },
     ],
@@ -70,46 +53,22 @@ const rules: KarabinerRules[] = [
     manipulators: [
       {
         type: "basic",
-        from: {
-          key_code: "h",
-          modifiers: {
-            mandatory: ["right_command"],
-            optional: ["any"],
-          },
-        },
+        from: { key_code: "h", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
         to: [{ key_code: "left_arrow" }],
       },
       {
         type: "basic",
-        from: {
-          key_code: "j",
-          modifiers: {
-            mandatory: ["right_command"],
-            optional: ["any"],
-          },
-        },
+        from: { key_code: "j", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
         to: [{ key_code: "down_arrow" }],
       },
       {
         type: "basic",
-        from: {
-          key_code: "k",
-          modifiers: {
-            mandatory: ["right_command"],
-            optional: ["any"],
-          },
-        },
+        from: { key_code: "k", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
         to: [{ key_code: "up_arrow" }],
       },
       {
         type: "basic",
-        from: {
-          key_code: "l",
-          modifiers: {
-            mandatory: ["right_command"],
-            optional: ["any"],
-          },
-        },
+        from: { key_code: "l", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
         to: [{ key_code: "right_arrow" }],
       },
     ],
