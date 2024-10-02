@@ -1,0 +1,4 @@
+theme = tokyonight
+macos-option-as-alt = true
+font-size = 16
+keybind = global:cmd+`=toggle_quick_terminal
