@@ -2,3 +2,7 @@ theme = tokyonight
 macos-option-as-alt = true
 font-size = 16
 keybind = global:cmd+§=toggle_quick_terminal
+keybind = cmd+right=text:\x05
+keybind = cmd+left=text:\x01
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
