@@ -10,3 +10,4 @@ source_home zsh
 if [[ -n $DEBUG_ZSH_STARTUP ]]; then
   zprof
 fi
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
