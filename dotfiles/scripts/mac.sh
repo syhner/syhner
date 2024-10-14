@@ -41,6 +41,7 @@ brew install cask slack
 brew install cask spotify
 brew install cask steam
 brew install cask vlc
+brew install cask vmware-fusion
 brew install cask zed
 
 # mac apps
