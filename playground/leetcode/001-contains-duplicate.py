@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/contains-duplicate
 
 def hasDuplicate(nums: list[int]) -> bool:
-    seen: set[int] = set()
+    seen = set()
     
     for num in nums:
         if num in seen:
