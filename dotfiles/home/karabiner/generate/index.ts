@@ -140,6 +140,7 @@ const rules: KarabinerRules[] = [
       n: open("raycast://extensions/raycast/floating-notes/toggle-floating-notes-focus"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       p: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
+      s: open("raycast://extensions/raycast/snippets/search-snippets"),
     },
     // s: {},
     // t: {},
