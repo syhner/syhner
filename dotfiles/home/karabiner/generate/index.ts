@@ -137,6 +137,7 @@ const rules: KarabinerRules[] = [
       e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
       h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
       i: open("raycast://extensions/raycast/raycast/confetti"),
+      k: open("raycast://extensions/mooxl/coffee/caffeinateWhile"),
       n: open("raycast://extensions/raycast/floating-notes/toggle-floating-notes-focus"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       p: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
