@@ -65,4 +65,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desk
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
+# Move windows by dragging anywhere while holding ctrl and cmd
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 echo "Finished setting mac defaults"
