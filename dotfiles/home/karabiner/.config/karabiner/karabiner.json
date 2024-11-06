@@ -1091,10 +1091,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/raycast/floating-notes/toggle-floating-notes-focus"
+                    "shell_command": "open raycast://extensions/raycast/raycast-notes/raycast-notes"
                   }
                 ],
-                "description": "Open raycast://extensions/raycast/floating-notes/toggle-floating-notes-focus",
+                "description": "Open raycast://extensions/raycast/raycast-notes/raycast-notes",
                 "type": "basic",
                 "from": {
                   "key_code": "n",
