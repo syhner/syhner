@@ -33,6 +33,7 @@ brew install cask mechvibes
 brew install cask monitorcontrol
 brew install cask obsidian
 brew install cask orbstack
+brew install cask proxyman
 brew install cask purevpn
 brew install cask qbittorrent
 brew install cask raycast
