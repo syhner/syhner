@@ -44,6 +44,7 @@ brew install cask spotify
 brew install cask steam
 brew install cask vlc
 brew install cask vmware-fusion
+brew install watchman
 brew install cask yaak
 brew install cask zed
 
