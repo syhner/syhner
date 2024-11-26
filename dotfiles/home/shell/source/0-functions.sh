@@ -124,6 +124,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   }
 fi
 
+function mkcd() {
+  mkdir -p "$1"
+  cd "$1" || exit
+}
+
 function myip() {
   if [[ "$OSTYPE" == "linux-gnu" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
     hostname -I | awk '{print $1}'
