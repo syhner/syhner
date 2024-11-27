@@ -19,6 +19,8 @@ brew install gnupg
 brew install httpie
 brew install jesseduffield/lazygit/lazygit
 brew install jj
+brew install mkcert
+mkcert -install
 brew install neofetch
 brew install ngrok/ngrok/ngrok
 brew install sst/tap/sst
