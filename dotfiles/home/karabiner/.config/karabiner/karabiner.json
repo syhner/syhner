@@ -719,10 +719,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Preview.app'"
+                    "shell_command": "open -a 'Spotify.app'"
                   }
                 ],
-                "description": "Open -a 'Preview.app'",
+                "description": "Open -a 'Spotify.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "p",

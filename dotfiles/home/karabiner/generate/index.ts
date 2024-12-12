@@ -120,7 +120,7 @@ const rules: KarabinerRules[] = [
 			k: app("Slack"), // slac[K]
 			m: app("Mail"), // [M]ail
 			n: app("Notes"), // [N]otes
-			p: app("Preview"), // [P]review
+			p: app("Spotify"), // s[P]otify
 			s: app("Safari"), // [S]afari
 			t: app("TickTick"), // [T]ickTick
 			v: app("Visual Studio Code"), // [V]isual Studio Code
