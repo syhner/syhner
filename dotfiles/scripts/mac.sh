@@ -19,6 +19,7 @@ brew install gnupg
 brew install httpie
 brew install jesseduffield/lazygit/lazygit
 brew install jj
+brew install luarocks
 brew install mkcert
 mkcert -install
 brew install neofetch
