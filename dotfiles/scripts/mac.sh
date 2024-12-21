@@ -25,6 +25,7 @@ brew install neofetch
 brew install ngrok/ngrok/ngrok
 brew install sst/tap/sst
 brew install tree
+brew install watchman
 
 # TODO - handle these brew cask installs better
 brew install cask barrier
@@ -44,9 +45,10 @@ brew install cask setapp
 brew install cask slack
 brew install cask spotify
 brew install cask steam
+brew install cask tailscale
+brew install cask tableplus
 brew install cask vlc
 brew install cask vmware-fusion
-brew install watchman
 brew install cask yaak
 brew install cask zed
 
