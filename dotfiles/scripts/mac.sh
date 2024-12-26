@@ -12,8 +12,9 @@ fi
 # TODO - handle these brew installs better
 brew install awscli
 brew install awsume
-brew install cloudflared
 brew install btop
+brew install cloudflared
+brew install deskflow/homebrew-tap/deskflow
 brew install gh
 brew install gnupg
 brew install httpie
@@ -29,7 +30,6 @@ brew install tree
 brew install watchman
 
 # TODO - handle these brew cask installs better
-brew install cask barrier
 brew install cask discord
 # install homerow.app and change keybindings to karabiner usage
 brew install cask karabiner-elements
