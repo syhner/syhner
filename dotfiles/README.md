@@ -91,3 +91,4 @@ gpg --decrypt-files --yes <files>
 - fix zellij copy_command on non-mac (since it runs system executables as commands, not wrapped by system shell)
 - replace alacritty with ghostty
 - composable dotfiles
+- cloudflared to local.\<domain\>.com
