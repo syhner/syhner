@@ -118,7 +118,7 @@ const rules: KarabinerRules[] = [
 			f: app("Finder"), // [F]inder
 			g: app("Ghostty"), // [G]hostty
 			k: app("Slack"), // slac[K]
-			m: app("Mail"), // [M]ail
+			m: app("Messages"), // [M]essages
 			n: app("Notes"), // [N]otes
 			p: app("Spotify"), // s[P]otify
 			s: app("Safari"), // [S]afari
