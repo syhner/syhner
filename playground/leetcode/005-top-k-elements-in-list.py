@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/top-k-frequent-elements
 
-def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+def topKFrequent(nums: list[int], k: int) -> list[int]:
 	count = {}
 	freq = [[] for _ in range(len(nums) + 1)]
 
