@@ -4,3 +4,5 @@ compinit
 
 # vim
 # set -o vi
+
+export EDITOR=nvim
