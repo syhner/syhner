@@ -1,3 +1,4 @@
 ^generate/.*$
 target.json
 .gitignore
+.DS_Store

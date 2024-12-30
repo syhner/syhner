@@ -24,7 +24,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
 fi
 
 # Relative paths in https://github.com/ryanoasis/nerd-fonts
-fonts=("src/unpatched-fonts/GeistMono" "patched-fonts/CascadiaCode")
+fonts=("src/unpatched-fonts/GeistMono" "patched-fonts/CascadiaCode" "patched-fonts/JetBrainsMono")
 
 for font in "${fonts[@]}"; do
   if [[ -d "$HOME/repos/nerd-fonts/$font" ]]; then

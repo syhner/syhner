@@ -1,0 +1,14 @@
+configpath: /Users/siraj/Library/Application Support/nom/config.yml
+showfavourites: false
+version: ""
+feeds:
+  - url: https://world.hey.com/dhh/feed.atom
+  - url: https://samwho.dev/rss.xml
+ordering: asc
+theme:
+  glamour: dark
+  titleColor: "62"
+  filterColor: "62"
+  selectedItemColor: "170"
+http:
+  mintls: TLS 1.2
