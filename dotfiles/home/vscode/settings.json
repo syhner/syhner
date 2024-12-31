@@ -118,6 +118,9 @@
   "update.showReleaseNotes": false,
   "window.newWindowDimensions": "maximized",
 
+  // Other
+  "update.mode": "none",
+
   // Javascript / Typescript
   "javascript.preferGoToSourceDefinition": true,
   "javascript.suggest.autoImports": true,
@@ -125,7 +128,6 @@
   "typescript.preferGoToSourceDefinition": true,
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-
   "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.printWidth": 100
@@ -263,5 +265,6 @@
       "sequence": ["settings.cycle.editor.rulers"]
     }
   ],
+
   "trailing-comma-hack": true
 }
