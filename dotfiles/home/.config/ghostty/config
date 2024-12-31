@@ -1,8 +1,22 @@
-theme = tokyonight
-macos-option-as-alt = true
+font-family = CaskaydiaCove Nerd Font Mono
+window-title-font-family = CaskaydiaCove Nerd Font Mono
+font-thicken = true
 font-size = 16
+
+theme = tokyonight
+cursor-style = block
+
 keybind = global:cmd+§=toggle_quick_terminal
-keybind = cmd+right=text:\x05
-keybind = cmd+left=text:\x01
-keybind = alt+left=esc:b
-keybind = alt+right=esc:f
+quick-terminal-animation-duration = 0
+
+keybind = cmd+backspace=text:\x15
+keybind = cmd+delete=text:\x0b
+keybind = opt+delete=esc:d
+
+confirm-close-surface = false
+macos-titlebar-style = tabs
+mouse-hide-while-typing = true
+window-colorspace = display-p3
+
+# custom-shader = crt.glsl
+# custom-shader = bloom.glsl
