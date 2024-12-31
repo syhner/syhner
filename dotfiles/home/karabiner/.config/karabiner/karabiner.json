@@ -653,7 +653,7 @@
                 "description": "Open -a 'Linear.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "h",
+                  "key_code": "i",
                   "modifiers": {
                     "optional": [
                       "any"
