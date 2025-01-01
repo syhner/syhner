@@ -4,6 +4,7 @@ version: ""
 feeds:
   - url: https://world.hey.com/dhh/feed.atom
   - url: https://samwho.dev/rss.xml
+  - url: https://rgbcu.be/blog.rss
 ordering: asc
 theme:
   glamour: dark
