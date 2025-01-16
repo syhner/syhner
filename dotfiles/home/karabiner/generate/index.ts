@@ -123,10 +123,11 @@ const rules: KarabinerRules[] = [
       n: app("Notes"), // [N]otes
       p: app("Spotify"), // s[P]otify
       s: app("Safari"), // [S]afari
+      t: app("TablePlus"), // [T]ablePlus
       v: app("Visual Studio Code"), // [V]isual Studio Code
       w: app("Weather"), // [W]eather
-      y: app("Yubico Authenticator"), // [Y]ubico Authenticator
-      z: app("Zed"), // [Z]ed
+      x: app("Proxyman"), // Pro[x]yman
+      y: app("Yaak"), // [Y]aak
     },
     // p: {},
     // q: AVOID

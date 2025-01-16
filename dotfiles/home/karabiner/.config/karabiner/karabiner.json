@@ -791,6 +791,30 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'TablePlus.app'"
+                  }
+                ],
+                "description": "Open -a 'TablePlus.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open -a 'Visual Studio Code.app'"
                   }
                 ],
@@ -839,13 +863,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Yubico Authenticator.app'"
+                    "shell_command": "open -a 'Proxyman.app'"
                   }
                 ],
-                "description": "Open -a 'Yubico Authenticator.app'",
+                "description": "Open -a 'Proxyman.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "y",
+                  "key_code": "x",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -863,13 +887,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Zed.app'"
+                    "shell_command": "open -a 'Yaak.app'"
                   }
                 ],
-                "description": "Open -a 'Zed.app'",
+                "description": "Open -a 'Yaak.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "z",
+                  "key_code": "y",
                   "modifiers": {
                     "optional": [
                       "any"
