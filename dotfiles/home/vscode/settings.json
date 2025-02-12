@@ -66,7 +66,7 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "window.titleBarStyle": "native",
-  "window.zoomLevel": 1,
+  // "window.zoomLevel": 1,
   "workbench.editor.customLabels.patterns": {
     "**/index.html": "/${dirname}",
     "**/index.ts": "/${dirname}",
