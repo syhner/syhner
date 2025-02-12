@@ -73,6 +73,21 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  {
+    description: "Change right_command + d/u to page down/up",
+    manipulators: [
+      {
+        type: "basic",
+        from: { key_code: "d", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        to: [{ key_code: "page_down" }],
+      },
+      {
+        type: "basic",
+        from: { key_code: "u", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        to: [{ key_code: "page_up" }],
+      },
+    ],
+  },
 
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
