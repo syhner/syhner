@@ -41,6 +41,7 @@ f"
 unstage = restore --staged
 undo = reset --soft HEAD~1
 squash-all = "!f(){ git reset $(git commit-tree \"HEAD^{tree}\" \"$@\");};f"
+sync = "!git add . && git commit -m "sync" && git push"
 
 [core]
 	excludesfile = /Users/siraj/.gitignore_global
