@@ -151,6 +151,7 @@ const rules: KarabinerRules[] = [
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
       e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
+      g: open("raycast://extensions/josephschmitt/gif-search/search"),
       h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
       i: open("raycast://extensions/raycast/raycast/confetti"),
       k: open("raycast://extensions/mooxl/coffee/caffeinateWhile"),
