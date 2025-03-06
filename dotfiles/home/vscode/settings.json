@@ -73,7 +73,6 @@
     "**/index.tsx": "/${dirname}"
   },
   "workbench.editor.enablePreview": true,
-  "workbench.editor.showTabs": "single",
 
   // Explorer
   "explorer.compactFolders": false,
@@ -266,5 +265,9 @@
     }
   ],
 
-  "trailing-comma-hack": true
+  "trailing-comma-hack": true,
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "git.openDiffOnClick": true,
+  "telemetry.telemetryLevel": "off",
+  "editor.wordWrap": "on"
 }
