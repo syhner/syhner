@@ -15,6 +15,7 @@ brew install awsume
 brew install btop
 brew install cloudflared
 brew install deskflow/homebrew-tap/deskflow
+brew install fswatch
 brew install gh
 brew install gnupg
 brew install httpie
