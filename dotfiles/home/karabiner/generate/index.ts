@@ -127,7 +127,7 @@ const rules: KarabinerRules[] = [
     // [O]pen
     o: {
       b: app("Obsidian"), // o[B]sidian
-      c: app("Calendar"), // [C]alendar
+      c: app("Cursor"), // [C]ursor
       d: app("Discord"), // [D]iscord
       e: app("Electron"), // [E]lectron
       f: app("Finder"), // [F]inder
