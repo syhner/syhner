@@ -49,6 +49,7 @@ brew install cask spotify
 brew install cask steam
 brew install cask tailscale
 brew install cask tableplus
+brew install cask teamviewer
 brew install cask vlc
 brew install cask vmware-fusion
 brew install cask yaak
