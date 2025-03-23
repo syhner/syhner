@@ -27,6 +27,7 @@ brew install neofetch
 brew install ngrok/ngrok/ngrok
 brew install sst/tap/sst
 brew install tree
+brew install uv
 brew install watchman
 
 # TODO - handle these brew cask installs better
