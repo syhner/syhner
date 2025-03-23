@@ -15,25 +15,34 @@
   "terminal.integrated.fontFamily": "Berkeley Mono Variable",
 
   // Styling
-  // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar
-  "apc.activityBar": {
-    "position": "bottom",
-    "size": 22
+  // Electron BrowserWindow options
+  //  - https://www.electronjs.org/docs/latest/api/base-window
+  //  - https://www.electronjs.org/docs/latest/api/browser-window
+  "custom-ui-style.electron": {
+    // Frameless window (no title bar, no MacOS traffic light buttons)
+    //  - "A frameless window removes all chrome applied by the OS, including window controls"
+    //  - https://www.electronjs.org/docs/latest/api/base-window#new-basewindowoptions
+    //  - https://www.electronjs.org/docs/latest/tutorial/custom-window-styles#frameless-windows
+    //  - https://www.electronjs.org/docs/latest/tutorial/custom-title-bar
+    "frame": false,
+    // Disable rounded corners (MacOS)
+    //  - https://www.electronjs.org/docs/latest/api/base-window#new-basewindowoptions
+    //  - "Whether frameless window should have rounded corners on MacOS"
+    //  - "Setting this property to false will prevent the window from being fullscreenable"
+    "roundedCorners": false
   },
-  "apc.electron": {
-    "titleBarStyle": "hiddenInset"
-  },
-  "apc.statusBar": {
-    "position": "editor-bottom"
-  },
-  "apc.stylesheet": {
-    ".sidebar > .title > .title-label": "opacity: 0",
-    ".sidebar .title-actions": "display: none !important",
-    ".editor-group-container .title-actions": "display: none !important",
-    "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
-    "[aria-label='Terminal actions']": "display: none !important",
-    ".actions-container .codicon-panel-close": "display: none !important",
-    ".actions-container .codicon-panel-maximize": "display: none !important"
+  "custom-ui-style.font.sansSerif": "Berkeley Mono Variable",
+  // "custom-ui-style.background.url": "file:///D:/image/ide-bg.jpg",
+  "custom-ui-style.webview.monospaceSelector": [".codeblock", ".prism [class*='language-']"],
+  // Custom stylesheet, support native nest selectors
+  "custom-ui-style.stylesheet": {
+    "kbd, .statusbar": {
+      "font-family": "var(--cus-monospace-font)"
+    },
+    ".composite.title": {
+      // "opacity": "0 !important"
+      // "display": "none !important"
+    }
   },
   "breadcrumbs.symbolPath": "off",
   "editor.minimap.autohide": true,
@@ -116,9 +125,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "update.showReleaseNotes": false,
   "window.newWindowDimensions": "maximized",
-
-  // Other
-  "update.mode": "none",
 
   // Javascript / Typescript
   "javascript.preferGoToSourceDefinition": true,
@@ -271,5 +277,9 @@
   "telemetry.telemetryLevel": "off",
   "editor.wordWrap": "on",
   "workbench.editor.showTabs": "single",
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "extensions.ignoreRecommendations": true,
+  "chat.commandCenter.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "top"
 }
