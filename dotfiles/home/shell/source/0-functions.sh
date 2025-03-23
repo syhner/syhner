@@ -72,45 +72,6 @@ function current_shell() {
   fi
 }
 
-function source_if_exists() {
-  if [[ "$#" -ne 1 ]]; then
-    echo "Usage: source_if_exists <file>"
-    exit 1
-  fi
-
-  local file="$1"
-
-  if [[ -f "$1" ]]; then
-    source "$file"
-  fi
-}
-
-function source_home() {
-  if [[ "$#" -lt 1 ]]; then
-    echo "Usage: source_home <file extension>"
-    exit 1
-  fi
-
-  local file_extension="$1"
-
-  # Globs that don't match anything should be silent
-  if [[ $(current_shell) == "bash" ]]; then
-    shopt -s nullglob
-  elif [[ $(current_shell) == "zsh" ]]; then
-    setopt NULL_GLOB
-  fi
-
-  for file in "$HOME/source/"*."$file_extension"; do
-    source_if_exists "$file"
-  done
-
-  if [[ $(current_shell) == "bash" ]]; then
-    shopt -u nullglob
-  elif [[ $(current_shell) == "zsh" ]]; then
-    unsetopt NULL_GLOB
-  fi
-}
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   function reset_permissions() {
     if [[ "$#" -lt 1 ]]; then

@@ -26,7 +26,15 @@
   "apc.statusBar": {
     "position": "editor-bottom"
   },
-  "apc.stylesheet": {},
+  "apc.stylesheet": {
+    ".sidebar > .title > .title-label": "opacity: 0",
+    ".sidebar .title-actions": "display: none !important",
+    ".editor-group-container .title-actions": "display: none !important",
+    "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
+    "[aria-label='Terminal actions']": "display: none !important",
+    ".actions-container .codicon-panel-close": "display: none !important",
+    ".actions-container .codicon-panel-maximize": "display: none !important"
+  },
   "breadcrumbs.symbolPath": "off",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# shellcheck source=/dev/null
+
 set -euo pipefail # strict mode
 
 export DOTFILES

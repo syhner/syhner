@@ -33,11 +33,6 @@ cd dotfiles
 This will:
 
 1. Copy files from [`home/`](home/) to your home directory
-
-   - both bash and zsh will source `$HOME/source/*.sh` files in order
-   - bash will source `$HOME/source/*.bash` files in order
-   - zsh will source `$HOME/source/*.zsh` files in order
-
 2. Check for / update package manager (apt for Linux / WSL, Homebrew for macOS, winget for Windows).
 3. Run package install scripts in [`scripts/install/`](scripts/install/) using the right package manager
 
@@ -91,3 +86,4 @@ gpg --decrypt-files --yes <files>
 - fix zellij copy_command on non-mac (since it runs system executables as commands, not wrapped by system shell)
 - composable dotfiles
 - cloudflared to local.\<domain\>.com
+- optimise loadup time by splitting interactive and non-interactive usage

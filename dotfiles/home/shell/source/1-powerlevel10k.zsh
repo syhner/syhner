@@ -1,9 +1,9 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-  source_if_exists "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme"
+  [[ -f "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme" ]] && source "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  source_if_exists "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+  [[ -f "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]] && source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 elif [[ "$OSTYPE" == "msys" ]]; then
-  source_if_exists "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme"
+  [[ -f "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme" ]] && source "$HOME/repos/powerlevel10k/powerlevel10k.zsh-theme"
 fi
 
 if ! command -v p10k &> /dev/null; then

@@ -189,9 +189,9 @@
   },
   // Settings cycle
   {
-    "key": "cmd+l cmd+n",
+    "key": "alt+cmd+l cmd+n",
     "command": "settings.cycle.lineNumbers",
-    "when": "isMac && editorFocus"
+    "when": "editorFocus"
   },
   {
     "key": "alt+t",
@@ -268,14 +268,14 @@
     "command": "workbench.action.switchWindow",
     "when": "isMac"
   },
-  // cmd+k shortcuts
+  // cmd+alt+k shortcuts
   {
-    "key": "cmd+k cmd+k",
+    "key": "cmd+alt+k cmd+alt+k",
     "command": "extension.multiCommand.execute",
     "when": "isMac && !terminalFocus"
   },
   {
-    "key": "cmd+k cmd+p",
+    "key": "cmd+alt+k cmd+p",
     "command": "copyRelativeFilePath",
     "when": "isMac && !terminalFocus"
   },
@@ -821,27 +821,35 @@
     "command": "-supermaven.editWithSupermaven"
   },
   {
-    "key": "cmd+k cmd+g",
+    "key": "cmd+alt+k cmd+g",
     "command": "workbench.action.debug.selectandstart"
   },
   {
-    "key": "cmd+k cmd+b",
+    "key": "cmd+alt+k cmd+b",
     "command": "editor.debug.action.toggleBreakpoint",
     "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
   },
   {
-    "key": "cmd+k cmd+f",
+    "key": "cmd+alt+k cmd+f",
     "command": "editor.toggleFold",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "cmd+k cmd+f",
+    "key": "cmd+alt+k cmd+f",
     "command": "-editor.action.formatSelection",
     "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+k cmd+r",
+    "key": "cmd+alt+k cmd+r",
     "command": "editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-  }
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+}
 ]

@@ -1,13 +1,13 @@
 # Completions
 if [[ $(current_shell) == "bash" ]]; then
   if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-    source_if_exists "$HOME/repos/fzf.bash"
+    [[ -f "$HOME/repos/fzf.bash" ]] && source "$HOME/repos/fzf.bash"
   elif command -v fzf &>/dev/null; then
     eval "$(fzf --bash)"
   fi
 elif [[ $(current_shell) == "zsh" ]]; then
   if [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "cygwin"* ]]; then
-    source_if_exists "$HOME/repos/fzf.zsh"
+    [[ -f "$HOME/repos/fzf.zsh" ]] && source "$HOME/repos/fzf.zsh"
   elif command -v fzf &>/dev/null; then
     eval "$(fzf --zsh)"
   fi

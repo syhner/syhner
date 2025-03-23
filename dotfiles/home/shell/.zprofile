@@ -1,5 +1,25 @@
+source "$HOME/source/0-aliases.sh"
+source "$HOME/source/0-aliases.zsh"
+source "$HOME/source/0-config.sh"
+source "$HOME/source/0-config.zsh"
 source "$HOME/source/0-functions.sh"
-source_home zprofile
+source "$HOME/source/0-setopt.zsh"
+source "$HOME/source/1-bat.sh"
+source "$HOME/source/1-bun.sh"
+source "$HOME/source/1-eza.sh"
+source "$HOME/source/1-fnm.sh"
+source "$HOME/source/1-fzf.sh"
+source "$HOME/source/1-git.sh"
+source "$HOME/source/1-homebrew.zprofile"
+source "$HOME/source/1-homebrew.zsh"
+source "$HOME/source/1-neovim.sh"
+source "$HOME/source/1-pyenv.sh"
+source "$HOME/source/1-thefuck.sh"
+source "$HOME/source/1-trash-cli.sh"
+source "$HOME/source/1-yazi.sh"
+source "$HOME/source/1-zellij.sh"
+source "$HOME/source/1-zoxide.sh"
 
+[[ -f "$HOME/repos/fzf-git/fzf-git.sh" ]] && source "$HOME/repos/fzf-git/fzf-git.sh"
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
