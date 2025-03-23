@@ -1,7 +1,5 @@
 {
   // Font
-  "apc.font.family": "Berkeley Mono Variable",
-  "apc.monospace.font.family": "Berkeley Mono Variable",
   "chat.editor.fontFamily": "Berkeley Mono Variable",
   "debug.console.fontFamily": "Berkeley Mono Variable",
   "editor.codeLensFontFamily": "Berkeley Mono Variable",
@@ -177,32 +175,6 @@
       "values": [{ "explorer.excludeGitIgnore": true }, { "explorer.excludeGitIgnore": false }]
     },
     {
-      "id": "apc.stylesheet",
-      "values": [
-        {
-          "apc.stylesheet": {}
-        },
-        {
-          "apc.stylesheet": {
-            // Sidebar category (e.g. Explorer) text, conflicts with mac window buttons
-            ".sidebar > .title > .title-label": "opacity: 0",
-            // Sidebar actions (e.g. fold all files)
-            ".sidebar .title-actions": "display: none !important",
-            // Editor actions (e.g. open preview)
-            ".editor-group-container .title-actions": "display: none !important",
-            // Auxiliary bar actions (e.g. commit when source control is in auxiliary bar)
-            "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
-            // Terminal actions (e.g. new terminal)
-            "[aria-label='Terminal actions']": "display: none !important",
-            // Panel close
-            ".actions-container .codicon-panel-close": "display: none !important",
-            // Panel maximize
-            ".actions-container .codicon-panel-maximize": "display: none !important"
-          }
-        }
-      ]
-    },
-    {
       "id": "git.openDiffOnClick",
       "values": [{ "git.openDiffOnClick": false }, { "git.openDiffOnClick": true }]
     },
@@ -249,10 +221,6 @@
     {
       "command": "multiCommand.scmOpenAndFocus",
       "sequence": ["workbench.scm.focus", "workbench.scm.focus"]
-    },
-    {
-      "command": "apc.stylesheet",
-      "sequence": ["settings.cycle.apc.stylesheet"]
     },
     {
       "command": "git.openDiffOnClick",
