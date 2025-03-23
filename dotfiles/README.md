@@ -8,7 +8,7 @@ Cross-platform dotfiles. Works on Linux, macOS, Windows, and WSL.
 - Terminal multiplexer - Zellij
 - Shell - zsh
 - Editor - Neovim / VS Code
-- Font - CaskaydiaCove Nerd Font Mono
+- Font - Berkeley Mono
 - Theme - Tokyo Night
 
 ## Prerequisites

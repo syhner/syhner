@@ -1,18 +1,18 @@
 {
   // Font
-  "apc.font.family": "CaskaydiaCove Nerd Font Mono",
-  "apc.monospace.font.family": "CaskaydiaCove Nerd Font Mono",
-  "chat.editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "debug.console.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "editor.codeLensFontFamily": "CaskaydiaCove Nerd Font Mono",
-  "editor.experimentalInlineEdit.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "editor.inlayHints.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "editor.inlineSuggest.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "errorLens.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "notebook.output.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "scm.inputFontFamily": "CaskaydiaCove Nerd Font Mono",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "apc.font.family": "Berkeley Mono Variable",
+  "apc.monospace.font.family": "Berkeley Mono Variable",
+  "chat.editor.fontFamily": "Berkeley Mono Variable",
+  "debug.console.fontFamily": "Berkeley Mono Variable",
+  "editor.codeLensFontFamily": "Berkeley Mono Variable",
+  "editor.experimentalInlineEdit.fontFamily": "Berkeley Mono Variable",
+  "editor.fontFamily": "Berkeley Mono Variable",
+  "editor.inlayHints.fontFamily": "Berkeley Mono Variable",
+  "editor.inlineSuggest.fontFamily": "Berkeley Mono Variable",
+  "errorLens.fontFamily": "Berkeley Mono Variable",
+  "notebook.output.fontFamily": "Berkeley Mono Variable",
+  "scm.inputFontFamily": "Berkeley Mono Variable",
+  "terminal.integrated.fontFamily": "Berkeley Mono Variable",
 
   // Styling
   // workbench.activityBar.location set to 'top' or 'bottom' undesirably enables the title bar
@@ -26,15 +26,7 @@
   "apc.statusBar": {
     "position": "editor-bottom"
   },
-  "apc.stylesheet": {
-    ".sidebar > .title > .title-label": "opacity: 0",
-    ".sidebar .title-actions": "display: none !important",
-    ".editor-group-container .title-actions": "display: none !important",
-    "[id='workbench.parts.auxiliarybar'] .title-actions": "display: none !important",
-    "[aria-label='Terminal actions']": "display: none !important",
-    ".actions-container .codicon-panel-close": "display: none !important",
-    ".actions-container .codicon-panel-maximize": "display: none !important"
-  },
+  "apc.stylesheet": {},
   "breadcrumbs.symbolPath": "off",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
@@ -269,5 +261,7 @@
   "security.allowedUNCHosts": ["wsl.localhost"],
   "git.openDiffOnClick": true,
   "telemetry.telemetryLevel": "off",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "workbench.editor.showTabs": "single",
+  "diffEditor.hideUnchangedRegions.enabled": true
 }

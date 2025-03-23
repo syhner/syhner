@@ -43,5 +43,5 @@ blur = true
 option_as_alt = "both"
 
 [font]
-normal.family = "CaskaydiaCove Nerd Font Mono"
+normal.family = "Berkeley Mono Variable"
 size = 14
