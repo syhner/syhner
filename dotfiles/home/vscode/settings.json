@@ -52,6 +52,7 @@
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.restoreFullscreen": false,
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Tokyo Night",
   "workbench.layoutControl.enabled": false,
   "workbench.preferredDarkColorTheme": "Tokyo Night",
@@ -65,9 +66,9 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "editor.glyphMargin": true, // TODO: add a keybind for debug
+  "editor.glyphMargin": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "off",
   "editor.linkedEditing": true,
   "editor.showFoldingControls": "never", // folding controls
   "editor.smoothScrolling": true,
