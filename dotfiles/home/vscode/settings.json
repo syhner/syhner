@@ -3,7 +3,6 @@
   "chat.editor.fontFamily": "Berkeley Mono Variable",
   "debug.console.fontFamily": "Berkeley Mono Variable",
   "editor.codeLensFontFamily": "Berkeley Mono Variable",
-  "editor.experimentalInlineEdit.fontFamily": "Berkeley Mono Variable",
   "editor.fontFamily": "Berkeley Mono Variable",
   "editor.inlayHints.fontFamily": "Berkeley Mono Variable",
   "editor.inlineSuggest.fontFamily": "Berkeley Mono Variable",
@@ -43,31 +42,40 @@
     }
   },
   "breadcrumbs.symbolPath": "off",
+  "editor.guides.indentation": false,
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
+  "editor.padding.bottom": 200, // combined with editor.scrollBeyondLastLine
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.restoreFullscreen": false,
   "window.zoomLevel": 1,
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Tokyo Night",
   "workbench.layoutControl.enabled": false,
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastColorTheme": "Tokyo Night",
   "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "workbench.statusBar.visible": false,
 
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 10, // scrolloff
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.glyphMargin": false,
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "off",
   "editor.linkedEditing": true,
+  "editor.scrollBeyondLastLine": false, // combined with editor.paddingBottom
   "editor.showFoldingControls": "never", // folding controls
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
@@ -114,7 +122,7 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.scrollback": 2000,
   "terminal.integrated.tabs.location": "right",
@@ -157,20 +165,6 @@
   "where-am-i.textTransfrom": "none",
   "settings.cycle": [
     {
-      "id": "themeDark",
-      "values": [
-        { "workbench.colorTheme": "Tokyo Night Storm" },
-        { "workbench.colorTheme": "Tokyo Night" }
-      ]
-    },
-    {
-      "id": "themeLight",
-      "values": [
-        { "workbench.colorTheme": "Tokyo Night Light" },
-        { "workbench.colorTheme": "Tokyo (Light)" }
-      ]
-    },
-    {
       "id": "explorer.excludeGitIgnore",
       "values": [{ "explorer.excludeGitIgnore": true }, { "explorer.excludeGitIgnore": false }]
     },
@@ -191,14 +185,7 @@
     },
     {
       "id": "editor.rulers",
-      "values": [
-        {
-          "editor.rulers": [80]
-        },
-        {
-          "editor.rulers": []
-        }
-      ]
+      "values": [{ "editor.rulers": [80] }, { "editor.rulers": [] }]
     }
   ],
   "multiCommand.commands": [
@@ -239,16 +226,13 @@
       "sequence": ["settings.cycle.editor.rulers"]
     }
   ],
-
-  "trailing-comma-hack": true,
   "security.allowedUNCHosts": ["wsl.localhost"],
   "git.openDiffOnClick": true,
+  "gitlens.mode.active": "zen",
   "telemetry.telemetryLevel": "off",
   "editor.wordWrap": "on",
   "workbench.editor.showTabs": "single",
   "diffEditor.hideUnchangedRegions.enabled": true,
   "extensions.ignoreRecommendations": true,
-  "chat.commandCenter.enabled": false,
-  "workbench.statusBar.visible": false,
-  "workbench.activityBar.location": "top"
+  "chat.commandCenter.enabled": false
 }
