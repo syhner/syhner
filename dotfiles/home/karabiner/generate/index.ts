@@ -1,5 +1,5 @@
 import type { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import { createHyperSubLayers, app, open } from "./utils";
 
 const FILE_NAME = `${__dirname}/../.config/karabiner/karabiner.json`;
 
@@ -137,6 +137,7 @@ const rules: KarabinerRules[] = [
       m: app("Messages"), // [M]essages
       n: app("Notes"), // [N]otes
       p: app("Spotify"), // s[P]otify
+      r: app("Reminders"), // [R]eminders
       s: app("Safari"), // [S]afari
       t: app("TablePlus"), // [T]ablePlus
       v: app("Visual Studio Code"), // [V]isual Studio Code
