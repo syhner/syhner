@@ -1,0 +1,9 @@
+[sso-session syhner]
+sso_start_url = https://syhner.awsapps.com/start
+sso_region = eu-central-1
+
+[profile siraj]
+sso_session = syhner
+sso_account_id = 043309331618
+sso_role_name = AdministratorAccess
+region = eu-central-1
