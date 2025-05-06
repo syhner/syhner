@@ -34,8 +34,6 @@ brew install watchman
 brew install cask discord
 # install homerow.app and change keybindings to karabiner usage
 brew install cask karabiner-elements
-brew install cask linear-linear
-brew install cask mechvibes
 brew install cask monitorcontrol
 brew install cask obsidian
 brew install cask orbstack
@@ -51,6 +49,7 @@ brew install cask steam
 brew install cask tailscale
 brew install cask tableplus
 brew install cask teamviewer
+brew install cask ticktick
 brew install cask vlc
 brew install cask vmware-fusion
 brew install cask yaak
