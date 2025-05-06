@@ -88,6 +88,21 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  {
+    description: "back / forward with mouse side buttons",
+    manipulators: [
+      {
+        type: "basic",
+        from: { pointing_button: "button4", modifiers: { optional: ["any"] } },
+        to: [{ key_code: "open_bracket", modifiers: ["left_command"] }],
+      },
+      {
+        type: "basic",
+        from: { pointing_button: "button5", modifiers: { optional: ["any"] } },
+        to: [{ key_code: "close_bracket", modifiers: ["left_command"] }],
+      },
+    ],
+  },
 
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
