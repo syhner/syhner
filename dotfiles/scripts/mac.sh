@@ -67,6 +67,7 @@ killall PowerChime
 defaults write com.apple.dock appswitcher-all-displays -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
+defaults write com.apple.dock "static-only" -bool "true"
 killall Dock
 
 # Set Desktop as the default location for new Finder windows
