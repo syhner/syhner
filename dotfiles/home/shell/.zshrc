@@ -1,4 +1,5 @@
-source "$HOME/source/1-powerlevel10k.zsh"
+[[ ! -n $CURSOR_AGENT ]] && source "$HOME/source/1-powerlevel10k.zsh"
+
 source "$HOME/source/1-zsh-completions.zsh"
 source "$HOME/source/1-zsh-you-should-use.zsh"
 source "$HOME/source/2-zsh-autosuggestions.zsh"
@@ -12,3 +13,6 @@ export PATH="$HOME/repos/nom:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/siraj/.lmstudio/bin"
+
+# opencode
+export PATH=/Users/siraj/.opencode/bin:$PATH
