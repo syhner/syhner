@@ -14,6 +14,7 @@ brew install awscli
 brew install awsume
 brew install btop
 brew install cloudflared
+brew install cmake
 brew install deskflow/homebrew-tap/deskflow
 brew install fswatch
 brew install gh
