@@ -1,4 +1,4 @@
-[[ ! -n $CURSOR_AGENT ]] && source "$HOME/source/1-powerlevel10k.zsh"
+[[ -z $CURSOR_AGENT ]] && source "$HOME/source/1-powerlevel10k.zsh"
 
 source "$HOME/source/1-zsh-completions.zsh"
 source "$HOME/source/1-zsh-you-should-use.zsh"
