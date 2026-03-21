@@ -33,6 +33,7 @@ brew install watchman
 
 # TODO - handle these brew cask installs better
 brew install cask discord
+brew install cask element
 # install homerow.app and change keybindings to karabiner usage
 brew install cask karabiner-elements
 brew install cask monitorcontrol
@@ -78,5 +79,9 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Move windows by dragging anywhere while holding ctrl and cmd
 defaults write -g NSWindowShouldDragOnGesture -bool true
+
+# finder can be closed with cmd+q
+defaults write com.apple.finder QuitMenuItem -bool YES
+killall Finder
 
 echo "Finished setting mac defaults"
