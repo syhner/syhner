@@ -103,6 +103,19 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  {
+    description: "Change right_command + delete_or_backspace to forward_delete",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "delete_or_backspace",
+          modifiers: { mandatory: ["left_control"], optional: ["any"] },
+        },
+        to: [{ key_code: "delete_forward" }],
+      },
+    ],
+  },
 
   // Note: Avoid layers which use the same finger as the Hyper key (q, a, z)
   // Note: Avoid sub-layers which use the same finger as the layer
@@ -141,24 +154,25 @@ const rules: KarabinerRules[] = [
     // n: {},
     // [O]pen
     o: {
-      b: app("Obsidian"), // O[B]sidian
-      c: app("Cursor"), // [C]ursor
-      d: app("Discord"), // [D]iscord
-      e: app("Electron"), // [E]lectron
-      f: app("Finder"), // [F]inder
-      g: app("Ghostty"), // [G]hostty
-      i: app("TickTick"), // T[I]ckTick
-      k: app("Slack"), // Slac[K]
-      m: app("Messages"), // [M]essages
-      n: app("Notes"), // [N]otes
-      p: app("Spotify"), // S[P]otify
-      r: app("Reminders"), // [R]eminders
-      s: app("Safari"), // [S]afari
-      t: app("TablePlus"), // [T]ablePlus
-      v: app("Cursor"), // [V]isual Studio Code
-      w: app("Weather"), // [W]eather
-      x: app("Proxyman"), // Pro[x]yman
-      y: app("Yaak"), // [Y]aak
+      3: app("T3 Chat"),
+      b: app("Obsidian"),
+      c: app("Cursor"),
+      d: app("Discord"),
+      e: app("Electron"),
+      f: app("Finder"),
+      g: app("Ghostty"),
+      i: app("TickTick"),
+      k: app("Slack"),
+      m: app("Messages"),
+      n: app("Notes"),
+      p: app("Preview"),
+      r: app("Reminders"),
+      s: app("Safari"),
+      t: app("Spotify"),
+      v: app("Cursor"),
+      w: app("Weather"),
+      x: app("Proxyman"),
+      y: app("Youtube"),
     },
     // p: {},
     // q: AVOID
