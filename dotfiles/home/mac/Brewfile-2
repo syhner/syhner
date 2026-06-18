@@ -1,0 +1,243 @@
+tap "bloznelis/tap"
+tap "browsh-org/browsh"
+tap "d12frosted/emacs-plus"
+tap "deskflow/tap"
+tap "homebrew/bundle"
+tap "jesseduffield/lazygit"
+tap "libsql/sqld"
+tap "ngrok/ngrok"
+tap "nikitabobko/tap"
+tap "oven-sh/bun"
+tap "sst/tap"
+tap "tursodatabase/tap"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Utility for easily assuming AWS IAM roles from the command-line
+brew "awsume"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Emacs dependency management
+brew "cask"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+# Cross-platform make
+brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Command-line tool to interact with exercism.io
+brew "exercism"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Fast and simple Node.js version manager
+brew "fnm"
+# Monitor a directory for changes and run a shell command
+brew "fswatch"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Statically typed language for the Erlang VM
+brew "gleam"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Modular IRC client
+brew "irssi"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Text-to-HTML conversion tool
+brew "markdown"
+# Mac App Store command-line interface
+brew "mas"
+# MIT/GNU Scheme development tools and runtime library
+brew "mit-scheme"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
+# Deep clean and optimize your Mac
+brew "mole"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# RSS/Atom feed reader for text terminals
+brew "newsboat"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Theme for zsh
+brew "powerlevel10k"
+# Python version management
+brew "pyenv"
+# Easily download, build, install, upgrade, and uninstall Python packages
+brew "python-setuptools"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Rust toolchain installer
+brew "rustup"
+# Steel Bank Common Lisp system
+brew "sbcl"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Soak up standard input and write to a file
+brew "sponge"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# System performance benchmark tool
+brew "sysbench"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Command-line interface to the freedesktop.org trashcan
+brew "trash-cli", link: true
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Watch files and take action when they change
+brew "watchman"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Zsh port of Fish shell's history search
+brew "zsh-history-substring-search"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# ZSH plugin that reminds you to use existing aliases for commands you just typed
+brew "zsh-you-should-use"
+# Memory training application
+cask "anki"
+# Allows connection to a computer remotely
+cask "anydesk"
+# Electronics prototyping platform
+cask "arduino-ide"
+# Control Apple TV from your desktop
+cask "atv-remote"
+# Managed client-based VPN service to securely access AWS resources
+cask "aws-vpn-client"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Tool to run Windows software
+cask "crossover"
+# Multi-platform client-side cloud file encryption tool
+cask "cryptomator"
+# Write, edit, and chat about your code with AI
+cask "cursor"
+# Mouse and keyboard sharing utility
+cask "deskflow/tap/deskflow"
+# Voice and text chat software
+cask "discord"
+# Matrix collaboration client
+cask "element"
+# Web browser
+cask "firefox"
+cask "font-hack-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Chromium-based web browser
+cask "helium-browser"
+# Keyboard customiser
+cask "karabiner-elements"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# Software for Logitech devices
+cask "logi-options+"
+# Break time reminder app
+cask "lookaway"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Sandbox construction video game
+cask "minecraft"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Home media server
+cask "plex-media-server"
+# VPN client focusing on security
+cask "protonvpn"
+# HTTP debugging proxy
+cask "proxyman"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
+# Modern programming language in the Lisp/Scheme family
+cask "racket"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Frontend for emulators, game engines and media players (OpenGL graphics API)
+cask "retroarch"
+# Online multiplayer game platform
+cask "roblox"
+# Tool to reverse the direction of scrolling
+cask "scroll-reverser"
+# Collection of apps available by subscription
+cask "setapp"
+# Instant messaging application focusing on security
+cask "signal"
+# Team communication and collaboration software
+cask "slack"
+# Music streaming service
+cask "spotify"
+# Video game digital distribution service
+cask "steam"
+# Minimal GUI for AI code agents
+cask "t3-code"
+# Native GUI tool for relational databases
+cask "tableplus"
+# To-do & task list manager
+cask "ticktick"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Create, manage, and run virtual machines
+cask "vmware-fusion"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Voice-to-text dictation with AI-powered auto-editing
+cask "wispr-flow"
+# REST, GraphQL and gRPC client
+cask "yaak"
+# Multiplayer code editor
+cask "zed"
