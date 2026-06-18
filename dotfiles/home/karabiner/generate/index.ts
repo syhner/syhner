@@ -53,41 +53,53 @@ const rules: KarabinerRules[] = [
     manipulators: [
       {
         type: "basic",
-        from: { key_code: "h", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        from: {
+          key_code: "h",
+          modifiers: { mandatory: ["left_control"], optional: ["any"] },
+        },
         to: [{ key_code: "left_arrow" }],
       },
       {
         type: "basic",
-        from: { key_code: "j", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        from: {
+          key_code: "j",
+          modifiers: { mandatory: ["left_control"], optional: ["any"] },
+        },
         to: [{ key_code: "down_arrow" }],
       },
       {
         type: "basic",
-        from: { key_code: "k", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        from: {
+          key_code: "k",
+          modifiers: { mandatory: ["left_control"], optional: ["any"] },
+        },
         to: [{ key_code: "up_arrow" }],
       },
       {
         type: "basic",
-        from: { key_code: "l", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+        from: {
+          key_code: "l",
+          modifiers: { mandatory: ["left_control"], optional: ["any"] },
+        },
         to: [{ key_code: "right_arrow" }],
       },
     ],
   },
-  {
-    description: "Change right_command + d/u to page down/up",
-    manipulators: [
-      {
-        type: "basic",
-        from: { key_code: "d", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
-        to: [{ key_code: "page_down" }],
-      },
-      {
-        type: "basic",
-        from: { key_code: "u", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
-        to: [{ key_code: "page_up" }],
-      },
-    ],
-  },
+  // {
+  //   description: "Change right_command + d/u to page down/up",
+  //   manipulators: [
+  //     {
+  //       type: "basic",
+  //       from: { key_code: "d", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+  //       to: [{ key_code: "page_down" }],
+  //     },
+  //     {
+  //       type: "basic",
+  //       from: { key_code: "u", modifiers: { mandatory: ["left_control"], optional: ["any"] } },
+  //       to: [{ key_code: "page_up" }],
+  //     },
+  //   ],
+  // },
   {
     description: "back / forward with mouse side buttons",
     manipulators: [
@@ -137,15 +149,30 @@ const rules: KarabinerRules[] = [
     j: {
       // clic[K]
       k: {
-        to: [{ key_code: "k", modifiers: ["right_command", "right_shift", "right_option"] }],
+        to: [
+          {
+            key_code: "k",
+            modifiers: ["right_command", "right_shift", "right_option"],
+          },
+        ],
       },
       // scro[L]l
       l: {
-        to: [{ key_code: "l", modifiers: ["right_command", "right_shift", "right_option"] }],
+        to: [
+          {
+            key_code: "l",
+            modifiers: ["right_command", "right_shift", "right_option"],
+          },
+        ],
       },
       // [S]earch
       s: {
-        to: [{ key_code: "s", modifiers: ["right_command", "right_shift", "right_option"] }],
+        to: [
+          {
+            key_code: "s",
+            modifiers: ["right_command", "right_shift", "right_option"],
+          },
+        ],
       },
     },
     // k: {},
@@ -156,7 +183,7 @@ const rules: KarabinerRules[] = [
     o: {
       3: app("T3 Chat"),
       b: app("Obsidian"),
-      c: app("Cursor"),
+      c: app("Google Chrome"),
       d: app("Discord"),
       e: app("Emacs"),
       f: app("Finder"),
@@ -168,9 +195,9 @@ const rules: KarabinerRules[] = [
       n: app("Notes"),
       p: app("Preview"),
       r: app("Reminders"),
-      // s: app("Safari"),
+      s: app("Safari"),
       t: app("Spotify"),
-      v: app("Cursor"),
+      v: app("Zed"),
       w: app("Weather"),
       x: app("Proxyman"),
       y: app("Youtube"),
@@ -181,14 +208,20 @@ const rules: KarabinerRules[] = [
     r: {
       a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
+      e: open(
+        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+      ),
       g: open("raycast://extensions/josephschmitt/gif-search/search"),
-      h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
+      h: open(
+        "raycast://extensions/raycast/clipboard-history/clipboard-history",
+      ),
       i: open("raycast://extensions/raycast/raycast/confetti"),
       k: open("raycast://extensions/mooxl/coffee/caffeinateWhile"),
       n: open("raycast://extensions/raycast/raycast-notes/raycast-notes"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
-      p: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
+      p: open(
+        "raycast://extensions/raycast/clipboard-history/clipboard-history",
+      ),
       s: open("raycast://extensions/raycast/snippets/search-snippets"),
     },
     // s: {},
@@ -201,14 +234,26 @@ const rules: KarabinerRules[] = [
         description: "Window: Hide",
         to: [{ key_code: "h", modifiers: ["right_command"] }],
       },
-      hyphen: open("-g raycast://extensions/raycast/window-management/make-smaller"),
-      equal_sign: open("-g raycast://extensions/raycast/window-management/make-larger"),
+      hyphen: open(
+        "-g raycast://extensions/raycast/window-management/make-smaller",
+      ),
+      equal_sign: open(
+        "-g raycast://extensions/raycast/window-management/make-larger",
+      ),
 
       // quadrants
-      u: open("-g raycast://extensions/raycast/window-management/top-left-quarter"),
-      i: open("-g raycast://extensions/raycast/window-management/top-right-quarter"),
-      j: open("-g raycast://extensions/raycast/window-management/bottom-left-quarter"),
-      k: open("-g raycast://extensions/raycast/window-management/bottom-right-quarter"),
+      u: open(
+        "-g raycast://extensions/raycast/window-management/top-left-quarter",
+      ),
+      i: open(
+        "-g raycast://extensions/raycast/window-management/top-right-quarter",
+      ),
+      j: open(
+        "-g raycast://extensions/raycast/window-management/bottom-left-quarter",
+      ),
+      k: open(
+        "-g raycast://extensions/raycast/window-management/bottom-right-quarter",
+      ),
 
       // halves
       h: open("-g raycast://extensions/raycast/window-management/left-half"),
@@ -216,13 +261,21 @@ const rules: KarabinerRules[] = [
 
       // center
       c: open("-g raycast://extensions/raycast/window-management/center"),
-      r: open("-g raycast://extensions/raycast/window-management/reasonable-size"),
-      comma: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
+      r: open(
+        "-g raycast://extensions/raycast/window-management/reasonable-size",
+      ),
+      comma: open(
+        "-g raycast://extensions/raycast/window-management/almost-maximize",
+      ),
       m: open("-g raycast://extensions/raycast/window-management/maximize"),
-      f: open("-g raycast://extensions/raycast/window-management/toggle-fullscreen"),
+      f: open(
+        "-g raycast://extensions/raycast/window-management/toggle-fullscreen",
+      ),
 
       // displays
-      p: open("-g raycast://extensions/raycast/window-management/previous-display"),
+      p: open(
+        "-g raycast://extensions/raycast/window-management/previous-display",
+      ),
       n: open("-g raycast://extensions/raycast/window-management/next-display"),
     },
     // x: {},

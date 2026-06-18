@@ -17,7 +17,9 @@ confirm-close-surface = false
 macos-titlebar-style = tabs
 mouse-hide-while-typing = true
 window-colorspace = display-p3
-window-decoration=none
+# window-decoration=none
 
 # custom-shader = crt.glsl
 # custom-shader = bloom.glsl
+
+macos-option-as-alt = true

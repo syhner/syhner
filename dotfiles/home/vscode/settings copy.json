@@ -1,0 +1,288 @@
+{
+  // Font
+  "chat.editor.fontFamily": "Berkeley Mono Variable",
+  "debug.console.fontFamily": "Berkeley Mono Variable",
+  "editor.codeLensFontFamily": "Berkeley Mono Variable",
+  "editor.fontFamily": "Berkeley Mono Variable",
+  "editor.inlayHints.fontFamily": "Berkeley Mono Variable",
+  "editor.inlineSuggest.fontFamily": "Berkeley Mono Variable",
+  "errorLens.fontFamily": "Berkeley Mono Variable",
+  "notebook.output.fontFamily": "Berkeley Mono Variable",
+  "scm.inputFontFamily": "Berkeley Mono Variable",
+  "terminal.integrated.fontFamily": "Berkeley Mono Variable",
+
+  // Styling
+  // Electron BrowserWindow options
+  //  - https://www.electronjs.org/docs/latest/api/base-window
+  //  - https://www.electronjs.org/docs/latest/api/browser-window
+  "custom-ui-style.electron": {
+    // Frameless window (no title bar, no MacOS traffic light buttons)
+    //  - "A frameless window removes all chrome applied by the OS, including window controls"
+    //  - https://www.electronjs.org/docs/latest/api/base-window#new-basewindowoptions
+    //  - https://www.electronjs.org/docs/latest/tutorial/custom-window-styles#frameless-windows
+    //  - https://www.electronjs.org/docs/latest/tutorial/custom-title-bar
+    "frame": false,
+    // Disable rounded corners (MacOS)
+    //  - https://www.electronjs.org/docs/latest/api/base-window#new-basewindowoptions
+    //  - "Whether frameless window should have rounded corners on MacOS"
+    //  - "Setting this property to false will prevent the window from being fullscreenable"
+    "roundedCorners": false
+  },
+  "custom-ui-style.font.sansSerif": "Berkeley Mono Variable",
+  // "custom-ui-style.background.url": "file:///D:/image/ide-bg.jpg",
+  "custom-ui-style.webview.monospaceSelector": [".codeblock", ".prism [class*='language-']"],
+  // Custom stylesheet, support native nest selectors
+  "custom-ui-style.stylesheet": {
+    "kbd, .statusbar": {
+      "font-family": "var(--cus-monospace-font)"
+    },
+    ".composite.title": {
+      // "opacity": "0 !important"
+      // "display": "none !important"
+    }
+  },
+  "breadcrumbs.symbolPath": "off",
+  "editor.guides.indentation": false,
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.padding.bottom": 200, // combined with editor.scrollBeyondLastLine
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.nativeTabs": true,
+  "window.restoreFullscreen": false,
+  "window.zoomLevel": 1,
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.layoutControl.enabled": false,
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredHighContrastColorTheme": "Tokyo Night",
+  "workbench.preferredHighContrastLightColorTheme": "Tokyo (Light)",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "workbench.tree.renderIndentGuides": "none",
+
+  // Editor
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 15, // scrolloff
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.glyphMargin": false, // gutter
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.scrollBeyondLastLine": false, // combined with editor.paddingBottom
+  "editor.showFoldingControls": "never", // folding controls gutter
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "window.titleBarStyle": "native",
+  // "window.zoomLevel": 1,
+  "workbench.editor.customLabels.patterns": {
+    "**/index.html": "/${dirname}",
+    "**/index.ts": "/${dirname}",
+    "**/index.tsx": "/${dirname}"
+  },
+  "workbench.editor.enablePreview": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.copyRelativePathSeparator": "/",
+  "explorer.decorations.badges": false,
+  "explorer.excludeGitIgnore": false,
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.editorAssociations": {
+    "*.db": "sqlite-viewer.option"
+  },
+
+  // Search
+  "search.smartCase": true,
+
+  // Git
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "git.autofetch": true,
+  "git.confirmSync": false, // Stop confirming when push/pulling
+  "git.enableSmartCommit": true, // Commit all when no files are staged
+  "githubPullRequests.pullBranch": "never",
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.tabs.location": "right",
+  "workbench.panel.defaultLocation": "bottom",
+
+  // Window behaviour
+  "security.workspace.trust.untrustedFiles": "open",
+  "update.showReleaseNotes": false,
+  "window.newWindowDimensions": "maximized",
+
+  // Javascript / Typescript
+  "javascript.preferGoToSourceDefinition": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 100
+  },
+  "[scheme][scm]": {
+    "editor.defaultFormatter": "evzen-wybitul.magic-racket"
+  },
+
+  // Extensions
+  "codesnap.containerPadding": "2em",
+  "codesnap.showWindowControls": false,
+  "codesnap.shutterAction": "copy",
+  "codesnap.target": "window",
+  "codesnap.transparentBackground": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "svelte.enable-ts-plugin": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.highlightedyank.enable": true,
+  "where-am-i.colorful": false,
+  "where-am-i.textTransfrom": "none",
+  "settings.cycle": [
+    {
+      "id": "explorer.excludeGitIgnore",
+      "values": [{ "explorer.excludeGitIgnore": true }, { "explorer.excludeGitIgnore": false }]
+    },
+    {
+      "id": "git.openDiffOnClick",
+      "values": [{ "git.openDiffOnClick": false }, { "git.openDiffOnClick": true }]
+    },
+    {
+      "id": "editor.wordWrap",
+      "values": [{ "editor.wordWrap": "on" }, { "editor.wordWrap": "off" }]
+    },
+    {
+      "id": "diffEditor.hideUnchangedRegions.enabled",
+      "values": [
+        { "diffEditor.hideUnchangedRegions.enabled": false },
+        { "diffEditor.hideUnchangedRegions.enabled": true }
+      ]
+    },
+    {
+      "id": "editor.rulers",
+      "values": [{ "editor.rulers": [80] }, { "editor.rulers": [] }]
+    },
+    {
+      "id": "editor.lineNumbers",
+      "values": [
+        {
+          "editor.lineNumbers": "off"
+        },
+        {
+          "editor.lineNumbers": "on"
+        },
+        {
+          "editor.lineNumbers": "relative"
+        }
+      ]
+    },
+    {
+      "id": "explorer.excludeGitIgnore",
+      "values": [
+        {
+          "explorer.excludeGitIgnore": true
+        },
+        {
+          "explorer.excludeGitIgnore": false
+        }
+      ]
+    }
+  ],
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.navigateExplorerDownAndPreviewFile",
+      "sequence": ["list.focusDown", "filesExplorer.openFilePreserveFocus"]
+    },
+    {
+      "command": "multiCommand.navigateExplorerUpAndPreviewFile",
+      "sequence": ["list.focusUp", "filesExplorer.openFilePreserveFocus"]
+    },
+    {
+      "command": "multiCommand.focusPrev",
+      "sequence": ["list.focusParent", "list.focusDown"]
+    },
+    {
+      "command": "multiCommand.focusNext",
+      "sequence": ["list.focusParent", "list.collapse", "list.focusDown"]
+    },
+    {
+      "command": "multiCommand.scmOpenAndFocus",
+      "sequence": ["workbench.scm.focus", "workbench.scm.focus"]
+    },
+    {
+      "command": "git.openDiffOnClick",
+      "sequence": ["settings.cycle.git.openDiffOnClick"]
+    },
+    {
+      "command": "editor.wordWrap",
+      "sequence": ["settings.cycle.editor.wordWrap"]
+    },
+    {
+      "command": "diffEditor.hideUnchangedRegions.enabled",
+      "sequence": ["settings.cycle.diffEditor.hideUnchangedRegions.enabled"]
+    },
+    {
+      "command": "editor.rulers",
+      "sequence": ["settings.cycle.editor.rulers"]
+    },
+    {
+      "command": "editor.lineNumbers",
+      "sequence": ["settings.cycle.editor.lineNumbers"]
+    },
+    {
+      "command": "hide gitignore files",
+      "sequence": ["settings.cycle.explorer.excludeGitIgnore"]
+    }
+  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "git.openDiffOnClick": false,
+  "telemetry.telemetryLevel": "off",
+  "editor.wordWrap": "on",
+  "extensions.ignoreRecommendations": true,
+  "chat.commandCenter.enabled": false,
+  "window.customTitleBarVisibility": "never",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "diffEditor.experimental.showMoves": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "gitlens.codeLens.enabled": false,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "workbench.editor.showTabs": "single",
+  "workbench.statusBar.visible": false,
+  "editor.lineNumbers": "off",
+  "search.exclude": {
+    ".ignore": true
+  },
+
+  "debug.javascript.autoAttachFilter": "disabled",
+  "git.openRepositoryInParentFolders": "never",
+
+  "code-runner.executorMapByFileExtension": {
+    ".scm": "scheme"
+  },
+  "workbench.iconTheme": "material-icon-theme"
+}

@@ -16,8 +16,11 @@ elif [[ "$OSTYPE" == "msys" ]]; then
   alias paste_command="paste"
 fi
 
+alias c="cursor -r ."
 alias cwd="pwd | copy_command"
 alias exitcode="echo \$?"
+alias gs="git sync"
 alias mkdir="mkdir -p"
+alias oc="opencode"
 alias sudo="sudo " # Allow aliases to be sudoed
 alias x="exit"
